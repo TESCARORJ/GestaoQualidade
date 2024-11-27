@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nuclep.GestaoQualidade.BlazorServer.props" />
+</Project>

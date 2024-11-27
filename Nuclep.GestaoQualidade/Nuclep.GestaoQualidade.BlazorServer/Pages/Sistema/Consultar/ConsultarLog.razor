@@ -1,0 +1,108 @@
+﻿@page "/Sistema/Consultar/ConsultarLog"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models;
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+        <RadzenLabel Text="Sensibilidade ao caso do filtro" Component="caseSensitivity" />
+        <RadzenDropDown @bind-Value="filterCaseSensitivity" Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)))" Change="@(args => grid.Reload())" Name="caseSensitivity">
+            <Template>
+                @GetEnumName((FilterCaseSensitivity)context)
+            </Template>
+        </RadzenDropDown>
+        <RadzenLabel Text="Operador lógico do filtro" Component="logicalOperator" class="rz-ms-6" />
+        <RadzenDropDown @bind-Value="logicalFilterOperator" Data="@(Enum.GetValues(typeof(LogicalFilterOperator)))" Change="@(args => grid.Reload())" Name="logicalOperator">
+            <Template>
+                @GetEnumName((LogicalFilterOperator)context)
+            </Template>
+        </RadzenDropDown>
+
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.SimpleWithMenu"
+                PageSize="50" AllowPaging="true" AllowSorting="true" Data="@model.LogCrudList" ColumnWidth="300px"
+                FilterCaseSensitivity="@filterCaseSensitivity"
+                LogicalFilterOperator="@logicalFilterOperator"
+                FilterText="Filtro"
+                EnumFilterSelectText="Selecione..."
+                EnumNullFilterText="Sem valor"
+                AndOperatorText="E"
+                OrOperatorText="Ou"
+                ApplyFilterText="Aplicar"
+                ClearFilterText="Limpar"
+                EqualsText="Igual"
+                NotEqualsText="Diferente"
+                LessThanText="Menor que"
+                LessThanOrEqualsText="Menor ou igual que"
+                GreaterThanText="Maior que"
+                GreaterThanOrEqualsText="Maior ou menor que"
+                EndsWithText="Termine com"
+                ContainsText="Contém"
+                DoesNotContainText="Não contém"
+                StartsWithText="Começa com"
+                IsNotNullText="Não é nulo"
+                IsNullText="É nulo"
+                IsNotEmptyText="Não está vazio"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Id" Title="Id" Width="10%" />
+        <RadzenDataGridColumn Property="Descricao" Title="Descrição" Width="70%" />
+        <RadzenDataGridColumn Property="LogTabelaNome" Title="Tabela" Width="20%" />
+
+    </Columns>
+</RadzenDataGrid>
+@code {
+    ConsultarLogCrudModel model = new();
+    RadzenDataGrid<LogCrudResponseDTO> grid;
+
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.Or;
+    StringFilterOperator stringFilterOperator = StringFilterOperator.Contains;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        try
+        {
+            var responseList = await Http.GetAsync("api/logCrud/GetAll");
+            responseList.EnsureSuccessStatusCode(); // Lança uma exceção se o status não for sucesso
+            model.LogCrudList = await responseList.Content.ReadFromJsonAsync<List<LogCrudResponseDTO>>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao obter dados da API: {ex.Message}");
+           
+        }
+    }
+
+
+
+    private string GetEnumName(FilterCaseSensitivity value)
+    {
+        return value switch
+        {
+            FilterCaseSensitivity.Default => "Ignorar caso",
+            FilterCaseSensitivity.CaseInsensitive => "Sensível ao caso",
+            _ => value.ToString() // Retorna o nome original se não houver correspondência
+        };
+    }
+
+    private string GetEnumName(LogicalFilterOperator value)
+    {
+        return value switch
+        {
+            LogicalFilterOperator.And => "E",
+            LogicalFilterOperator.Or => "OU",
+            _ => value.ToString() // Retorna o nome original se não houver correspondência
+        };
+    }
+
+}
+

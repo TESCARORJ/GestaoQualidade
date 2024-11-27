@@ -1,0 +1,36 @@
+﻿@using System.Security.Principal
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@inherits LayoutComponentBase
+@inject IHttpContextAccessor HttpContextAccessor
+@inject HttpClient Http
+
+
+
+<RadzenComponents />
+
+<PageTitle>Gestão de Qualidade</PageTitle>
+
+<div class="page">
+    <div class="sidebar" style="width:15%">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+           <h3>NUCLEP</h3>
+        </div>
+
+
+        
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+@code {
+    
+}

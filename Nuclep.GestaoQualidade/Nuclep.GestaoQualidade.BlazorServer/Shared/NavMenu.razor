@@ -1,0 +1,194 @@
+﻿@using System.Security.Principal
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Domain.Enumeradores
+@inject HttpClient Http
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Gestão de Qualidade</a>
+        @*  <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+        </button> *@
+    </div>
+</div>
+
+<div style="width: 100%;">
+    <nav class="flex-column" style="width: 100%;">
+        <RadzenStack AlignItems="AlignItems.Start" class="nav-item px-2" style="width: 100%;">
+
+            <RadzenPanelMenu Click="OnParentClicked" Style="width: 100%;" Multiple="@multiple">
+
+                <RadzenPanelMenuItem Text="Indicadores" Icon="assessment">
+
+                    @if (model.IsAcaoCorrecaoAvaliadaEficaz)
+                    {
+                        <RadzenPanelMenuItem Text="Ação de Correção Avaliada Eficaz" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAcaoCorrecaoAvaliadaEficaz" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsAderenciaProgramacaoMensal)
+                    {
+                        <RadzenPanelMenuItem Text="Aderência Programação Mensal" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAderenciaProgramacaoMensal" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsAutoavaliacaoGerencialSGQ)
+                    {
+                        <RadzenPanelMenuItem Text="Autovaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQ" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsCumprimentoEtapasPACDentroPrazo)
+                    {
+                        <RadzenPanelMenuItem Text="Cumprimento das Etapas do PAC Dentro do Prazo" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoEtapasPACDentroPrazo" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsCumprimentoVerbaDestinadaPATMME)
+                    {
+                        <RadzenPanelMenuItem Text="Cumprimento de Verba Destinada ao PAT pelo MME" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoVerbaDestinadaPATMME" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsLocalidadeItaguai || model.IsLocalidadeAramar || model.IsCondensador || model.IsVPR)
+                    {
+                        <RadzenPanelMenuItem Text="Defeito de Soldagem" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDefeitoSoldagem" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+
+                    @if (model.IsDuracaoProcessoLicitacao)
+                    {
+                        <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacao" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsFaturamentoRealizado)
+                    {
+                        <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizado" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+
+
+                </RadzenPanelMenuItem>
+
+                @if (model.PerfilSistema == Enums.Administrador)
+                {
+                    <RadzenPanelMenuItem Text="Configuração" Icon="settings">
+                        <RadzenPanelMenuItem Text="Usuários" Path="Sistema/Consultar/ConsultarUsuario" Icon="people"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Localidades" Path="Sistema/Consultar/ConsultarLocalidade" Icon="home"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Logs" Path="Sistema/Consultar/ConsultarLog" Icon="list"></RadzenPanelMenuItem>
+                    </RadzenPanelMenuItem>
+
+                    <RadzenPanelMenuItem Text="Configuração Meta" Icon="settings">
+                        <RadzenPanelMenuItem Text="Ação de Correção Avaliada Eficaz" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAcaoCorrecaoAvaliadaEficazMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Aderência Programação Mensal" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAderenciaProgramacaoMensalMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Autovaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Ação de Cumprimento de Verba Destinada ao PAT pelo MME" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoVerbaDestinadaPATMMEMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Cumprimento das Etapas do PAC Dentro do Prazo" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoEtapasPACDentroPrazoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacaoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Defeito de Soldagem" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDefeitoSoldagemMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizadoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                    </RadzenPanelMenuItem>
+                }
+
+
+
+            </RadzenPanelMenu>
+        </RadzenStack>
+    </nav>
+</div>
+
+@code {
+    bool multiple = true;
+
+
+
+    void OnParentClicked(MenuItemEventArgs args)
+    {
+
+    }
+
+    void OnChildClicked(MenuItemEventArgs args)
+    {
+
+    }
+
+    bool IsPerfilAdim = false;
+    bool IsExibeAcaoCorrecaoAvaliadaEficaz = false;
+    bool IsExibeAderenciaProgramacaoMensal = false;
+    bool IsExibeAutoavaliacaoGerencialSGQ = false;
+    bool IsExibeDuracaoProcessoLicitacao = false;
+    bool IsExibeFaturamentoRealizado = false;
+    bool IsExibeCumprimentoEtapasPACDentroPrazo = false;
+    bool IsExibeCumprimentoVerbaDestinadaPATMME = false;
+    bool IsLocalidadeItaguai = false;
+    bool IsLocalidadeAramar = false;
+    bool IsCondensador = false;
+    bool IsVPR = false;
+
+    ConsultarUsuarioModel model = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        try
+        {
+            var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+
+            var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
+
+            var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+            if (usuarioResponse != null)
+            {
+                model = new ConsultarUsuarioModel
+                    {
+                
+                        Nome = usuarioResponse.Nome,
+                        PerfilSistema = usuarioResponse.PerfilSistema,
+                        IsConfirmacaoNaoInformado = usuarioResponse.IsConfirmacaoNaoInformado,
+                        IsLocalidadeAramar = usuarioResponse.IsLocalidadeAramar,
+                        IsLocalidadeItaguai = usuarioResponse.IsLocalidadeItaguai,
+                        IsCondensador = usuarioResponse.IsCondensador,
+                        IsVPR = usuarioResponse.IsVPR,
+                        IsNivelServicoAtendimento = usuarioResponse.IsNivelServicoAtendimento,
+                        IsAderenciaProgramacaoMensal = usuarioResponse.IsAderenciaProgramacaoMensal,
+                        IsCumprimentoEtapasPACDentroPrazo = usuarioResponse.IsCumprimentoEtapasPACDentroPrazo,
+                        IsSatisfacaoUsuario = usuarioResponse.IsSatisfacaoUsuario,
+                        IsTempoMedioSolucao = usuarioResponse.IsTempoMedioSolucao,
+                        IsItensCadastradosMais15Dias = usuarioResponse.IsItensCadastradosMais15Dias,
+                        IsDuracaoProcessoLicitacao = usuarioResponse.IsDuracaoProcessoLicitacao,
+                        IsEventosAtraso = usuarioResponse.IsEventosAtraso,
+                        IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+                        IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
+                        IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
+                        IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,
+                        IsAcaoDentroPrazo = usuarioResponse.IsAcaoDentroPrazo,
+                        IsAutoavaliacaoGerencialSGQ = usuarioResponse.IsAutoavaliacaoGerencialSGQ,
+                        IsCapacitacaoAreaContratos = usuarioResponse.IsCapacitacaoAreaContratos,
+                        IsOcupacaoMaoObra = usuarioResponse.IsOcupacaoMaoObra,
+                        IsProdutividadeMaoObra = usuarioResponse.IsProdutividadeMaoObra,
+                        IsGestaoProcessosPessoasPrevistoPAT = usuarioResponse.IsGestaoProcessosPessoasPrevistoPAT,
+                        IsRespostaAreasPrazoOriginal = usuarioResponse.IsRespostaAreasPrazoOriginal,
+                        IsRetrabalhoDocumentos = usuarioResponse.IsRetrabalhoDocumentos,
+                        IsSatisfacaoClientesAreaResponsavel = usuarioResponse.IsSatisfacaoClientesAreaResponsavel,
+                        IsReducaoRNC = usuarioResponse.IsReducaoRNC,
+                        IsTaxaConformidadeDocumentosQualidade = usuarioResponse.IsTaxaConformidadeDocumentosQualidade,
+                        IsTempoMedioInspecaoRecebimentoMateriais = usuarioResponse.IsTempoMedioInspecaoRecebimentoMateriais,
+                        IsTempoReparoEquipamentosProgramadosObras = usuarioResponse.IsTempoReparoEquipamentosProgramadosObras,
+                        IsRejeicaoMateriaisAntesTratamento = usuarioResponse.IsRejeicaoMateriaisAntesTratamento
+
+                    };
+            }
+
+            var isPerfilAdim = await Http.GetAsync("api/Usuario/PerfilAdim?login=" + login);
+
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+
+
+
+
+
+    }
+}
+

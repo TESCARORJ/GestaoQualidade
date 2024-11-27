@@ -1,0 +1,371 @@
+﻿@page "/Sistema/Editar/EditarUsuario/{id:long}"
+
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Editar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.ComponentModel
+@using Radzen.Blazor
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+@inject DialogService DialogService
+
+
+<h3>Editar Usuario</h3>
+
+<div class="rz-p-0 rz-p-md-12">
+    <RadzenTemplateForm TItem="EditarUsuarioModel" Submit="ConfirmarEnvio" Data=@model>
+
+        <RadzenStack Gap="1rem">
+            <RadzenRow>
+                <RadzenColumn>
+                    <RadzenFormField class="col-md-12" Text="Nome">
+                        <ChildContent>
+                            <RadzenTextBox Name="Nome" @bind-Value=@model.Nome />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Nome" Text="First name is required." />
+                        </Helper>
+                    </RadzenFormField>
+                </RadzenColumn>
+                <RadzenColumn>
+                    <RadzenFormField Text="Perfil" class="col-md-12">
+                        <RadzenDropDown Data=@perfilSistemaList @bind-Value="@model.PerfilSistema" TextProperty="Description" ValueProperty="Value" />
+                    </RadzenFormField>
+                </RadzenColumn>
+                <RadzenColumn>
+                    <RadzenFormField Text="Ativo/Inativo" class="col-md-12">
+                        <RadzenRadioButtonList @bind-Value=@model.IsAtivo TValue="bool" class="rz-m-4 rz-mt-8">
+                            <Items>
+                                <RadzenRadioButtonListItem Text="Ativo" Value="true" />
+                                <RadzenRadioButtonListItem Text="Inativo" Value="false" />
+                            </Items>
+                        </RadzenRadioButtonList>
+                    </RadzenFormField>
+                </RadzenColumn>
+            </RadzenRow>
+
+            @if (model.PerfilSistema != Enums.NaoInformado)
+            {
+                <RadzenCard Class="col-md-12">
+                    <RadzenText TextStyle="TextStyle.H4"><strong>ATENÇÃO:</strong></RadzenText>
+                    <RadzenList>
+                        <RadzenListItem>
+                            <RadzenLabel>
+                                Ao habilitar o usuário para preencher um Resultado, perguntas referentes ao Resultado serão criadas automaticamente referente ao ano vigente quando o usuário clicar em <b>Responder Perguntas</b>.
+                            </RadzenLabel>
+                        </RadzenListItem>
+                        <RadzenListItem>
+                            <RadzenLabel>
+                                Ao inabilitar o usuário para preencher um Resultado, perguntas referentes ao Resultado serão deletadas automaticamente referente ao ano vigente.
+                            </RadzenLabel>
+                        </RadzenListItem>
+                    </RadzenList>
+                </RadzenCard>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsLocalidadeAramar Name="IsLocalidadeAramar" />
+                            <RadzenLabel Text="Preenche Resultados BLOCO 40 Aramar?" Component="IsLocalidadeAramar" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsLocalidadeItaguai Name="IsLocalidadeItaguai" />
+                            <RadzenLabel Text="Preenche Resultados BLOCO 40 Itaguaí?" Component="IsLocalidadeItaguai" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsVPR Name="IsVPR" />
+                            <RadzenLabel Text="Preenche Resultados VPR?" Component="IsVPR" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsCondensador Name="IsCondensador" />
+                            <RadzenLabel Text="Preenche Resultados Compensador?" Component="IsCondensador" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsNivelServicoAtendimento Name="IsNivelServicoAtendimento" />
+                            <RadzenLabel Text="Preenche Nível de Serviço de Atendimento?" Component="IsNivelServicoAtendimento" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsAderenciaProgramacaoMensal Name="IsAderenciaProgramacaoMensal" />
+                            <RadzenLabel Text="Preenche Aderência de Programação de Mensal?" Component="IsAderenciaProgramacaoMensal" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsSatisfacaoUsuario Name="IsSatisfacaoUsuario" />
+                            <RadzenLabel Text="Preenche Nível de Satisfação do Usuário?" Component="IsSatisfacaoUsuario" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsTempoMedioSolucao Name="IsTempoMedioSolucao" />
+                            <RadzenLabel Text="Preenche Tempo Médio de Solução?" Component="IsTempoMedioSolucao" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsItensCadastradosMais15Dias Name="IsItensCadastradosMais15Dias" />
+                            <RadzenLabel Text="Preenche Itens Cadastrados em Mais de 15 dias?" Component="IsItensCadastradosMais15Dias" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsDuracaoProcessoLicitacao Name="IsDuracaoProcessoLicitacao" />
+                            <RadzenLabel Text="Preenche Indicador de Duração de Processo de Licitação?" Component="IsDuracaoProcessoLicitacao" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsEventosAtraso Name="IsEventosAtraso" />
+                            <RadzenLabel Text="Preenche Indicador de Eventos em Atraso?" Component="IsEventosAtraso" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsFaturamentoRealizado Name="IsFaturamentoRealizado" />
+                            <RadzenLabel Text="Preenche Indicador de Faturamentos Realizados?" Component="IsFaturamentoRealizado" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsTempoManutencaoCorretivaEquipamentoProgramado Name="IsTempoManutencaoCorretivaEquipamentoProgramado" />
+                            <RadzenLabel Text="Preenche Indicador de Tempo de Manutenção Corretiva em Equipamentos Programados?" Component="IsTempoManutencaoCorretivaEquipamentoProgramado" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsAcaoCorrecaoAvaliadaEficaz Name="IsAcaoCorrecaoAvaliadaEficaz" />
+                            <RadzenLabel Text="Preenche Indicador de Ação Corretiva Avaliada como Eficaz?" Component="IsAcaoCorrecaoAvaliadaEficaz" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsAcaoDentroPrazo Name="IsAcaoDentroPrazo" />
+                            <RadzenLabel Text="Preenche Indicador de Ações Dentro do Prazo?" Component="IsAcaoDentroPrazo" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsAcaoDentroPrazo Name="IsAcaoDentroPrazo" />
+                            <RadzenLabel Text="Preenche Indicador de Ação Dentro Prazo?" Component="IsAcaoDentroPrazo" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsAutoavaliacaoGerencialSGQ Name="IsAutoavaliacaoGerencialSGQ" />
+                            <RadzenLabel Text="Preenche Indicador de Autoavaliação Gerencial do SGQ?" Component="IsAutoavaliacaoGerencialSGQ" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsCapacitacaoAreaContratos Name="IsCapacitacaoAreaContratos" />
+                            <RadzenLabel Text="Preenche Indicador Capacitação na Área de Contratos?" Component="IsCapacitacaoAreaContratos" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsOcupacaoMaoObra Name="IsOcupacaoMaoObra" />
+                            <RadzenLabel Text="Preenche de Ocupação de Mão de Obra?" Component="IsOcupacaoMaoObra" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsProdutividadeMaoObra Name="IsProdutividadeMaoObra" />
+                            <RadzenLabel Text="Preenche de Produtividade de Mão de Obra?" Component="IsProdutividadeMaoObra" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsGestaoProcessosPessoasPrevistoPAT Name="IsGestaoProcessosPessoasPrevistoPAT" />
+                            <RadzenLabel Text="Preenche Indicador de Realização de Treinamentos de Gestão de Projetos, Processos e Pessoas Previstos no PAT?" Component="IsGestaoProcessosPessoasPrevistoPAT" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsRespostaAreasPrazoOriginal Name="IsRespostaAreasPrazoOriginal" />
+                            <RadzenLabel Text="Preenche de Resposta das Áreas no Prazo Original Área responsável?" Component="IsRespostaAreasPrazoOriginal" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsRetrabalhoDocumentos Name="IsRetrabalhoDocumentos" />
+                            <RadzenLabel Text="Preenche Indicador de Retrabalho de Documentos?" Component="IsRetrabalhoDocumentos" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsSatisfacaoClientesAreaResponsavel Name="IsSatisfacaoClientesAreaResponsavel" />
+                            <RadzenLabel Text="Preenche de Satisfação de Clientes Área responsável?" Component="IsSatisfacaoClientesAreaResponsavel" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsReducaoRNC Name="IsReducaoRNC" />
+                            <RadzenLabel Text="Preenche Indicador de Não Conformidades?" Component="IsReducaoRNC" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsTaxaConformidadeDocumentosQualidade Name="IsTaxaConformidadeDocumentosQualidade" />
+                            <RadzenLabel Text="PPreenche de Taxa de Conformidade dos Documentos da Qualidade?" Component="IsTaxaConformidadeDocumentosQualidade" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsTempoMedioInspecaoRecebimentoMateriais Name="IsTempoMedioInspecaoRecebimentoMateriais" />
+                            <RadzenLabel Text="Preenche Tempo Médio de Inspeção de Recebimento de Materiais?" Component="IsTempoMedioInspecaoRecebimentoMateriais" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsTempoReparoEquipamentosProgramadosObras Name="IsTempoReparoEquipamentosProgramadosObras" />
+                            <RadzenLabel Text="Preenche de Taxa de Conformidade dos Documentos da Qualidade?" Component="IsTempoReparoEquipamentosProgramadosObras" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsCumprimentoEtapasPACDentroPrazo Name="IsCumprimentoEtapasPACDentroPrazo" />
+                            <RadzenLabel Text="Preenche Cumprimento das Etapas do PAC Dentro do Prazo?" Component="IsCumprimentoEtapasPACDentroPrazo" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsCumprimentoVerbaDestinadaPATMME Name="IsCumprimentoVerbaDestinadaPATMME" />
+                            <RadzenLabel Text="Preenche Indicador de Cumprimento de Verba Destinada ao PAT pelo MME?" Component="IsCumprimentoVerbaDestinadaPATMME" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+                </RadzenRow>
+            }
+            <RadzenButton Text="Salvar" ButtonType="ButtonType.Submit"></RadzenButton>
+        </RadzenStack>
+    </RadzenTemplateForm>
+</div>
+
+<RadzenNotification />
+
+
+@code {
+    [Parameter]
+    public long Id { get; set; }
+    private List<EnumDescription>? perfilSistemaList;
+
+
+    private EditarUsuarioModel model = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        model = await Http.GetFromJsonAsync<EditarUsuarioModel>($"api/usuario/id/{Id}");
+
+        if (model == null)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = "Usuário não encontrado", Duration = 4000 });
+            Navigation.NavigateTo("/Sistema/Usuarios");
+            return;
+
+        }
+
+        perfilSistemaList = Enum.GetValues(typeof(Enums))
+                              .Cast<Enums>()
+                              .Select(e => new EnumDescription { Value = e, Description = GetEnumDescription(e) })
+                              .ToList();
+        // enumPerfilSistema = (EnumPerfilSistema)model.PerfilSistema;
+    }
+
+    private string GetEnumDescription(Enum value)
+    {
+        var field = value.GetType().GetField(value.ToString());
+        if (field == null) return value.ToString();
+
+        var attribute = (DescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
+        return attribute?.Description ?? value.ToString();
+    }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+    private async Task ConfirmarEnvio()
+    {
+        if (model.PerfilSistema == Enums.NaoInformado)
+        {
+            var result = await DialogService.Confirm("Ao salvar o usuário com esse perfil, todas as permissões serão excluídas?", "Confirmação", new ConfirmOptions { OkButtonText = "Sim", CancelButtonText = "Não" });
+
+            if (result.HasValue && result.Value)
+            {
+                model.IsConfirmacaoNaoInformado = true;
+                await Enviar();
+            }
+
+        }
+        else
+        {
+            model.IsConfirmacaoNaoInformado = false;
+            await Enviar();
+        }
+
+    }
+
+    private async Task Enviar()
+    {
+        try
+        {
+            HttpResponseMessage response = await Http.PutAsJsonAsync($"api/usuario/{model.Id}", model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Editado com sucesso!", Detail = "Editado com sucesso!", Duration = 4000 });
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/Sistema/Consultar/ConsultarUsuario");
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao editar", Detail = "Falha ao editar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha ao editar", Duration = 4000 });
+        }
+    }
+}

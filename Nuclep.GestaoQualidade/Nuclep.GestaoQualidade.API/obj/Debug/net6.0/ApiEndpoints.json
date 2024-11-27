@@ -1,0 +1,3176 @@
+[
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/acaocorrecaoavaliadaeficaz/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AcaoCorrecaoAvaliadaEficazMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/acaocorrecaoavaliadaeficazmeta/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AcaoCorrecaoAvaliadaEficazMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/aderenciaprogramacaomensal/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/aderenciaprogramacaomensal/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/aderenciaprogramacaomensal/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AderenciaProgramacaoMensalMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/aderenciaprogramacaomensalmeta/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AderenciaProgramacaoMensalMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgq/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/autoavaliacaogerencialsgq/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/autoavaliacaogerencialsgq/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.AutoavaliacaoGerencialSGQMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/autoavaliacaogerencialsgqmeta/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.AutoavaliacaoGerencialSGQMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazo/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoEtapasPACDentroPrazoMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/cumprimentoetapaspacdentroprazometa/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoEtapasPACDentroPrazoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMERequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/cumprimentoverbadestinadapatmme/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.CumprimentoVerbaDestinadaPATMMEMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/cumprimentoverbadestinadapatmmemeta/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.CumprimentoVerbaDestinadaPATMMEMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/defeitosoldagem/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/defeitosoldagem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "GararPerguntas",
+    "RelativePath": "api/defeitosoldagem/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/defeitosoldagem/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/defeitosoldagem/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/defeitosoldagem/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/defeitosoldagem/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/defeitosoldagem/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/defeitosoldagemmeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/defeitosoldagemmeta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/defeitosoldagemmeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/defeitosoldagemmeta/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/defeitosoldagemmeta/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DefeitoSoldagemMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/defeitosoldagemmeta/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DefeitoSoldagemMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/duracaoprocessolicitacao/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/duracaoprocessolicitacao/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.DuracaoProcessoLicitacaoMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/duracaoprocessolicitacaometa/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.DuracaoProcessoLicitacaoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/faturamentorealizado/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/faturamentorealizado/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "GararPerguntasAsync",
+    "RelativePath": "api/faturamentorealizado/gararperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/faturamentorealizado/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/faturamentorealizado/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "GetAllUsarioLogadoAsync",
+    "RelativePath": "api/faturamentorealizado/getallusariologado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/faturamentorealizado/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "IndicadorHabilitado",
+    "RelativePath": "api/faturamentorealizado/indicadorhabilitado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoController",
+    "Method": "VerificaMetaPerguntas",
+    "RelativePath": "api/faturamentorealizado/verificametaperguntas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "AddAsync",
+    "RelativePath": "api/faturamentorealizadometa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/faturamentorealizadometa/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/faturamentorealizadometa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/faturamentorealizadometa/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "GetAllAtivosAsync",
+    "RelativePath": "api/faturamentorealizadometa/getallativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.FaturamentoRealizadoMetaController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/faturamentorealizadometa/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.FaturamentoRealizadoMetaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "AddAsync",
+    "RelativePath": "api/localidade",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/localidade/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/localidade/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/localidade/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/localidade/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LocalidadeController",
+    "Method": "GetByNameListAsync",
+    "RelativePath": "api/localidade/nome/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.LocalidadeResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.LogCrudController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/logcrud/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.LogCrudResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/usuario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/usuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "ExisteUsuario",
+    "RelativePath": "api/usuario/existeusuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nomeAD",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/usuario/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO, Nuclep.GestaoQualidade.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/usuario/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "GetByNameListAsync",
+    "RelativePath": "api/usuario/nome/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "PerfilAdim",
+    "RelativePath": "api/usuario/perfiladim",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "Nuclep.GestaoQualidade.API.Controllers.UsuarioController",
+    "Method": "Usuario",
+    "RelativePath": "api/usuario/usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Nuclep.GestaoQualidade.Application.DTOs.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  }
+]

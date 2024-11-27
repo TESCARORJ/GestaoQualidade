@@ -1,0 +1,110 @@
+﻿@page "/Sistema/Consultar/ConsultarUsuario"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models;
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+        <RadzenLabel Text="Sensibilidade ao caso do filtro" Component="caseSensitivity" />
+        <RadzenDropDown @bind-Value="filterCaseSensitivity" Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)))" Change="@(args => grid.Reload())" Name="caseSensitivity">
+            <Template>
+                @GetEnumName((FilterCaseSensitivity)context)
+            </Template>
+        </RadzenDropDown>
+        <RadzenLabel Text="Operador lógico do filtro" Component="logicalOperator" class="rz-ms-6" />
+        <RadzenDropDown @bind-Value="logicalFilterOperator" Data="@(Enum.GetValues(typeof(LogicalFilterOperator)))" Change="@(args => grid.Reload())" Name="logicalOperator">
+            <Template>
+                @GetEnumName((LogicalFilterOperator)context)
+            </Template>
+        </RadzenDropDown>
+
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.SimpleWithMenu"
+                PageSize="5" AllowPaging="true" AllowSorting="true" Data="@model.UsuarioList" ColumnWidth="300px"
+                FilterCaseSensitivity="@filterCaseSensitivity"
+                LogicalFilterOperator="@logicalFilterOperator"
+                FilterText="Filtro"
+                EnumFilterSelectText="Selecione..."
+                EnumNullFilterText="Sem valor"
+                AndOperatorText="E"
+                OrOperatorText="Ou"
+                ApplyFilterText="Aplicar"
+                ClearFilterText="Limpar"
+                EqualsText="Igual"
+                NotEqualsText="Diferente"
+                LessThanText="Menor que"
+                LessThanOrEqualsText="Menor ou igual que"
+                GreaterThanText="Maior que"
+                GreaterThanOrEqualsText="Maior ou menor que"
+                EndsWithText="Termine com"
+                ContainsText="Contém"
+                DoesNotContainText="Não contém"
+                StartsWithText="Começa com"
+                IsNotNullText="Não é nulo"
+                IsNullText="É nulo"
+                IsNotEmptyText="Não está vazio"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Nome" Title="Nome" />
+        <RadzenDataGridColumn Property="IsAtivo" Title="Ativo">
+            <Template Context="usuario"> @(usuario.IsAtivo ? "Sim" : "Não")</Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn Property="PerfilSistema" Title="Perfil" />
+        <RadzenDataGridColumn TItem="UsuarioResponseDTO" Context="usuario" CssClass="rz-p-4">
+            <Template>
+                <div style="display: flex; justify-content: center;">
+                    <RadzenButton Text="Editar" Style="width: 50%;" Click="@(args => EditarUsuario(usuario.Id))" />
+                </div>
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+@code {
+    ConsultarUsuarioModel model = new();
+    RadzenDataGrid<UsuarioResponseDTO> grid;
+
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.Or;
+    StringFilterOperator stringFilterOperator = StringFilterOperator.Contains;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/usuario/GetAll");
+        model.UsuarioList = await responseList.Content.ReadFromJsonAsync<List<UsuarioResponseDTO>>();
+    }
+
+    private void EditarUsuario(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarUsuario/{id}");
+    }
+
+    private string GetEnumName(FilterCaseSensitivity value)
+    {
+        return value switch
+        {
+            FilterCaseSensitivity.Default => "Ignorar caso",
+            FilterCaseSensitivity.CaseInsensitive => "Sensível ao caso",
+            _ => value.ToString() // Retorna o nome original se não houver correspondência
+        };
+    }
+
+    private string GetEnumName(LogicalFilterOperator value)
+    {
+        return value switch
+        {
+            LogicalFilterOperator.And => "E",
+            LogicalFilterOperator.Or => "OU",
+            _ => value.ToString() // Retorna o nome original se não houver correspondência
+        };
+    }
+
+}
+

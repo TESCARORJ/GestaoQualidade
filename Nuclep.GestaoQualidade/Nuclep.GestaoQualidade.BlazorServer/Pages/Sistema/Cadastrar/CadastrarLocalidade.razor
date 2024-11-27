@@ -1,0 +1,100 @@
+﻿@page "/Sistema/Cadastrar/CadastrarLocalidade"
+
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Cadastrar
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Editar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.ComponentModel
+@using Radzen.Blazor
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+@inject DialogService DialogService
+
+
+<h3>Editar Usuario</h3>
+
+<div class="rz-p-0 rz-p-md-12">
+    <RadzenTemplateForm TItem="CadastrarLocalidadeModel" Submit="Enviar" Data=@model>
+
+        <RadzenStack Gap="1rem">
+            <RadzenRow>
+                <RadzenColumn>
+                    <RadzenFormField class="col-md-12" Text="Nome">
+                        <ChildContent>
+                            <RadzenTextBox Name="Nome" @bind-Value=@model.Nome />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Nome" Text="First name is required." />
+                        </Helper>
+                    </RadzenFormField>
+                </RadzenColumn>
+             
+                <RadzenColumn>
+                    <RadzenFormField Text="Ativo/Inativo" class="col-md-12">
+                        <RadzenRadioButtonList @bind-Value=@model.IsAtivo TValue="bool" class="rz-m-4 rz-mt-8">
+                            <Items>
+                                <RadzenRadioButtonListItem Text="Ativo" Value="true" />
+                                <RadzenRadioButtonListItem Text="Inativo" Value="false" />
+                            </Items>
+                        </RadzenRadioButtonList>
+                    </RadzenFormField>
+                </RadzenColumn>
+            </RadzenRow>
+
+          
+            <RadzenButton Text="Salvar" ButtonType="ButtonType.Submit"></RadzenButton>
+        </RadzenStack>
+    </RadzenTemplateForm>
+</div>
+
+<RadzenNotification />
+
+
+@code {
+    [Parameter]
+    public long Id { get; set; }
+
+    private CadastrarLocalidadeModel model = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+       
+
+    }
+
+   
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+   
+
+    private async Task Enviar()
+    {
+        try
+        {
+            HttpResponseMessage response = await Http.PostAsJsonAsync("api/localidade", model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Editado com sucesso!", Detail = "Editado com sucesso!", Duration = 4000 });
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/Sistema/Consultar/ConsultarLocalidade");
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao editar", Detail = "Falha ao editar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha ao editar", Duration = 4000 });
+        }
+    }
+}

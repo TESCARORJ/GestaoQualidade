@@ -1,0 +1,545 @@
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidade\V2\branches\ProjetoDomain\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Blazor1\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Criacao_de_CRUDs\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indicador de Duração de Processo de Licitação\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.AssemblyReference.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfoInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.AssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.csproj.CoreCompileInputs.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\refint\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\appsettings.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.exe
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.deps.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.runtimeconfig.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Application.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.Domain.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.SqlServer.pdb
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Nuclep.GestaoQualidade.API.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\scopedcss\bundle\Nuclep.GestaoQualidade.API.styles.css
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.G.E9074BB9.Up2Date
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\Nuclep.GestaoQualidade.API.genruntimeconfig.cache
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\branches\Indice_de_Autoavaliacao_Gerencial_do_SGQ\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\ref\Nuclep.GestaoQualidade.API.dll
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\bin\Debug\net6.0\Nuclep.GestaoQualidade.API.staticwebassets.endpoints.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets\msbuild.Nuclep.GestaoQualidade.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\thiago.ntl\Documents\Desenvolvimento\GestaoQualidadeV2\trunk\Nuclep.GestaoQualidade\Nuclep.GestaoQualidade.API\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

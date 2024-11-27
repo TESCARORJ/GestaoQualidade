@@ -1,0 +1,111 @@
+﻿@page "/Sistema/Consultar/ConsultarLocalidade/"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models;
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Localidades</h3>           
+        </div>
+
+        <RadzenButton Text="Criar Localidade" Style="width: 20%" Click="@(args => CriarLocalidade())" />
+      
+    </RadzenStack>
+</RadzenCard>
+
+
+<RadzenDataGrid @ref="grid" AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.SimpleWithMenu"
+                PageSize="5" AllowPaging="true" AllowSorting="true" Data="@model.LocalidadeList" ColumnWidth="300px"
+                FilterCaseSensitivity="@filterCaseSensitivity"
+                LogicalFilterOperator="@logicalFilterOperator"
+                FilterText="Filtro"
+                EnumFilterSelectText="Selecione..."
+                EnumNullFilterText="Sem valor"
+                AndOperatorText="E"
+                OrOperatorText="Ou"
+                ApplyFilterText="Aplicar"
+                ClearFilterText="Limpar"
+                EqualsText="Igual"
+                NotEqualsText="Diferente"
+                LessThanText="Menor que"
+                LessThanOrEqualsText="Menor ou igual que"
+                GreaterThanText="Maior que"
+                GreaterThanOrEqualsText="Maior ou menor que"
+                EndsWithText="Termine com"
+                ContainsText="Contém"
+                DoesNotContainText="Não contém"
+                StartsWithText="Começa com"
+                IsNotNullText="Não é nulo"
+                IsNullText="É nulo"
+                IsNotEmptyText="Não está vazio"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Nome" Title="Nome" />
+        <RadzenDataGridColumn Property="IsAtivo" Title="Ativo">
+            <Template Context="localidade"> @(localidade.IsAtivo ? "Sim" : "Não")</Template>
+        </RadzenDataGridColumn>
+      
+        <RadzenDataGridColumn TItem="LocalidadeResponseDTO" Context="localidade" CssClass="rz-p-4">
+            <Template>
+                <div style="display: flex; justify-content: center;">
+                    <RadzenButton Text="Editar" Style="width: 50%;" Click="@(args => EditarLocalidade(localidade.Id))" />
+                </div>
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+@code {
+    ConsultarLocalidadeModel model = new();
+    RadzenDataGrid<LocalidadeResponseDTO> grid;
+
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.Or;
+    StringFilterOperator stringFilterOperator = StringFilterOperator.Contains;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/localidade/GetAll");
+        model.LocalidadeList = await responseList.Content.ReadFromJsonAsync<List<LocalidadeResponseDTO>>();
+    }
+
+
+
+    private void CriarLocalidade()
+    {
+        Navigation.NavigateTo($"Sistema/Cadastrar/CadastrarLocalidade");
+    }
+
+    private void EditarLocalidade(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarLocalidade/{id}");
+    }
+
+    // private string GetEnumName(FilterCaseSensitivity value)
+    // {
+    //     return value switch
+    //     {
+    //         FilterCaseSensitivity.Default => "Ignorar caso",
+    //         FilterCaseSensitivity.CaseInsensitive => "Sensível ao caso",
+    //         _ => value.ToString() // Retorna o nome original se não houver correspondência
+    //     };
+    // }
+
+    // private string GetEnumName(LogicalFilterOperator value)
+    // {
+    //     return value switch
+    //     {
+    //         LogicalFilterOperator.And => "E",
+    //         LogicalFilterOperator.Or => "OU",
+    //         _ => value.ToString() // Retorna o nome original se não houver correspondência
+    //     };
+    // }
+
+}
+

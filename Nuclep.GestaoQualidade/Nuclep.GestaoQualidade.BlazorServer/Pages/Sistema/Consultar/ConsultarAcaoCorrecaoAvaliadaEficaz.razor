@@ -1,0 +1,247 @@
+﻿@page "/Sistema/Consultar/ConsultarAcaoCorrecaoAvaliadaEficaz"
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.Security.Principal
+@using System.Reflection
+@using System.ComponentModel
+
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Consulta de Ação de Correção Avaliada Eficaz</h3>
+            <h6 style="">Esse Indicador possui somente uma Meta por Ano</h6>
+        </div>
+        @if (IsExibeBotao)
+        {
+            <RadzenButton Text="Gerar Perguntas" Style="width: 20%" Click="@(args => CadastrarAcaoCorrecaoAvaliadaEficaz())" />
+        }
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowColumnResize="true" TItem="AcaoCorrecaoAvaliadaEficazResponseDTO"
+                Data="@model.AcaoCorrecaoAvaliadaEficazList" ColumnWidth="300px"
+                EmptyText="Nenhum registro encontrado"
+                RowUpdate="@OnUpdateRow"
+                EditMode="@editMode">
+    <Columns>
+        <!-- Hidden Column for UsuarioCadastro -->
+        <RadzenDataGridColumn Property="UsuarioCadastro" Visible="false" />
+        <RadzenDataGridColumn Property="UsuarioCadastroId" Visible="false" />
+        <RadzenDataGridColumn Property="DataHoraCadastro" Visible="false" />
+        <!---->
+
+    
+        <RadzenDataGridColumn Property="Meta" Title="Meta" Width="10%" />
+        @* <RadzenDataGridColumn Property="Mes" Title="Mês" Width="10%" /> *@
+
+        <RadzenDataGridColumn Property="Trimestre" Title="Trimestre" Width="10%">
+            <Template Context="data">
+                @GetDescription(((EnumTrimestre)data.Trimestre))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="Ano" Title="Ano" Width="10%">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="TotalAbertura" Title="Total de Abertura">
+            <EditTemplate Context="data">
+                <RadzenNumeric TValue="long?" @bind-Value="data.TotalAbertura" Style="width: 100%;" />
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+
+        <RadzenDataGridColumn Property="TotalFechamento" Title="Total de Fechamento">
+            <EditTemplate Context="data">
+                <RadzenNumeric TValue="long?" @bind-Value="data.TotalFechamento" Style="width: 100%;" />
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="TotalTratamentoEficaz" Title="Total de Tratamento Eficaz">
+            <EditTemplate Context="data">
+                <RadzenNumeric TValue="long?" @bind-Value="data.TotalTratamentoEficaz" Style="width: 100%;" />
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Context="data" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Width="10%">
+            <Template Context="data">
+                <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@(args => EditRow(data))" @onclick:stopPropagation="true">
+                </RadzenButton>
+
+            </Template>
+            <EditTemplate Context="data">
+                <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@((args) => SaveRow(data))" aria-label="Save">
+                </RadzenButton>
+                <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@((args) => CancelEdit(data))" aria-label="Cancel">
+                </RadzenButton>
+
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+
+    DataGridEditMode editMode = DataGridEditMode.Single;
+
+
+
+    ConsultarAcaoCorrecaoAvaliadaEficazModel model = new();
+    RadzenDataGrid<AcaoCorrecaoAvaliadaEficazResponseDTO> grid;
+    List<AcaoCorrecaoAvaliadaEficazResponseDTO> dataToUpdate = new List<AcaoCorrecaoAvaliadaEficazResponseDTO>();
+
+
+    async Task EditRow(AcaoCorrecaoAvaliadaEficazResponseDTO model)
+    {
+        //var response = await Http.PutAsJsonAsync($"/api/acaocorrecaoavaliadaeficaz/id/{model.Id}", model);
+
+        dataToUpdate.Add(model);
+        await grid.EditRow(model);
+    }
+
+    void CancelEdit(AcaoCorrecaoAvaliadaEficazResponseDTO model)
+    {
+        Reset(model);
+
+        grid.CancelEditRow(model);
+
+        // var orderEntry = dbContext.Entry(order);
+        // if (orderEntry.State == EntityState.Modified)
+        // {
+        //     orderEntry.CurrentValues.SetValues(orderEntry.OriginalValues);
+        //     orderEntry.State = EntityState.Unchanged;
+        // }
+    }
+
+    void Reset()
+    {
+        dataToUpdate.Clear();
+    }
+
+    void Reset(AcaoCorrecaoAvaliadaEficazResponseDTO model)
+    {
+        dataToUpdate.Remove(model);
+    }
+
+    void OnUpdateRow(AcaoCorrecaoAvaliadaEficazResponseDTO model)
+    {
+        Reset(model);
+
+        var response = Http.PutAsJsonAsync($"/api/acaoCorrecaoAvaliadaEficaz/id/{model.Id}", model);
+    }
+
+    bool IsExibeBotao = false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var responseList = await Http.GetAsync("api/acaoCorrecaoAvaliadaEficaz/GetAllUsarioLogado");
+
+        model.AcaoCorrecaoAvaliadaEficazList = await responseList.Content.ReadFromJsonAsync<List<AcaoCorrecaoAvaliadaEficazResponseDTO>>();     
+
+        var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+
+        var isHabilitado = await Http.GetAsync("api/acaoCorrecaoAvaliadaEficaz/IndicadorHabilitado?login=" + login);
+
+        if ((model.AcaoCorrecaoAvaliadaEficazList == null || model.AcaoCorrecaoAvaliadaEficazList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        {
+            IsExibeBotao = true;
+        }
+    }
+
+    private async Task CadastrarAcaoCorrecaoAvaliadaEficaz()
+    {
+        try
+        {
+            var isMetaPerguntas = await Http.GetAsync("/api/acaoCorrecaoAvaliadaEficaz/VerificaMetaPerguntas");
+
+            if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+            }
+            else
+            {
+                string login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");                
+                
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Atenção", Detail = "Gerando perguntas.", Duration = 8000 });
+
+                var response = await Http.GetAsync("/api/acaoCorrecaoAvaliadaEficaz/GararPerguntas/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    await Task.Delay(4000);
+                    Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+                }
+            }
+
+
+          
+           
+        }
+        catch (Exception ex)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha!", Duration = 4000 });
+        }
+    }
+
+    private void Editar(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarAcaoCorrecaoAvaliadaEficaz/{id}");
+    }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+    private async Task SaveRow(AcaoCorrecaoAvaliadaEficazResponseDTO model)
+    {
+        try
+        {
+           
+            var response = await Http.PutAsJsonAsync($"/api/acaocorrecaoavaliadaeficaz/{model.Id}", model);
+
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Indicador", Detail = "Salvo com sucesso!!", Duration = 4000 });
+
+                grid.CancelEditRow(model);
+
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao salvar", Detail = "Falha ao salvar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha!", Duration = 4000 });
+        }
+    }
+
+    string GetDescription(Enum value)
+    {
+        FieldInfo? field = value.GetType().GetField(value.ToString());
+        DescriptionAttribute? attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        return attribute == null ? value.ToString() : attribute.Description;
+    }
+
+}
+
+
+

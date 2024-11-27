@@ -1,0 +1,120 @@
+﻿@page "/Sistema/Cadastrar/CadastrarCumprimentoVerbaDestinadaPATMMEMeta"
+
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.ComponentModel
+@using Radzen.Blazor
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+@inject DialogService DialogService
+
+
+<h3>Cadastrar Meta de Cumprimento de Verba Destinada ao PAT pelo MME</h3>
+
+<div class="rz-p-0 rz-p-md-12">
+    <RadzenTemplateForm TItem="CumprimentoVerbaDestinadaPATMMEMetaRequestDTO" Submit="Enviar" Data=@model>
+
+        <RadzenStack Gap="1rem">
+            <RadzenRow>
+                <RadzenColumn>
+                    <RadzenFormField class="col-md-12" Text="Meta">
+                        <ChildContent>
+                            <RadzenNumeric Name="Meta" @bind-Value=@model.Meta />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Meta" Text="Campo obrigatório." />
+                            <RadzenNumericRangeValidator Component="Meta" Min="1" Text="O valor deve ser maior que zero." />
+                        </Helper>
+                    </RadzenFormField>
+                </RadzenColumn>
+
+
+
+                <RadzenColumn>
+                    <RadzenFormField Text="Ano" class="col-md-12">
+                        <ChildContent>
+                            <RadzenDropDown Data=@anoList @bind-Value="@model.Ano" TextProperty="Description" ValueProperty="Value" />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Text="Campo obrigatório." />
+                            <RadzenNumericRangeValidator Min="1" Text="O valor deve ser maior que zero." />
+                        </Helper>
+                    </RadzenFormField>
+                </RadzenColumn>
+
+            </RadzenRow>
+
+
+        </RadzenStack>
+
+        <br />
+        <RadzenButton Text="Salvar Meta" ButtonType="ButtonType.Submit"></RadzenButton>
+
+    </RadzenTemplateForm>
+</div>
+
+<RadzenNotification />
+
+
+@code {
+
+
+    private CumprimentoVerbaDestinadaPATMMEMetaRequestDTO model = new();
+
+    private List<EnumDescription>? anoList;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Yield(); // Adiciona uma operação assíncrona para evitar o aviso CS1998
+
+        anoList = Enum.GetValues(typeof(EnumAno))
+                            .Cast<EnumAno>()
+                            .Select(e => new EnumDescription { Value = e, Description = GetEnumDescription(e) })
+                            .ToList();
+    }
+
+    private string GetEnumDescription(Enum value)
+    {
+        var field = value.GetType().GetField(value.ToString());
+        if (field == null) return value.ToString();
+
+        var attribute = (DescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
+        return attribute?.Description ?? value.ToString();
+    }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+
+
+    private async Task Enviar()
+    {
+        try
+        {
+            HttpResponseMessage response = await Http.PostAsJsonAsync($"api/CumprimentoVerbaDestinadaPATMMEMeta", model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Cadastrado com sucesso!", Detail = "Cadastrado com sucesso!", Duration = 4000 });
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/Sistema/Consultar/ConsultarCumprimentoVerbaDestinadaPATMMEMeta");
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao cadastrar", Detail = "Falha ao cadastrar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha ao cadastrar", Duration = 4000 });
+        }
+    }
+}
