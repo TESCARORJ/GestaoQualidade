@@ -1,11 +1,13 @@
-##Transformação Digital - Gestão de Qualidade da Nuclep##
-Este projeto tem como objetivo principal a transformação digital da área de Gestão de Qualidade da Nuclep, modernizando os processos e oferecendo uma solução robusta e escalável para atender às necessidades específicas do setor.
+# Transformação Digital - Gestão de Qualidade (Nuclep)
 
-##Tecnologias Utilizadas##
-O projeto utiliza as seguintes tecnologias e práticas modernas:
+Este repositório contém o projeto de transformação digital desenvolvido para a área de Gestão de Qualidade da empresa **Nuclep**. O objetivo é modernizar e otimizar processos por meio de uma aplicação robusta baseada em tecnologias modernas.
 
-##Domain-Driven Design (DDD):## Arquitetura focada no domínio, promovendo a separação de responsabilidades e maior clareza no código.
-##Entity Framework Core:## Para mapeamento objeto-relacional (ORM), facilitando o acesso e manipulação de dados.
-##.NET 6 (API):## Backend robusto e performático para gerenciar as regras de negócio e comunicação com o banco de dados.
-##Blazor:## Framework para construção de interfaces modernas e interativas utilizando C# no frontend.
-##Radzen:## Conjunto de componentes ricos para Blazor, acelerando o desenvolvimento de UI com qualidade e produtividade.
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Domain-Driven Design (DDD)**: Design orientado a domínios para organização e escalabilidade do projeto.
+- **Entity Framework Core**: ORM para abstração do acesso ao banco de dados.
+- **.NET 6 API**: Backend escalável, robusto e eficiente.
+- **Blazor**: Framework para construção de interfaces web interativas.
+- **Radzen**: Componentes para aceleração do desenvolvimento front-end.
