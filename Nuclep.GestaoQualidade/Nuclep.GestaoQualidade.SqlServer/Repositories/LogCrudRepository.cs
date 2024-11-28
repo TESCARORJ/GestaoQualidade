@@ -21,7 +21,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
 
         public async Task<List<LogCrud>> GetAll()
         {
-            var result =  await _dataContext.Set<LogCrud>().Include(x => x.LogTabela).ToListAsync();
+            //var result =  await _dataContext.Set<LogCrud>().Include(x => x.LogTabela).ToListAsync();
+            var result =  await _dataContext.Set<LogCrud>().ToListAsync();
             return result;
         }
     }

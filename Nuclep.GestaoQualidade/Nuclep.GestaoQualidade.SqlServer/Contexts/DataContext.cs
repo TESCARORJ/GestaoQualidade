@@ -33,6 +33,9 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
             modelBuilder.ApplyConfiguration(new CumprimentoVerbaDestinadaPATMMEMap());
             modelBuilder.ApplyConfiguration(new CumprimentoVerbaDestinadaPATMMEMetaMap());
 
+            modelBuilder.ApplyConfiguration(new EficaciaTreinamentoMap());
+            modelBuilder.ApplyConfiguration(new EficaciaTreinamentoMetaMap());
+
             modelBuilder.ApplyConfiguration(new DefeitoSoldagemMap());
             modelBuilder.ApplyConfiguration(new DefeitoSoldagemMetaMap());
 

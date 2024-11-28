@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj": {}
+    "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj": {
+    "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
         "projectName": "Nuclep.GestaoQualidade.Domain",
-        "projectPath": "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
+        "projectPath": "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
         "packagesPath": "C:\\Users\\thiago.ntl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\obj\\",
+        "outputPath": "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

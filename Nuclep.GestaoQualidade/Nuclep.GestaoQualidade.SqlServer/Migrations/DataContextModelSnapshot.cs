@@ -570,6 +570,82 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.ToTable("Ind_DuracaoProcessoLicitacaoMeta", (string)null);
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.EficaciaTreinamento", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("Realizado")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Semestre")
+                        .HasColumnType("int")
+                        .HasColumnName("Semestre");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_EficaciaTreinamento", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.EficaciaTreinamentoMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_EficaciaTreinamentoMeta", (string)null);
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.FaturamentoRealizado", b =>
                 {
                     b.Property<long>("Id")
@@ -696,9 +772,6 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("IdLogTabela")
-                        .HasColumnType("bigint");
-
                     b.Property<long>("IdReferencia")
                         .HasColumnType("bigint");
 
@@ -706,7 +779,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("bit");
 
                     b.Property<long>("LogTabelaId")
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("IdLogTabela");
 
                     b.Property<int>("LogTipo")
                         .HasColumnType("int")
@@ -715,17 +789,14 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Property<string>("NomeAD")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UsuarioCadastroId1")
-                        .HasColumnType("bigint");
-
                     b.Property<long>("UsuarioId")
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("UsuarioId");
+
+                    b.Property<string>("UsuarioNome")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IdLogTabela");
-
-                    b.HasIndex("UsuarioCadastroId1");
 
                     b.HasIndex("UsuarioId");
 
@@ -806,6 +877,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Property<bool>("IsDuracaoProcessoLicitacao")
                         .HasColumnType("bit")
                         .HasColumnName("IsDuracaoProcessoLicitacao");
+
+                    b.Property<bool>("IsEficaciaTreinamento")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsEficaciaTreinamento");
 
                     b.Property<bool>("IsEventosAtraso")
                         .HasColumnType("bit")
@@ -1070,6 +1145,28 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Navigation("UsuarioCadastro");
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.EficaciaTreinamento", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.EficaciaTreinamentoMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.EficaciaTreinamentoMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.FaturamentoRealizado", b =>
                 {
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
@@ -1105,25 +1202,11 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
 
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.LogCrud", b =>
                 {
-                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.LogTabela", "LogTabela")
-                        .WithMany()
-                        .HasForeignKey("IdLogTabela")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
-                        .WithMany()
-                        .HasForeignKey("UsuarioCadastroId1");
-
-                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("LogTabela");
-
-                    b.Navigation("Usuario");
 
                     b.Navigation("UsuarioCadastro");
                 });

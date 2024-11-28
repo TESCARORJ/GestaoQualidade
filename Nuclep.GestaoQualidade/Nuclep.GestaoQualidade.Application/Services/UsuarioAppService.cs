@@ -55,13 +55,16 @@ namespace Nuclep.GestaoQualidade.Application.Services
             novousuario.PerfilSistema = Enums.NaoInformado;
             novousuario.UsuarioCadastro = await _UsuarioDomainService.GetByIdAsync(1);
 
+            var usuarioAdm = _UsuarioDomainService.GetByIdAsync(1).Result; /*AdminQualidade*/
+
             // Adiciona o log de CRUD
             var logCrud = new LogCrud
             {
                 DataHoraCadastro = DateTime.Now,
-                Usuario = _UsuarioDomainService.GetByIdAsync(1).Result, /*AdminQualidade*/
+                UsuarioId = usuarioAdm.Id,
+                UsuarioNome = usuarioAdm.Nome,
                 LogTipo = LogTipo.Cadastrado,
-                LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "sys_usuario").Result,
+                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "sys_usuario").Result.Id,
                 IdReferencia = novousuario.Id,
                 Descricao = $"Usuário {novousuario.Nome} cadastrado no sistema de forma automática."
             };
@@ -131,13 +134,17 @@ namespace Nuclep.GestaoQualidade.Application.Services
             var usuario = await _UsuarioDomainService.GetByIdAsync(id);
             var usuarioLogado = _usuarioSession.GetUsuarioLogado().Result;
 
+            var usuarioAdm = _UsuarioDomainService.GetByIdAsync(1).Result; /*AdminQualidade*/
+
+
             // Adiciona o log de CRUD
             var logCrud = new LogCrud
             {
                 DataHoraCadastro = DateTime.Now,
-                Usuario = _UsuarioDomainService.GetByIdAsync(1).Result, /*AdminQualidade*/
+                UsuarioId = usuarioAdm.Id,
+                UsuarioNome = usuarioAdm.Nome,
                 LogTipo = LogTipo.Cadastrado,
-                LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "sys_usuario").Result,
+                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "sys_usuario").Result.Id,
                 IdReferencia = usuario.Id,
                 Descricao = $"Usuário {usuario.Nome} excluído no sistema por {usuarioLogado.Nome}, ID: {usuarioLogado.Id} em {DateTime.Now}."
             };
@@ -236,9 +243,9 @@ namespace Nuclep.GestaoQualidade.Application.Services
                               let propCamelcase =
                                                 System.Text.RegularExpressions.Regex.Replace(diff.Key, "([A-Z])", " $1",
                                                     System.Text.RegularExpressions.RegexOptions.Compiled).Trim()
-                              select new LogCrud(usuarioLogado
+                              select new LogCrud(usuarioLogado.Id, usuarioLogado.Nome
                               , LogTipo.Alterado
-                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result
+                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id
                               , propCamelcase,
                               (diff.Value.Item1 == null || string.IsNullOrEmpty(diff.Value.Item1.ToString())
                               ? "'sem dado'"
@@ -251,8 +258,8 @@ namespace Nuclep.GestaoQualidade.Application.Services
             }
             else
             {
-                logs.Add(new LogCrud(usuarioLogado, LogTipo.Cadastrado,
-                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result, null,
+                logs.Add(new LogCrud(usuarioLogado.Id, usuarioLogado.Nome, LogTipo.Cadastrado,
+                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id, null,
                     null, null));
             }
 

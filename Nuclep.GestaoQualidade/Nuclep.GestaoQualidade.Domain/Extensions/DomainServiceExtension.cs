@@ -29,6 +29,9 @@ namespace Nuclep.GestaoQualidade.Domain.Extensions
 
             services.AddTransient<ICumprimentoVerbaDestinadaPATMMEDomainService, CumprimentoVerbaDestinadaPATMMEDomainService>();
             services.AddTransient<ICumprimentoVerbaDestinadaPATMMEMetaDomainService, CumprimentoVerbaDestinadaPATMMEMetaDomainService>();
+            
+            services.AddTransient<IEficaciaTreinamentoDomainService, EficaciaTreinamentoDomainService>();
+            services.AddTransient<IEficaciaTreinamentoMetaDomainService, EficaciaTreinamentoMetaDomainService>();
 
             services.AddTransient<IDefeitoSoldagemDomainService, DefeitoSoldagemDomainService>();
             services.AddTransient<IDefeitoSoldagemMetaDomainService, DefeitoSoldagemMetaDomainService>();

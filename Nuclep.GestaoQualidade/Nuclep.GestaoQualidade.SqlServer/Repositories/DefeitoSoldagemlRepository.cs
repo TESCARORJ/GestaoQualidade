@@ -46,6 +46,7 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
         {
             return await _context.Set<DefeitoSoldagem>()
                                  .Where(x => x.Id > 0 && x.UsuarioCadastroId == usuarioLogadoId)
+                                 .AsNoTracking()
                                  .Include(x => x.Localidade)
                                  .Include(x => x.UsuarioCadastro)
                                  .ToListAsync();
@@ -60,6 +61,17 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
                                  .Include(x => x.UsuarioCadastro)
                                  .ToListAsync();
         }
+
+        public async Task<List<DefeitoSoldagem>> GetLocalidadeUsarioLogadoAsync(long usuarioLogadoId, long localidadeId)
+        {
+            return await _context.Set<DefeitoSoldagem>()
+                                 .Where(x => x.Id > 0 && x.UsuarioCadastroId == usuarioLogadoId && x.LocalidadeId == localidadeId)
+                                 .AsNoTracking()
+                                 .Include(x => x.Localidade)
+                                 .Include(x => x.UsuarioCadastro)
+                                 .ToListAsync();
+        }
+
 
     }
 }

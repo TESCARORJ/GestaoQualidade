@@ -85,6 +85,8 @@
 
 
     ConsultarCumprimentoVerbaDestinadaPATMMEModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
+
     RadzenDataGrid<CumprimentoVerbaDestinadaPATMMEResponseDTO> grid;
     List<CumprimentoVerbaDestinadaPATMMEResponseDTO> dataToUpdate = new List<CumprimentoVerbaDestinadaPATMMEResponseDTO>();
 
@@ -103,12 +105,6 @@
 
         grid.CancelEditRow(model);
 
-        // var orderEntry = dbContext.Entry(order);
-        // if (orderEntry.State == EntityState.Modified)
-        // {
-        //     orderEntry.CurrentValues.SetValues(orderEntry.OriginalValues);
-        //     orderEntry.State = EntityState.Unchanged;
-        // }
     }
 
     void Reset()
@@ -137,11 +133,57 @@
         var responseList = await Http.GetAsync("api/CumprimentoVerbaDestinadaPATMME/GetAllUsarioLogado");
         model.CumprimentoVerbaDestinadaPATMMEList = await responseList.Content.ReadFromJsonAsync<List<CumprimentoVerbaDestinadaPATMMEResponseDTO>>();     
 
+        // var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+
+        // var isHabilitado = await Http.GetAsync("api/CumprimentoVerbaDestinadaPATMME/IndicadorHabilitado?login=" + login);
+        
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
+        {
+            usuarioModel = new ConsultarUsuarioModel
+                {
 
-        var isHabilitado = await Http.GetAsync("api/CumprimentoVerbaDestinadaPATMME/IndicadorHabilitado?login=" + login);
+                    Nome = usuarioResponse.Nome,
+                    // PerfilSistema = usuarioResponse.PerfilSistema,
+                    // IsConfirmacaoNaoInformado = usuarioResponse.IsConfirmacaoNaoInformado,
+                    // IsLocalidadeAramar = usuarioResponse.IsLocalidadeAramar,
+                    // IsLocalidadeItaguai = usuarioResponse.IsLocalidadeItaguai,
+                    // IsCondensador = usuarioResponse.IsCondensador,
+                    // IsVPR = usuarioResponse.IsVPR,
+                    // IsNivelServicoAtendimento = usuarioResponse.IsNivelServicoAtendimento,
+                    // IsAderenciaProgramacaoMensal = usuarioResponse.IsAderenciaProgramacaoMensal,
+                    // IsCumprimentoEtapasPACDentroPrazo = usuarioResponse.IsCumprimentoEtapasPACDentroPrazo,
+                    // IsSatisfacaoUsuario = usuarioResponse.IsSatisfacaoUsuario,
+                    // IsTempoMedioSolucao = usuarioResponse.IsTempoMedioSolucao,
+                    // IsItensCadastradosMais15Dias = usuarioResponse.IsItensCadastradosMais15Dias,
+                    // IsDuracaoProcessoLicitacao = usuarioResponse.IsDuracaoProcessoLicitacao,
+                    // IsEventosAtraso = usuarioResponse.IsEventosAtraso,
+                    // IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+                    // IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
+                    // IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
+                    IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,
+                    // IsAcaoDentroPrazo = usuarioResponse.IsAcaoDentroPrazo,
+                    // IsAutoavaliacaoGerencialSGQ = usuarioResponse.IsAutoavaliacaoGerencialSGQ,
+                    // IsCapacitacaoAreaContratos = usuarioResponse.IsCapacitacaoAreaContratos,
+                    // IsOcupacaoMaoObra = usuarioResponse.IsOcupacaoMaoObra,
+                    // IsProdutividadeMaoObra = usuarioResponse.IsProdutividadeMaoObra,
+                    // IsGestaoProcessosPessoasPrevistoPAT = usuarioResponse.IsGestaoProcessosPessoasPrevistoPAT,
+                    // IsRespostaAreasPrazoOriginal = usuarioResponse.IsRespostaAreasPrazoOriginal,
+                    // IsRetrabalhoDocumentos = usuarioResponse.IsRetrabalhoDocumentos,
+                    // IsSatisfacaoClientesAreaResponsavel = usuarioResponse.IsSatisfacaoClientesAreaResponsavel,
+                    // IsReducaoRNC = usuarioResponse.IsReducaoRNC,
+                    // IsTaxaConformidadeDocumentosQualidade = usuarioResponse.IsTaxaConformidadeDocumentosQualidade,
+                    // IsTempoMedioInspecaoRecebimentoMateriais = usuarioResponse.IsTempoMedioInspecaoRecebimentoMateriais,
+                    // IsTempoReparoEquipamentosProgramadosObras = usuarioResponse.IsTempoReparoEquipamentosProgramadosObras,
+                    // IsRejeicaoMateriaisAntesTratamento = usuarioResponse.IsRejeicaoMateriaisAntesTratamento
 
-        if ((model.CumprimentoVerbaDestinadaPATMMEList == null || model.CumprimentoVerbaDestinadaPATMMEList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+                };
+        }
+
+
+        if ((model.CumprimentoVerbaDestinadaPATMMEList == null || model.CumprimentoVerbaDestinadaPATMMEList.Count == 0) && usuarioModel.IsCumprimentoVerbaDestinadaPATMME)
         {
             IsExibeBotao = true;
         }

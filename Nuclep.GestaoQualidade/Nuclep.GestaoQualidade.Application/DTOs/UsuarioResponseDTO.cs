@@ -23,7 +23,6 @@ namespace Nuclep.GestaoQualidade.Application.DTOs
         public string? NomeAD { get; set; }
         public Enums PerfilSistema { get; set; }
         public bool IsConfirmacaoNaoInformado { get; set; }
-        //public List<EnumPerfilSistema> PerfilSistemaList { get; set; }
         public bool IsLocalidadeAramar { get; set; }
         public bool IsLocalidadeItaguai { get; set; }
         public bool IsCondensador { get; set; }
@@ -40,6 +39,7 @@ namespace Nuclep.GestaoQualidade.Application.DTOs
         public bool IsTempoManutencaoCorretivaEquipamentoProgramado { get; set; }
         public bool IsAcaoCorrecaoAvaliadaEficaz { get; set; }
         public bool IsCumprimentoVerbaDestinadaPATMME { get; set; }
+        public bool IsEficaciaTreinamento { get; set; }
         public bool IsAcaoDentroPrazo { get; set; }
         public bool IsAutoavaliacaoGerencialSGQ { get; set; }
         public bool IsCapacitacaoAreaContratos { get; set; }

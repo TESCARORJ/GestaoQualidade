@@ -4148,6 +4148,614 @@
         }
       }
     },
+    "/api/eficaciatreinamento/indicadorhabilitado": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/verificametaperguntas": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/gararperguntas": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/{id}": {
+      "put": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/id/{id}": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/getall": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/getallusariologado": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamento/getallativos": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamentometa": {
+      "post": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamentometa/{id}": {
+      "put": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EficaciaTreinamentoMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamentometa/id/{id}": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamentometa/getall": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eficaciatreinamentometa/getallativos": {
+      "get": {
+        "tags": [
+          "EficaciaTreinamentoMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EficaciaTreinamentoMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/faturamentorealizado/indicadorhabilitado": {
       "get": {
         "tags": [
@@ -6349,6 +6957,134 @@
         },
         "additionalProperties": false
       },
+      "EficaciaTreinamentoMetaRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EficaciaTreinamentoMetaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EficaciaTreinamentoRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "semestre": {
+            "$ref": "#/components/schemas/EnumSemestre"
+          },
+          "realizado": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EficaciaTreinamentoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "semestre": {
+            "$ref": "#/components/schemas/EnumSemestre"
+          },
+          "realizado": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "EnumAno": {
         "enum": [
           1999,
@@ -6729,15 +7465,13 @@
             "type": "integer",
             "format": "int64"
           },
-          "logTabela": {
-            "$ref": "#/components/schemas/LogTabela"
-          },
           "usuarioId": {
             "type": "integer",
             "format": "int64"
           },
-          "usuario": {
-            "$ref": "#/components/schemas/Usuario"
+          "usuarioNome": {
+            "type": "string",
+            "nullable": true
           },
           "descricao": {
             "type": "string",
@@ -6774,24 +7508,6 @@
           },
           "logCrud": {
             "$ref": "#/components/schemas/LogCrud"
-          },
-          "descricao": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LogTabela": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "nome": {
-            "type": "string",
-            "nullable": true
           },
           "descricao": {
             "type": "string",
@@ -6890,6 +7606,9 @@
             "type": "boolean"
           },
           "isCumprimentoVerbaDestinadaPATMME": {
+            "type": "boolean"
+          },
+          "isEficaciaTreinamento": {
             "type": "boolean"
           },
           "isAcaoDentroPrazo": {
@@ -7017,6 +7736,9 @@
           "isCumprimentoVerbaDestinadaPATMME": {
             "type": "boolean"
           },
+          "isEficaciaTreinamento": {
+            "type": "boolean"
+          },
           "isAcaoDentroPrazo": {
             "type": "boolean"
           },
@@ -7141,6 +7863,9 @@
             "type": "boolean"
           },
           "isCumprimentoVerbaDestinadaPATMME": {
+            "type": "boolean"
+          },
+          "isEficaciaTreinamento": {
             "type": "boolean"
           },
           "isAcaoDentroPrazo": {

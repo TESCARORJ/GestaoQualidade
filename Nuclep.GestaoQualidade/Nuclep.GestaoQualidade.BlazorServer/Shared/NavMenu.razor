@@ -59,6 +59,11 @@
                         <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacao" Icon="done"></RadzenPanelMenuItem>
                     }
 
+                    @if (model.IsEficaciaTreinamento)
+                    {
+                        <RadzenPanelMenuItem Text="Eficácia de Treinamento" Style="font-size:12px" Path="Sistema/Consultar/ConsultarEficaciaTreinamento" Icon="done"></RadzenPanelMenuItem>
+                    }
+
                     @if (model.IsFaturamentoRealizado)
                     {
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizado" Icon="done"></RadzenPanelMenuItem>
@@ -82,8 +87,9 @@
                         <RadzenPanelMenuItem Text="Autovaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Ação de Cumprimento de Verba Destinada ao PAT pelo MME" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoVerbaDestinadaPATMMEMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Cumprimento das Etapas do PAC Dentro do Prazo" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoEtapasPACDentroPrazoMeta" Icon="done_all"></RadzenPanelMenuItem>
-                        <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacaoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Defeito de Soldagem" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDefeitoSoldagemMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacaoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Eficácia de Treinamento" Style="font-size:12px" Path="Sistema/Consultar/ConsultarEficaciaTreinamentoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizadoMeta" Icon="done_all"></RadzenPanelMenuItem>
                     </RadzenPanelMenuItem>
                 }
@@ -110,18 +116,7 @@
 
     }
 
-    bool IsPerfilAdim = false;
-    bool IsExibeAcaoCorrecaoAvaliadaEficaz = false;
-    bool IsExibeAderenciaProgramacaoMensal = false;
-    bool IsExibeAutoavaliacaoGerencialSGQ = false;
-    bool IsExibeDuracaoProcessoLicitacao = false;
-    bool IsExibeFaturamentoRealizado = false;
-    bool IsExibeCumprimentoEtapasPACDentroPrazo = false;
-    bool IsExibeCumprimentoVerbaDestinadaPATMME = false;
-    bool IsLocalidadeItaguai = false;
-    bool IsLocalidadeAramar = false;
-    bool IsCondensador = false;
-    bool IsVPR = false;
+
 
     ConsultarUsuarioModel model = new();
 
@@ -159,6 +154,7 @@
                         IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
                         IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
                         IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,
+                        IsEficaciaTreinamento = usuarioResponse.IsEficaciaTreinamento,
                         IsAcaoDentroPrazo = usuarioResponse.IsAcaoDentroPrazo,
                         IsAutoavaliacaoGerencialSGQ = usuarioResponse.IsAutoavaliacaoGerencialSGQ,
                         IsCapacitacaoAreaContratos = usuarioResponse.IsCapacitacaoAreaContratos,

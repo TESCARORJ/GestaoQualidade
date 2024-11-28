@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MXgtFbSoKhU=",
+  "dgSpecHash": "iauXv0zrPKQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
+  "projectFilePath": "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.Domain\\Nuclep.GestaoQualidade.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thiago.ntl\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\thiago.ntl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"

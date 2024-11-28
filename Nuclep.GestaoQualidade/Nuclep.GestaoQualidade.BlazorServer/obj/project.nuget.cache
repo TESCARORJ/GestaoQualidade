@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYoR/C1SYas=",
+  "dgSpecHash": "9RB3HOpyaqE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\thiago.ntl\\Documents\\PESSOAL\\Github\\GestaoQualidade\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.BlazorServer\\Nuclep.GestaoQualidade.BlazorServer.csproj",
+  "projectFilePath": "C:\\Users\\thiago.ntl\\Documents\\Desenvolvimento\\GestaoQualidadeV2\\trunk\\Nuclep.GestaoQualidade\\Nuclep.GestaoQualidade.BlazorServer\\Nuclep.GestaoQualidade.BlazorServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thiago.ntl\\.nuget\\packages\\dartsassbuilder\\1.0.0\\dartsassbuilder.1.0.0.nupkg.sha512",
     "C:\\Users\\thiago.ntl\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",

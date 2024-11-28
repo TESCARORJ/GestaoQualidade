@@ -44,7 +44,7 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
 
                 throw;
             }
-            
+
         }
 
         public virtual async Task UpdateAsync(TEntity entity)
@@ -63,8 +63,25 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
 
         public virtual async Task DeleteAsync(TEntity entity)
         {
-            _dataContext.Remove(entity);
-            await _dataContext.SaveChangesAsync();
+            try
+            {
+                var trackedEntity = await _dataContext.Set<TEntity>().FindAsync(_dataContext.Entry(entity).Property("Id").CurrentValue);
+                if (trackedEntity != null)
+                {
+                    _dataContext.Remove(trackedEntity);
+                }
+                else
+                {
+                    _dataContext.Remove(entity);
+                }
+                await _dataContext.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         //public virtual async Task<TEntity?> GetOneAsync(Expression<Func<TEntity, bool>> where)

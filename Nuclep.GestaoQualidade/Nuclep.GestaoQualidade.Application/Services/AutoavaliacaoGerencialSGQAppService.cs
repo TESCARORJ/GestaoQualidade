@@ -86,9 +86,10 @@ namespace Nuclep.GestaoQualidade.Application.Services
                 {
                     IdReferencia = usuarioLogado.Id,
                     DataHoraCadastro = DateTime.Now,
-                    Usuario = usuarioLogado,
+                    UsuarioId = usuarioLogado.Id,
+                    UsuarioNome = usuarioLogado.Nome,
                     LogTipo = LogTipo.Cadastrado,
-                    LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome == "AutoavaliacaoGerencialSGQ").Result,
+                    LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_AutoavaliacaoGerencialSGQ").Result.Id,
                     Descricao = $"Cadastrado períodos de preenchimento de Faturamentos Realizados para o usuário {usuarioLogado.Nome} em {DateTime.Now}",
                 };
 
@@ -150,9 +151,10 @@ namespace Nuclep.GestaoQualidade.Application.Services
             var logCrud = new LogCrud
             {
                 DataHoraCadastro = DateTime.Now,
-                Usuario = usuarioLogado,
+                UsuarioId = usuarioLogado.Id,
+                UsuarioNome = usuarioLogado.Nome,
                 LogTipo = LogTipo.Cadastrado,
-                LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "Ind_AutoavaliacaoGerencialSGQ".ToLower()).Result,
+                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "Ind_AutoavaliacaoGerencialSGQ".ToLower()).Result.Id,
                 IdReferencia = model.Id,
                 Descricao = $" Faturamento Realizado de valor {model.Realizado} excluída no sistema por {usuarioLogado.Nome}, ID: {usuarioLogado.Id} em {DateTime.Now}."
             };
@@ -206,9 +208,9 @@ namespace Nuclep.GestaoQualidade.Application.Services
                               let propCamelcase =
                                                 System.Text.RegularExpressions.Regex.Replace(diff.Key, "([A-Z])", " $1",
                                                     System.Text.RegularExpressions.RegexOptions.Compiled).Trim()
-                              select new LogCrud(usuarioLogado
+                              select new LogCrud(usuarioLogado.Id, usuarioLogado.Nome
                               , LogTipo.Alterado
-                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result
+                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id
                               , propCamelcase,
                               (diff.Value.Item1 == null || string.IsNullOrEmpty(diff.Value.Item1.ToString())
                               ? "'sem dado'"
@@ -221,8 +223,8 @@ namespace Nuclep.GestaoQualidade.Application.Services
             }
             else
             {
-                logs.Add(new LogCrud(usuarioLogado, LogTipo.Cadastrado,
-                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result, null,
+                logs.Add(new LogCrud(usuarioLogado.Id, usuarioLogado.Nome, LogTipo.Cadastrado,
+                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id, null,
                     null, null));
             }
 

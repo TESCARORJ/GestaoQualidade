@@ -1,0 +1,88 @@
+﻿@page "/Sistema/Consultar/ConsultarEficaciaTreinamentoMeta"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using System.Reflection
+@using System.ComponentModel
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Consulta de Meta de Eficácia de Treinamento</h3>
+            <h6 style="">Esse Indicador possui somente uma Meta por Ano</h6>
+        </div>
+        @if (IsExibeBotao)
+        {
+            <RadzenButton Text="Cadastrar Novo" Style="width: 20%" Click="@(args => CadastrarEficaciaTreinamentoMeta())" />
+        }
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowColumnResize="true"
+                Data="@model.EficaciaTreinamentoMetaList" ColumnWidth="300px"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Meta" Title="Meta" />
+        <RadzenDataGridColumn Property="Ano" Title="Ano" Width="100px">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn TItem="EficaciaTreinamentoMetaResponseDTO" Context="EficaciaTreinamentoMetaResponseDTO" CssClass="rz-p-4">
+            <Template>
+                <div style="display: flex; justify-content: center;">
+                    <RadzenButton Text="Editar" Style="width: 50%;" Click="@(args => EditarMeta(EficaciaTreinamentoMetaResponseDTO.Id))" />
+                </div>
+            </Template>
+        </RadzenDataGridColumn>
+
+    </Columns>
+</RadzenDataGrid>
+@code {
+    ConsultarEficaciaTreinamentoMetaModel model = new();
+    RadzenDataGrid<EficaciaTreinamentoMetaResponseDTO> grid;
+
+    bool IsExibeBotao = false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/EficaciaTreinamentoMeta/GetAll");
+        model.EficaciaTreinamentoMetaList = await responseList.Content.ReadFromJsonAsync<List<EficaciaTreinamentoMetaResponseDTO>>();
+
+        if (model.EficaciaTreinamentoMetaList == null || model.EficaciaTreinamentoMetaList.Count == 0)
+        {
+            IsExibeBotao = true;
+        }
+    }
+
+    private void CadastrarEficaciaTreinamentoMeta()
+    {
+        Navigation.NavigateTo($"Sistema/Cadastrar/CadastrarEficaciaTreinamentoMeta");
+    }
+
+    private void EditarMeta(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarEficaciaTreinamentoMeta/{id}");
+    }
+
+
+    string GetDescription(Enum value)
+    {
+        FieldInfo? field = value.GetType().GetField(value.ToString());
+        DescriptionAttribute? attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        return attribute == null ? value.ToString() : attribute.Description;
+    }
+
+}
+
+
+

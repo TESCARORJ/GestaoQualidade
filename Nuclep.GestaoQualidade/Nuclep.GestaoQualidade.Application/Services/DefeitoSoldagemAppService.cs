@@ -81,7 +81,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
             {
                 foreach (var meta in MetaList)
                 {
-                    if (!defeitoSoldagemList.Any(x => x.LocalidadeId == 1 && x.Ano == meta.Ano))
+                    if (!itaguaiList.Any(x => x.LocalidadeId == 1 && x.Ano == meta.Ano))
                     {
                         for (int i = 1; i <= 12; i++)
                         {
@@ -107,7 +107,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
             {
                 foreach (var meta in MetaList)
                 {
-                    if (!defeitoSoldagemList.Any(x => x.LocalidadeId == 2 && x.Ano == meta.Ano))
+                    if (!aramarList.Any(x => x.LocalidadeId == 2 && x.Ano == meta.Ano))
                     {
                         for (int i = 1; i <= 12; i++)
                         {
@@ -133,7 +133,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
             {
                 foreach (var meta in MetaList)
                 {
-                    if (!defeitoSoldagemList.Any(x => x.LocalidadeId == 3 && x.Ano == meta.Ano))
+                    if (!condensadorList.Any(x => x.LocalidadeId == 3 && x.Ano == meta.Ano))
                     {
                         for (int i = 1; i <= 12; i++)
                         {
@@ -159,7 +159,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
             {
                 foreach (var meta in MetaList)
                 {
-                    if (!defeitoSoldagemList.Any(x => x.LocalidadeId == 4 && x.Ano == meta.Ano))
+                    if (!vprList.Any(x => x.LocalidadeId == 4 && x.Ano == meta.Ano))
                     {
                         for (int i = 1; i <= 12; i++)
                         {
@@ -188,9 +188,10 @@ namespace Nuclep.GestaoQualidade.Application.Services
                 {
                     IdReferencia = usuarioLogado.Id,
                     DataHoraCadastro = DateTime.Now,
-                    Usuario = usuarioLogado,
+                    UsuarioId = usuarioLogado.Id,
+                    UsuarioNome = usuarioLogado.Nome,
                     LogTipo = LogTipo.Cadastrado,
-                    LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_DefeitoSoldagem").Result,
+                    LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_DefeitoSoldagem").Result.Id,
                     Descricao = $"Cadastrado períodos de preenchimento de Defeito de Soldagem para o usuário {usuarioLogado.Nome} em {DateTime.Now}",
                 };
 
@@ -256,9 +257,10 @@ namespace Nuclep.GestaoQualidade.Application.Services
             var logCrud = new LogCrud
             {
                 DataHoraCadastro = DateTime.Now,
-                Usuario = usuarioLogado,
+                UsuarioId = usuarioLogado.Id,
+                UsuarioNome = usuarioLogado.Nome,
                 LogTipo = LogTipo.Cadastrado,
-                LogTabela = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "Ind_DefeitoSoldagem".ToLower()).Result,
+                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "Ind_DefeitoSoldagem".ToLower()).Result.Id,
                 IdReferencia = model.Id,
                 Descricao = $" Aderência Programação Mensal de valor {model.Mes} excluída no sistema por {usuarioLogado.Nome}, ID: {usuarioLogado.Id} em {DateTime.Now}."
             };
@@ -314,9 +316,9 @@ namespace Nuclep.GestaoQualidade.Application.Services
                               let propCamelcase =
                                                 System.Text.RegularExpressions.Regex.Replace(diff.Key, "([A-Z])", " $1",
                                                     System.Text.RegularExpressions.RegexOptions.Compiled).Trim()
-                              select new LogCrud(usuarioLogado
+                              select new LogCrud(usuarioLogado.Id, usuarioLogado.Nome
                               , LogTipo.Alterado
-                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result
+                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id
                               , propCamelcase,
                               (diff.Value.Item1 == null || string.IsNullOrEmpty(diff.Value.Item1.ToString())
                               ? "'sem dado'"
@@ -329,8 +331,8 @@ namespace Nuclep.GestaoQualidade.Application.Services
             }
             else
             {
-                logs.Add(new LogCrud(usuarioLogado, LogTipo.Cadastrado,
-                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result, null,
+                logs.Add(new LogCrud(usuarioLogado.Id, usuarioLogado.Nome, LogTipo.Cadastrado,
+                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id, null,
                     null, null));
             }
 

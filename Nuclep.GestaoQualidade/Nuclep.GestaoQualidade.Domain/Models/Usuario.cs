@@ -24,6 +24,7 @@ namespace Nuclep.GestaoQualidade.Domain.Models
         public bool IsTempoManutencaoCorretivaEquipamentoProgramado { get; set; }
         public bool IsAcaoCorrecaoAvaliadaEficaz { get; set; }
         public bool IsCumprimentoVerbaDestinadaPATMME { get; set; }
+        public bool IsEficaciaTreinamento { get; set; }
         public bool IsAcaoDentroPrazo { get; set; }
         public bool IsAutoavaliacaoGerencialSGQ { get; set; }
         public bool IsCapacitacaoAreaContratos { get; set; }

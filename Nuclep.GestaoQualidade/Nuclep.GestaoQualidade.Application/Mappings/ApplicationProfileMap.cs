@@ -56,6 +56,11 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<CumprimentoVerbaDestinadaPATMME, CumprimentoVerbaDestinadaPATMMEResponseDTO>().ReverseMap();
             CreateMap<CumprimentoVerbaDestinadaPATMMEMetaRequestDTO, CumprimentoVerbaDestinadaPATMMEMeta>().ReverseMap();
             CreateMap<CumprimentoVerbaDestinadaPATMMEMeta, CumprimentoVerbaDestinadaPATMMEMetaResponseDTO>().ReverseMap();
+             
+            CreateMap<EficaciaTreinamentoRequestDTO, EficaciaTreinamento>().ReverseMap();
+            CreateMap<EficaciaTreinamento, EficaciaTreinamentoResponseDTO>().ReverseMap();
+            CreateMap<EficaciaTreinamentoMetaRequestDTO, EficaciaTreinamentoMeta>().ReverseMap();
+            CreateMap<EficaciaTreinamentoMeta, EficaciaTreinamentoMetaResponseDTO>().ReverseMap();
 
             CreateMap<DefeitoSoldagemRequestDTO, DefeitoSoldagem>().ReverseMap();
             CreateMap<DefeitoSoldagem, DefeitoSoldagemResponseDTO>()
@@ -72,8 +77,8 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<Localidade, LocalidadeRequestDTO>().ReverseMap();
 
             CreateMap<LogCrud, LogCrudResponseDTO>()
-                .ForMember(dest => dest.LogTabelaNome, opt => opt.MapFrom(src => src.LogTabela.Nome)
-                ).ReverseMap();
+                //.ForMember(dest => dest.LogTabelaNome, opt => opt.MapFrom(src => src.LogTabela.Nome))
+                .ReverseMap();
 
         }
     }

@@ -90,6 +90,7 @@
 
 
     ConsultarDefeitoSoldagemModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<DefeitoSoldagemResponseDTO> grid;
     List<DefeitoSoldagemResponseDTO> dataToUpdate = new List<DefeitoSoldagemResponseDTO>();
 
@@ -137,13 +138,66 @@
         model.DefeitoSoldagemList = await responseList.Content.ReadFromJsonAsync<List<DefeitoSoldagemResponseDTO>>();
 
 
+        // var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+
+        // var isHabilitado = await Http.GetAsync("api/DefeitoSoldagem/IndicadorHabilitado?login=" + login);
+
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-        var isHabilitado = await Http.GetAsync("api/DefeitoSoldagem/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.DefeitoSoldagemList == null || model.DefeitoSoldagemList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsConfirmacaoNaoInformado = usuarioResponse.IsConfirmacaoNaoInformado,
+                    IsLocalidadeAramar = usuarioResponse.IsLocalidadeAramar,
+                    IsLocalidadeItaguai = usuarioResponse.IsLocalidadeItaguai,
+                    IsCondensador = usuarioResponse.IsCondensador,
+                    IsVPR = usuarioResponse.IsVPR,
+                    IsNivelServicoAtendimento = usuarioResponse.IsNivelServicoAtendimento,
+                    IsAderenciaProgramacaoMensal = usuarioResponse.IsAderenciaProgramacaoMensal,
+                    IsCumprimentoEtapasPACDentroPrazo = usuarioResponse.IsCumprimentoEtapasPACDentroPrazo,
+                    IsSatisfacaoUsuario = usuarioResponse.IsSatisfacaoUsuario,
+                    IsTempoMedioSolucao = usuarioResponse.IsTempoMedioSolucao,
+                    IsItensCadastradosMais15Dias = usuarioResponse.IsItensCadastradosMais15Dias,
+                    IsDuracaoProcessoLicitacao = usuarioResponse.IsDuracaoProcessoLicitacao,
+                    IsEventosAtraso = usuarioResponse.IsEventosAtraso,
+                    IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+                    IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
+                    IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
+                    IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,
+                    IsAcaoDentroPrazo = usuarioResponse.IsAcaoDentroPrazo,
+                    IsAutoavaliacaoGerencialSGQ = usuarioResponse.IsAutoavaliacaoGerencialSGQ,
+                    IsCapacitacaoAreaContratos = usuarioResponse.IsCapacitacaoAreaContratos,
+                    IsOcupacaoMaoObra = usuarioResponse.IsOcupacaoMaoObra,
+                    IsProdutividadeMaoObra = usuarioResponse.IsProdutividadeMaoObra,
+                    IsGestaoProcessosPessoasPrevistoPAT = usuarioResponse.IsGestaoProcessosPessoasPrevistoPAT,
+                    IsRespostaAreasPrazoOriginal = usuarioResponse.IsRespostaAreasPrazoOriginal,
+                    IsRetrabalhoDocumentos = usuarioResponse.IsRetrabalhoDocumentos,
+                    IsSatisfacaoClientesAreaResponsavel = usuarioResponse.IsSatisfacaoClientesAreaResponsavel,
+                    IsReducaoRNC = usuarioResponse.IsReducaoRNC,
+                    IsTaxaConformidadeDocumentosQualidade = usuarioResponse.IsTaxaConformidadeDocumentosQualidade,
+                    IsTempoMedioInspecaoRecebimentoMateriais = usuarioResponse.IsTempoMedioInspecaoRecebimentoMateriais,
+                    IsTempoReparoEquipamentosProgramadosObras = usuarioResponse.IsTempoReparoEquipamentosProgramadosObras,
+                    IsRejeicaoMateriaisAntesTratamento = usuarioResponse.IsRejeicaoMateriaisAntesTratamento
+
+                };
+        }
+
+
+        if ((model.DefeitoSoldagemList == null || !model.DefeitoSoldagemList.Where(x => x.LocalidadeId == 1).Any() && usuarioModel.IsLocalidadeItaguai) ||
+            (model.DefeitoSoldagemList == null || !model.DefeitoSoldagemList.Where(x => x.LocalidadeId == 2).Any() && usuarioModel.IsLocalidadeAramar) ||
+            (model.DefeitoSoldagemList == null || !model.DefeitoSoldagemList.Where(x => x.LocalidadeId == 3).Any() && usuarioModel.IsCondensador) ||
+            (model.DefeitoSoldagemList == null || !model.DefeitoSoldagemList.Where(x => x.LocalidadeId == 4).Any() && usuarioModel.IsVPR))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 

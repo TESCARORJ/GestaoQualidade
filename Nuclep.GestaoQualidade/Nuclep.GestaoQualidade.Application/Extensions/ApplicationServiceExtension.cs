@@ -37,6 +37,9 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
             services.AddTransient<ICumprimentoVerbaDestinadaPATMMEAppService, CumprimentoVerbaDestinadaPATMMEAppService>();
             services.AddTransient<ICumprimentoVerbaDestinadaPATMMEMetaAppService, CumprimentoVerbaDestinadaPATMMEMetaAppService>();
 
+            services.AddTransient<IEficaciaTreinamentoAppService, EficaciaTreinamentoAppService>();
+            services.AddTransient<IEficaciaTreinamentoMetaAppService, EficaciaTreinamentoMetaAppService>();
+
             services.AddTransient<IDefeitoSoldagemAppService, DefeitoSoldagemAppService>();
             services.AddTransient<IDefeitoSoldagemMetaAppService, DefeitoSoldagemMetaAppService>();
 

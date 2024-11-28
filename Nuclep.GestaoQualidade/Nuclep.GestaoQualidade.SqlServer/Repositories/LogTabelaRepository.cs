@@ -24,19 +24,23 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
         {
             return await _context.Set<LogTabela>()
                                  .Where(where)
+                                 .AsNoTracking()
                                  .FirstOrDefaultAsync();
         }
 
         public async Task<LogTabela?> GetByIdAsync(long id)
         {
             return await _context.Set<LogTabela>()
-                                 .Where(x => x.Id == id).FirstOrDefaultAsync();
+                                 .Where(x => x.Id == id)
+                                 .AsNoTracking()
+                                 .FirstOrDefaultAsync();
         }
 
         public async Task<List<LogTabela>> GetAllAsync()
         {
             return await _context.Set<LogTabela>()
                                  .Where(x => x.Id > 0)
+                                 .AsNoTracking()
                                  .ToListAsync();
         }
       

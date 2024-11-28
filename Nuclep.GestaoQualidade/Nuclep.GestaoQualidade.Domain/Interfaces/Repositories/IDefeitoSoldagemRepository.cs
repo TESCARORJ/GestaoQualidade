@@ -9,6 +9,7 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Repositories
         Task<DefeitoSoldagem?> GetByIdAsync(long id);
         Task<List<DefeitoSoldagem>> GetAllAsync();
         Task<List<DefeitoSoldagem>> GetAllUsarioLogadoAsync(long usuarioLogadoId);
+        Task<List<DefeitoSoldagem>> GetLocalidadeUsarioLogadoAsync(long usuarioLogadoId, long localidadeId);
         Task<List<DefeitoSoldagem>> GetAllAtivosAsync();
     }
 }
