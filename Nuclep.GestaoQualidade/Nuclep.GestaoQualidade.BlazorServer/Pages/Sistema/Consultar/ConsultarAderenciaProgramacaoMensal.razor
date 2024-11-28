@@ -97,6 +97,7 @@
 
 
     ConsultarAderenciaProgramacaoMensalModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<AderenciaProgramacaoMensalResponseDTO> grid;
     List<AderenciaProgramacaoMensalResponseDTO> dataToUpdate = new List<AderenciaProgramacaoMensalResponseDTO>();
 
@@ -143,14 +144,29 @@
         var responseList = await Http.GetAsync("api/aderenciaProgramacaoMensal/GetAllUsarioLogado");
         model.AderenciaProgramacaoMensalList = await responseList.Content.ReadFromJsonAsync<List<AderenciaProgramacaoMensalResponseDTO>>();
        
-
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-        var isHabilitado = await Http.GetAsync("api/aderenciaProgramacaoMensal/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.AderenciaProgramacaoMensalList == null || model.AderenciaProgramacaoMensalList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsAderenciaProgramacaoMensal = usuarioResponse.IsAderenciaProgramacaoMensal,
+
+                };
+        }
+
+
+        if ((model.AderenciaProgramacaoMensalList == null || !model.AderenciaProgramacaoMensalList.Any() && usuarioModel.IsAderenciaProgramacaoMensal))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 
@@ -162,7 +178,7 @@
 
             if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
             }
             else
             {

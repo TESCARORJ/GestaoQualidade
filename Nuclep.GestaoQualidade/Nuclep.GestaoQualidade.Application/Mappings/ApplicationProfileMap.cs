@@ -70,6 +70,11 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<DefeitoSoldagemMetaRequestDTO, DefeitoSoldagemMeta>().ReverseMap();
             CreateMap<DefeitoSoldagemMeta, DefeitoSoldagemMetaResponseDTO>().ReverseMap();
 
+            CreateMap<OcupacaoMaoObraRequestDTO, OcupacaoMaoObra>().ReverseMap();
+            CreateMap<OcupacaoMaoObra, OcupacaoMaoObraResponseDTO>().ReverseMap();
+            CreateMap<OcupacaoMaoObraMetaRequestDTO, OcupacaoMaoObraMeta>().ReverseMap();
+            CreateMap<OcupacaoMaoObraMeta, OcupacaoMaoObraMetaResponseDTO>().ReverseMap();
+
             CreateMap<Usuario, UsuarioResponseDTO>().ReverseMap();
             CreateMap<Usuario, UsuarioRequestDTO>().ReverseMap();
 

@@ -92,6 +92,7 @@
 
 
     ConsultarFaturamentoRealizadoModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<FaturamentoRealizadoResponseDTO> grid;
     List<FaturamentoRealizadoResponseDTO> dataToUpdate = new List<FaturamentoRealizadoResponseDTO>();
 
@@ -140,11 +141,27 @@
 
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-       var isHabilitado = await Http.GetAsync("api/FaturamentoRealizado/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.FaturamentoRealizadoList == null || model.FaturamentoRealizadoList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+
+                };
+        }
+
+
+        if ((model.FaturamentoRealizadoList == null || !model.FaturamentoRealizadoList.Any() && usuarioModel.IsFaturamentoRealizado))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 
@@ -156,7 +173,7 @@
 
             if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
             }
             else
             {

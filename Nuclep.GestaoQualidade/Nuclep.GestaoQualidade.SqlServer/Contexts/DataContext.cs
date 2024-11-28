@@ -38,6 +38,9 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
 
             modelBuilder.ApplyConfiguration(new DefeitoSoldagemMap());
             modelBuilder.ApplyConfiguration(new DefeitoSoldagemMetaMap());
+              
+            modelBuilder.ApplyConfiguration(new OcupacaoMaoObraMap());
+            modelBuilder.ApplyConfiguration(new OcupacaoMaoObraMetaMap());
 
         }
     }

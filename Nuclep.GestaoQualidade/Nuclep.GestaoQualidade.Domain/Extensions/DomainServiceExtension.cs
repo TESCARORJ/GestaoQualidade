@@ -35,6 +35,9 @@ namespace Nuclep.GestaoQualidade.Domain.Extensions
 
             services.AddTransient<IDefeitoSoldagemDomainService, DefeitoSoldagemDomainService>();
             services.AddTransient<IDefeitoSoldagemMetaDomainService, DefeitoSoldagemMetaDomainService>();
+             
+            services.AddTransient<IOcupacaoMaoObraDomainService, OcupacaoMaoObraDomainService>();
+            services.AddTransient<IOcupacaoMaoObraMetaDomainService, OcupacaoMaoObraMetaDomainService>();
 
 
             services.AddTransient<ILogCrudDomainService, LogCrudDomainService>();

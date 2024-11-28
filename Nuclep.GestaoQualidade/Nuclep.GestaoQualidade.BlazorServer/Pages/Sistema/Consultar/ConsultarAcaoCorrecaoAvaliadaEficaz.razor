@@ -98,6 +98,7 @@
 
 
     ConsultarAcaoCorrecaoAvaliadaEficazModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<AcaoCorrecaoAvaliadaEficazResponseDTO> grid;
     List<AcaoCorrecaoAvaliadaEficazResponseDTO> dataToUpdate = new List<AcaoCorrecaoAvaliadaEficazResponseDTO>();
 
@@ -154,11 +155,27 @@
 
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-        var isHabilitado = await Http.GetAsync("api/acaoCorrecaoAvaliadaEficaz/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.AcaoCorrecaoAvaliadaEficazList == null || model.AcaoCorrecaoAvaliadaEficazList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
+
+                };
+        }
+
+
+        if ((model.AcaoCorrecaoAvaliadaEficazList == null || !model.AcaoCorrecaoAvaliadaEficazList.Any() && usuarioModel.IsAcaoCorrecaoAvaliadaEficaz))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 
@@ -170,7 +187,7 @@
 
             if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
             }
             else
             {

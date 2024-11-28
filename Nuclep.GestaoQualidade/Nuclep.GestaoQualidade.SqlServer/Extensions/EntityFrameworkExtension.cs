@@ -34,6 +34,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Extensions
             services.AddTransient<ICumprimentoVerbaDestinadaPATMMEMetaRepository, CumprimentoVerbaDestinadaPATMMEMetaRepository>();
             services.AddTransient<IDefeitoSoldagemRepository, DefeitoSoldagemRepository>();
             services.AddTransient<IDefeitoSoldagemMetaRepository, DefeitoSoldagemMetaRepository>();
+            services.AddTransient<IOcupacaoMaoObraRepository, OcupacaoMaoObraRepository>();
+            services.AddTransient<IOcupacaoMaoObraMetaRepository, OcupacaoMaoObraMetaRepository>();
             services.AddTransient<IEficaciaTreinamentoRepository, EficaciaTreinamentoRepository>();
             services.AddTransient<IEficaciaTreinamentoMetaRepository, EficaciaTreinamentoMetaRepository>();
 

@@ -88,6 +88,7 @@
 
 
     ConsultarCumprimentoEtapasPACDentroPrazoModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<CumprimentoEtapasPACDentroPrazoResponseDTO> grid;
     List<CumprimentoEtapasPACDentroPrazoResponseDTO> dataToUpdate = new List<CumprimentoEtapasPACDentroPrazoResponseDTO>();
 
@@ -132,16 +133,31 @@
     {
         await base.OnInitializedAsync();
         var responseList = await Http.GetAsync("api/cumprimentoEtapasPACDentroPrazo/GetAllUsarioLogado");
-        model.CumprimentoEtapasPACDentroPrazoList = await responseList.Content.ReadFromJsonAsync<List<CumprimentoEtapasPACDentroPrazoResponseDTO>>();
-       
+        model.CumprimentoEtapasPACDentroPrazoList = await responseList.Content.ReadFromJsonAsync<List<CumprimentoEtapasPACDentroPrazoResponseDTO>>();       
 
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-        var isHabilitado = await Http.GetAsync("api/cumprimentoEtapasPACDentroPrazo/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.CumprimentoEtapasPACDentroPrazoList == null || model.CumprimentoEtapasPACDentroPrazoList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsCumprimentoEtapasPACDentroPrazo = usuarioResponse.IsCumprimentoEtapasPACDentroPrazo,
+
+                };
+        }
+
+
+        if ((model.CumprimentoEtapasPACDentroPrazoList == null || !model.CumprimentoEtapasPACDentroPrazoList.Any() && usuarioModel.IsCumprimentoEtapasPACDentroPrazo))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 
@@ -153,7 +169,7 @@
 
             if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
             }
             else
             {

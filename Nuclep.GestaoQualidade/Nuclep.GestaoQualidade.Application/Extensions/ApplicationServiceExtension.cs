@@ -42,6 +42,9 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
 
             services.AddTransient<IDefeitoSoldagemAppService, DefeitoSoldagemAppService>();
             services.AddTransient<IDefeitoSoldagemMetaAppService, DefeitoSoldagemMetaAppService>();
+               
+            services.AddTransient<IOcupacaoMaoObraAppService, OcupacaoMaoObraAppService>();
+            services.AddTransient<IOcupacaoMaoObraMetaAppService, OcupacaoMaoObraMetaAppService>();
 
             services.AddTransient<ILogCrudAppService, LogCrudAppService>();
                         

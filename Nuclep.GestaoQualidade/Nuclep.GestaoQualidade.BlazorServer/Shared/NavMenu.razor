@@ -69,7 +69,10 @@
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizado" Icon="done"></RadzenPanelMenuItem>
                     }
 
-
+                    @if (model.IsOcupacaoMaoObra)
+                    {
+                        <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObra" Icon="done"></RadzenPanelMenuItem>
+                    }
 
                 </RadzenPanelMenuItem>
 
@@ -91,6 +94,7 @@
                         <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacaoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Eficácia de Treinamento" Style="font-size:12px" Path="Sistema/Consultar/ConsultarEficaciaTreinamentoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizadoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObraMeta" Icon="done_all"></RadzenPanelMenuItem>
                     </RadzenPanelMenuItem>
                 }
 

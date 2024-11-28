@@ -5664,6 +5664,576 @@
         }
       }
     },
+    "/api/ocupacaomaoobra/verificametaperguntas": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/gararperguntas": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/{id}": {
+      "put": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/id/{id}": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/getall": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/getallusariologado": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobra/getallativos": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobrameta": {
+      "post": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobrameta/{id}": {
+      "put": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OcupacaoMaoObraMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobrameta/id/{id}": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobrameta/getall": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocupacaomaoobrameta/getallativos": {
+      "get": {
+        "tags": [
+          "OcupacaoMaoObraMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OcupacaoMaoObraMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/usuario/{id}": {
       "put": {
         "tags": [
@@ -7524,6 +8094,156 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "OcupacaoMaoObraMetaRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OcupacaoMaoObraMetaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OcupacaoMaoObraRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mes": {
+            "$ref": "#/components/schemas/EnumMes"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "tempoEfetivoFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "tempoDisponivelFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OcupacaoMaoObraResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "mes": {
+            "$ref": "#/components/schemas/EnumMes"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "tempoEfetivoFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "tempoDisponivelFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       },
       "Usuario": {
         "type": "object",

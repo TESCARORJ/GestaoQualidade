@@ -725,6 +725,88 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.ToTable("Ind_FaturamentoRealizadoMeta", (string)null);
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObra", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("TempoDisponivelFabril")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("TempoEfetivoFabril")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_OcupacaoMaoObra", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObraMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_OcupacaoMaoObraMeta", (string)null);
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Localidade", b =>
                 {
                     b.Property<long>("Id")
@@ -1183,6 +1265,28 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
                         .WithOne()
                         .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.FaturamentoRealizadoMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObra", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObraMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObraMeta", "UsuarioCadastroId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

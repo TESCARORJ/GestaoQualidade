@@ -28,6 +28,7 @@ namespace Nuclep.GestaoQualidade.API.Controllers
         private readonly IDuracaoProcessoLicitacaoRepository _duracaoProcessoLicitacaoRepository;
         private readonly IFaturamentoRealizadoRepository _faturamentoRealizadoRepository;
         private readonly IEficaciaTreinamentoRepository _eficaciaTreinamentoRepository;
+        private readonly IOcupacaoMaoObraRepository _ocupacaoMaoObraRepository;
 
 
         public UsuarioController(
@@ -44,7 +45,8 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             ICumprimentoVerbaDestinadaPATMMERepository cumprimentoVerbaDestinadaPATMMERepository,
             IDuracaoProcessoLicitacaoRepository duracaoProcessoLicitacaoRepository,
             IFaturamentoRealizadoRepository faturamentoRealizadoRepository,
-            IEficaciaTreinamentoRepository eficaciaTreinamentoRepository)
+            IEficaciaTreinamentoRepository eficaciaTreinamentoRepository,
+            IOcupacaoMaoObraRepository ocupacaoMaoObraRepository)
         {
             _UsuarioAppService = UsuarioAppService;
             _httpContextAccessor = httpContextAccessor;
@@ -60,25 +62,9 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             _duracaoProcessoLicitacaoRepository = duracaoProcessoLicitacaoRepository;
             _faturamentoRealizadoRepository = faturamentoRealizadoRepository;
             _eficaciaTreinamentoRepository = eficaciaTreinamentoRepository;
+            _ocupacaoMaoObraRepository = ocupacaoMaoObraRepository;
         }
 
-        //[HttpPost("{AddForm}")]
-        //[ProducesResponseType(typeof(UsuarioResponseDTO),201)]
-        //public async Task<IActionResult> AddFormAsync([FromBody] UsuarioRequestDTO request)
-        //{
-        //    var response = await _UsuarioAppService.AddAsync(request);
-
-        //    return StatusCode(201, response);
-        //}
-
-        //[HttpPost]
-        //[ProducesResponseType(typeof(UsuarioResponseDTO),201)]
-        //public async Task<IActionResult> AddAsync(UsuarioRequestDTO request)
-        //{
-        //    var response = await _UsuarioAppService.AddAsync(request);
-
-        //    return StatusCode(201, response);
-        //}
 
         private void LimparIndicadores(UsuarioRequestDTO request)
         {
@@ -539,6 +525,39 @@ namespace Nuclep.GestaoQualidade.API.Controllers
 
                         }
                     }
+
+                    #endregion
+
+                    #region OcupacaoMaoObra                   
+
+                    if (!usuario.IsOcupacaoMaoObra)
+                    {
+                        var ocupacaoMaoObraList = await _ocupacaoMaoObraRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (ocupacaoMaoObraList.Count > 0)
+                        {
+                            var logOcupacaoMaoObra = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_OcupacaoMaoObra").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Ocupação de Mão de Obra para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logOcupacaoMaoObra);
+
+                            foreach (var ocupacaoMaoObra in ocupacaoMaoObraList)
+                            {
+                                await _ocupacaoMaoObraRepository.DeleteAsync(ocupacaoMaoObra);
+
+                            }
+
+                        }
+                    }
+
 
                     #endregion
 

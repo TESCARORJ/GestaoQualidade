@@ -88,6 +88,7 @@
 
 
     ConsultarDuracaoProcessoLicitacaoModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
     RadzenDataGrid<DuracaoProcessoLicitacaoResponseDTO> grid;
     List<DuracaoProcessoLicitacaoResponseDTO> dataToUpdate = new List<DuracaoProcessoLicitacaoResponseDTO>();
 
@@ -136,11 +137,27 @@
 
         var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
 
-       var isHabilitado = await Http.GetAsync("api/DuracaoProcessoLicitacao/IndicadorHabilitado?login=" + login);
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
 
-        if ((model.DuracaoProcessoLicitacaoList == null || model.DuracaoProcessoLicitacaoList.Count == 0) && isHabilitado.IsSuccessStatusCode)
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
         {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+
+                };
+        }
+
+
+        if ((model.DuracaoProcessoLicitacaoList == null || !model.DuracaoProcessoLicitacaoList.Any() && usuarioModel.IsDuracaoProcessoLicitacao))
+        {
+
             IsExibeBotao = true;
+
         }
     }
 
@@ -152,7 +169,7 @@
 
             if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador", Detail = "Indicador sem meta definida!", Duration = 4000 });
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
             }
             else
             {
