@@ -5,6 +5,7 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Services
     public interface IProdutividadeMaoObraDomainService : IDisposable
     {
         Task<ProdutividadeMaoObra> AddAsync(ProdutividadeMaoObra entity);
+        Task<List<ProdutividadeMaoObra>> AddListAsync(List<ProdutividadeMaoObra> entity);
         Task<ProdutividadeMaoObra> UpdateAsync(ProdutividadeMaoObra entity);
         Task<ProdutividadeMaoObra> DeleteAsync(long id);
         Task<ProdutividadeMaoObra> GetByIdAsync(long id);

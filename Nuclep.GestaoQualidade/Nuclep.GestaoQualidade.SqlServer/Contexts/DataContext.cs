@@ -22,7 +22,9 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
             modelBuilder.ApplyConfiguration(new CumprimentoEtapasPACDentroPrazoMap());
             modelBuilder.ApplyConfiguration(new CumprimentoEtapasPACDentroPrazoMetaMap());     
             modelBuilder.ApplyConfiguration(new FaturamentoRealizadoMap());
-            modelBuilder.ApplyConfiguration(new FaturamentoRealizadoMetaMap());    
+            modelBuilder.ApplyConfiguration(new FaturamentoRealizadoMetaMap());
+            modelBuilder.ApplyConfiguration(new RejeicaoMateriaisMap());
+            modelBuilder.ApplyConfiguration(new RejeicaoMateriaisMetaMap());
             modelBuilder.ApplyConfiguration(new DuracaoProcessoLicitacaoMap());
             modelBuilder.ApplyConfiguration(new DuracaoProcessoLicitacaoMetaMap());     
             modelBuilder.ApplyConfiguration(new UsuarioMap());
@@ -41,6 +43,9 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
               
             modelBuilder.ApplyConfiguration(new OcupacaoMaoObraMap());
             modelBuilder.ApplyConfiguration(new OcupacaoMaoObraMetaMap());
+
+            modelBuilder.ApplyConfiguration(new ProdutividadeMaoObraMap());
+            modelBuilder.ApplyConfiguration(new ProdutividadeMaoObraMetaMap());
 
         }
     }

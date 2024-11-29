@@ -37,6 +37,11 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<FaturamentoRealizadoMetaRequestDTO, FaturamentoRealizadoMeta>().ReverseMap();
             CreateMap<FaturamentoRealizadoMeta, FaturamentoRealizadoMetaResponseDTO>().ReverseMap();
 
+            CreateMap<RejeicaoMateriaisRequestDTO, RejeicaoMateriais>().ReverseMap();
+            CreateMap<RejeicaoMateriais, RejeicaoMateriaisResponseDTO>().ReverseMap();
+            CreateMap<RejeicaoMateriaisMetaRequestDTO, RejeicaoMateriaisMeta>().ReverseMap();
+            CreateMap<RejeicaoMateriaisMeta, RejeicaoMateriaisMetaResponseDTO>().ReverseMap();
+
             CreateMap<DuracaoProcessoLicitacaoRequestDTO, DuracaoProcessoLicitacao>().ReverseMap();
             CreateMap<DuracaoProcessoLicitacao, DuracaoProcessoLicitacaoResponseDTO>().ReverseMap();
             CreateMap<DuracaoProcessoLicitacaoMetaRequestDTO, DuracaoProcessoLicitacaoMeta>().ReverseMap();
@@ -74,6 +79,11 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<OcupacaoMaoObra, OcupacaoMaoObraResponseDTO>().ReverseMap();
             CreateMap<OcupacaoMaoObraMetaRequestDTO, OcupacaoMaoObraMeta>().ReverseMap();
             CreateMap<OcupacaoMaoObraMeta, OcupacaoMaoObraMetaResponseDTO>().ReverseMap();
+
+            CreateMap<ProdutividadeMaoObraRequestDTO, ProdutividadeMaoObra>().ReverseMap();
+            CreateMap<ProdutividadeMaoObra, ProdutividadeMaoObraResponseDTO>().ReverseMap();
+            CreateMap<ProdutividadeMaoObraMetaRequestDTO, ProdutividadeMaoObraMeta>().ReverseMap();
+            CreateMap<ProdutividadeMaoObraMeta, ProdutividadeMaoObraMetaResponseDTO>().ReverseMap();
 
             CreateMap<Usuario, UsuarioResponseDTO>().ReverseMap();
             CreateMap<Usuario, UsuarioRequestDTO>().ReverseMap();

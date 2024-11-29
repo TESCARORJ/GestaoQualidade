@@ -26,6 +26,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Extensions
             services.AddTransient<ICumprimentoEtapasPACDentroPrazoMetaRepository, CumprimentoEtapasPACDentroPrazoMetaRepository>();
             services.AddTransient<IFaturamentoRealizadoRepository, FaturamentoRealizadoRepository>();
             services.AddTransient<IFaturamentoRealizadoMetaRepository, FaturamentoRealizadoMetaRepository>();
+            services.AddTransient<IRejeicaoMateriaisRepository, RejeicaoMateriaisRepository>();
+            services.AddTransient<IRejeicaoMateriaisMetaRepository, RejeicaoMateriaisMetaRepository>();
             services.AddTransient<IDuracaoProcessoLicitacaoRepository, DuracaoProcessoLicitacaoRepository>();
             services.AddTransient<IDuracaoProcessoLicitacaoMetaRepository, DuracaoProcessoLicitacaoMetaRepository>();
             services.AddTransient<IAutoavaliacaoGerencialSGQRepository, AutoavaliacaoGerencialSGQRepository>();
@@ -38,6 +40,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Extensions
             services.AddTransient<IOcupacaoMaoObraMetaRepository, OcupacaoMaoObraMetaRepository>();
             services.AddTransient<IEficaciaTreinamentoRepository, EficaciaTreinamentoRepository>();
             services.AddTransient<IEficaciaTreinamentoMetaRepository, EficaciaTreinamentoMetaRepository>();
+            services.AddTransient<IProdutividadeMaoObraRepository, ProdutividadeMaoObraRepository>();
+            services.AddTransient<IProdutividadeMaoObraMetaRepository, ProdutividadeMaoObraMetaRepository>();
 
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddTransient<ILocalidadeRepository, LocalidadeRepository>();

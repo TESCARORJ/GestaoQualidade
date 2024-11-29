@@ -5,15 +5,11 @@ namespace Nuclep.GestaoQualidade.Domain.Models.Indicadores
 {
     public class ProdutividadeMaoObra : IEntidade
     {
-        public string? Ano { get; set; }
-        public string? Mes { get; set; }
-        public decimal TempoTotalFaturavel { get; set; }
-        public decimal TempoDisponivelTotal { get; set; }
-        public decimal Perdas { get; set; }
 
-        public List<ProdutividadeMaoObraMeta> MesList;
-      
-
-
+        public EnumAno Ano { get; set; }
+        public EnumMes Mes { get; set; }
+        public long? TempoTotalFaturavel { get; set; }
+        public long? TempoDisponivelTotal { get; set; }
+        public int Meta { get; set; }
     }
 }

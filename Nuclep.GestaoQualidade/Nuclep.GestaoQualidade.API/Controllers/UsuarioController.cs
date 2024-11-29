@@ -27,8 +27,10 @@ namespace Nuclep.GestaoQualidade.API.Controllers
         private readonly ICumprimentoVerbaDestinadaPATMMERepository _cumprimentoVerbaDestinadaPATMMERepository;
         private readonly IDuracaoProcessoLicitacaoRepository _duracaoProcessoLicitacaoRepository;
         private readonly IFaturamentoRealizadoRepository _faturamentoRealizadoRepository;
+        private readonly IRejeicaoMateriaisRepository _rejeicaoMateriaisRepository;
         private readonly IEficaciaTreinamentoRepository _eficaciaTreinamentoRepository;
         private readonly IOcupacaoMaoObraRepository _ocupacaoMaoObraRepository;
+        private readonly IProdutividadeMaoObraRepository _produtividadeMaoObraRepository;
 
 
         public UsuarioController(
@@ -46,7 +48,9 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             IDuracaoProcessoLicitacaoRepository duracaoProcessoLicitacaoRepository,
             IFaturamentoRealizadoRepository faturamentoRealizadoRepository,
             IEficaciaTreinamentoRepository eficaciaTreinamentoRepository,
-            IOcupacaoMaoObraRepository ocupacaoMaoObraRepository)
+            IOcupacaoMaoObraRepository ocupacaoMaoObraRepository,
+            IProdutividadeMaoObraRepository produtividadeMaoObraRepository,
+            IRejeicaoMateriaisRepository rejeicaoMateriaisRepository)
         {
             _UsuarioAppService = UsuarioAppService;
             _httpContextAccessor = httpContextAccessor;
@@ -63,6 +67,8 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             _faturamentoRealizadoRepository = faturamentoRealizadoRepository;
             _eficaciaTreinamentoRepository = eficaciaTreinamentoRepository;
             _ocupacaoMaoObraRepository = ocupacaoMaoObraRepository;
+            _produtividadeMaoObraRepository = produtividadeMaoObraRepository;
+            _rejeicaoMateriaisRepository = rejeicaoMateriaisRepository;
         }
 
 
@@ -79,6 +85,7 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             request.IsDuracaoProcessoLicitacao = false;
             request.IsEventosAtraso = false;
             request.IsFaturamentoRealizado = false;
+            request.IsRejeicaoMateriais = false;
             request.IsGestaoProcessosPessoasPrevistoPAT = false;
             request.IsItensCadastradosMais15Dias = false;
             request.IsLocalidadeAramar = false;
@@ -558,6 +565,72 @@ namespace Nuclep.GestaoQualidade.API.Controllers
                         }
                     }
 
+
+                    #endregion
+
+                    #region ProdutividadeMaoObra                   
+
+                    if (!usuario.IsProdutividadeMaoObra)
+                    {
+                        var produtividadeMaoObraList = await _produtividadeMaoObraRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (produtividadeMaoObraList.Count > 0)
+                        {
+                            var logProdutividadeMaoObra = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_ProdutividadeMaoObra").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Produtividade de Mão de Obra para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logProdutividadeMaoObra);
+
+                            foreach (var produtividadeMaoObra in produtividadeMaoObraList)
+                            {
+                                await _produtividadeMaoObraRepository.DeleteAsync(produtividadeMaoObra);
+
+                            }
+
+                        }
+                    }
+
+
+                    #endregion
+
+                    #region RejeicaoMateriais
+
+                    if (!usuario.IsRejeicaoMateriais)
+                    {
+                        var rejeicaoMateriaisList = await _rejeicaoMateriaisRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (rejeicaoMateriaisList.Count > 0)
+                        {
+
+                            var logRejeicaoMateriais = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_RejeicaoMateriais").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador Rejeição de Materiais para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logRejeicaoMateriais);
+
+                            foreach (var rejeicaoMateriais in rejeicaoMateriaisList)
+                            {
+                                await _rejeicaoMateriaisRepository.DeleteAsync(rejeicaoMateriais);
+
+                            }
+
+                        }
+                    }
 
                     #endregion
 

@@ -807,6 +807,167 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.ToTable("Ind_OcupacaoMaoObraMeta", (string)null);
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ProdutividadeMaoObra", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("TempoDisponivelTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("TempoTotalFaturavel")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_ProdutividadeMaoObra", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ProdutividadeMaoObraMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_ProdutividadeMaoObraMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriais", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("TotalCTIsFinalizados")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("TotalCTIsRejeitados")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Trimestre")
+                        .HasColumnType("int")
+                        .HasColumnName("Trimestre");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_RejeicaoMateriais", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriaisMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_RejeicaoMateriaisMeta", (string)null);
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Localidade", b =>
                 {
                     b.Property<long>("Id")
@@ -1003,6 +1164,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Property<bool>("IsReducaoRNC")
                         .HasColumnType("bit")
                         .HasColumnName("IsReducaoRNC");
+
+                    b.Property<bool>("IsRejeicaoMateriais")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsRejeicaoMateriais");
 
                     b.Property<bool>("IsRejeicaoMateriaisAntesTratamento")
                         .HasColumnType("bit")
@@ -1287,6 +1452,50 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
                         .WithOne()
                         .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObraMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ProdutividadeMaoObra", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ProdutividadeMaoObraMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ProdutividadeMaoObraMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriais", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriaisMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriaisMeta", "UsuarioCadastroId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

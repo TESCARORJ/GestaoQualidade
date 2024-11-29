@@ -1,0 +1,88 @@
+﻿@page "/Sistema/Consultar/ConsultarRejeicaoMateriaisMeta"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using System.Reflection
+@using System.ComponentModel
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Consulta de Meta de Rejeição de Materiais</h3>
+            <h6 style="">Esse Indicador possui somente uma Meta por Ano</h6>
+        </div>
+        @if (IsExibeBotao)
+        {
+            <RadzenButton Text="Cadastrar Novo" Style="width: 20%" Click="@(args => CadastrarRejeicaoMateriaisMeta())" />
+        }
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowColumnResize="true"
+                Data="@model.RejeicaoMateriaisMetaList" ColumnWidth="300px"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Meta" Title="Meta" />
+        <RadzenDataGridColumn Property="Ano" Title="Ano" Width="100px">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn TItem="RejeicaoMateriaisMetaResponseDTO" Context="RejeicaoMateriaisMetaResponseDTO" CssClass="rz-p-4">
+            <Template>
+                <div style="display: flex; justify-content: center;">
+                    <RadzenButton Text="Editar" Style="width: 50%;" Click="@(args => EditarMeta(RejeicaoMateriaisMetaResponseDTO.Id))" />
+                </div>
+            </Template>
+        </RadzenDataGridColumn>
+
+    </Columns>
+</RadzenDataGrid>
+@code {
+    ConsultarRejeicaoMateriaisMetaModel model = new();
+    RadzenDataGrid<RejeicaoMateriaisMetaResponseDTO> grid;
+
+    bool IsExibeBotao = false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/RejeicaoMateriaisMeta/GetAll");
+        model.RejeicaoMateriaisMetaList = await responseList.Content.ReadFromJsonAsync<List<RejeicaoMateriaisMetaResponseDTO>>();
+
+        if (model.RejeicaoMateriaisMetaList == null || model.RejeicaoMateriaisMetaList.Count == 0)
+        {
+            IsExibeBotao = true;
+        }
+    }
+
+    private void CadastrarRejeicaoMateriaisMeta()
+    {
+        Navigation.NavigateTo($"Sistema/Cadastrar/CadastrarRejeicaoMateriaisMeta");
+    }
+
+    private void EditarMeta(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarRejeicaoMateriaisMeta/{id}");
+    }
+
+
+    string GetDescription(Enum value)
+    {
+        FieldInfo? field = value.GetType().GetField(value.ToString());
+        DescriptionAttribute? attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        return attribute == null ? value.ToString() : attribute.Description;
+    }
+
+}
+
+
+

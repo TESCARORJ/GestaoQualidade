@@ -72,6 +72,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDYWRhc3RyYXJcQ2FkYXN0cmFyT2N1cGFjYW9NYW9PYnJhTWV0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Cadastrar/CadastrarProdutividadeMaoObraMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDYWRhc3RyYXJcQ2FkYXN0cmFyUHJvZHV0aXZpZGFkZU1hb09icmFNZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Cadastrar/CadastrarRejeicaoMateriaisMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDYWRhc3RyYXJcQ2FkYXN0cmFyUmVqZWljYW9NYXRlcmlhaXNNZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarAcaoCorrecaoAvaliadaEficaz.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyQWNhb0NvcnJlY2FvQXZhbGlhZGFFZmljYXoucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -160,6 +168,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyT2N1cGFjYW9NYW9PYnJhTWV0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarProdutividadeMaoObra.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyUHJvZHV0aXZpZGFkZU1hb09icmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarProdutividadeMaoObraMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyUHJvZHV0aXZpZGFkZU1hb09icmFNZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarRejeicaoMateriais.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyUmVqZWljYW9NYXRlcmlhaXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarRejeicaoMateriaisMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyUmVqZWljYW9NYXRlcmlhaXNNZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Consultar/ConsultarUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxDb25zdWx0YXJcQ29uc3VsdGFyVXN1YXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -206,6 +230,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Editar/EditarOcupacaoMaoObraMeta.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxFZGl0YXJcRWRpdGFyT2N1cGFjYW9NYW9PYnJhTWV0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Editar/EditarProdutividadeMaoObraMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxFZGl0YXJcRWRpdGFyUHJvZHV0aXZpZGFkZU1hb09icmFNZXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Editar/EditarRejeicaoMateriaisMeta.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lzdGVtYVxFZGl0YXJcRWRpdGFyUmVqZWljYW9NYXRlcmlhaXNNZXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thiago.ntl/Documents/Desenvolvimento/GestaoQualidadeV2/trunk/Nuclep.GestaoQualidade/Nuclep.GestaoQualidade.BlazorServer/Pages/Sistema/Editar/EditarUsuario.razor]

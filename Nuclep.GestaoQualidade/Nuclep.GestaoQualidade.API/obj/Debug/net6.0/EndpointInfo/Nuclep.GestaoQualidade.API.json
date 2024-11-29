@@ -6234,6 +6234,1184 @@
         }
       }
     },
+    "/api/produtividademaoobra/verificametaperguntas": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/gararperguntas": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/{id}": {
+      "put": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/id/{id}": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/getall": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/getallusariologado": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobra/getallativos": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObra"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobrameta": {
+      "post": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobrameta/{id}": {
+      "put": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProdutividadeMaoObraMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobrameta/id/{id}": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobrameta/getall": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/produtividademaoobrameta/getallativos": {
+      "get": {
+        "tags": [
+          "ProdutividadeMaoObraMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProdutividadeMaoObraMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/indicadorhabilitado": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/verificametaperguntas": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/gararperguntas": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/{id}": {
+      "put": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/id/{id}": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/getall": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/getallusariologado": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriais/getallativos": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriais"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriaismeta": {
+      "post": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriaismeta/{id}": {
+      "put": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejeicaoMateriaisMetaRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriaismeta/id/{id}": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriaismeta/getall": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rejeicaomateriaismeta/getallativos": {
+      "get": {
+        "tags": [
+          "RejeicaoMateriaisMeta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RejeicaoMateriaisMetaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/usuario/{id}": {
       "put": {
         "tags": [
@@ -8245,6 +9423,294 @@
         },
         "additionalProperties": false
       },
+      "ProdutividadeMaoObraMetaRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProdutividadeMaoObraMetaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProdutividadeMaoObraRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mes": {
+            "$ref": "#/components/schemas/EnumMes"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "tempoEfetivoFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "tempoDisponivelFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProdutividadeMaoObraResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localidadeNome": {
+            "type": "string",
+            "nullable": true
+          },
+          "mes": {
+            "$ref": "#/components/schemas/EnumMes"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "tempoEfetivoFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "tempoDisponivelFabril": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejeicaoMateriaisMetaRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejeicaoMateriaisMetaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejeicaoMateriaisRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trimestre": {
+            "$ref": "#/components/schemas/EnumTrimestre"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "totalCTIsRejeitados": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalCTIsFinalizados": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejeicaoMateriaisResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAtivo": {
+            "type": "boolean"
+          },
+          "dataHoraCadastro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioCadastroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trimestre": {
+            "$ref": "#/components/schemas/EnumTrimestre"
+          },
+          "ano": {
+            "$ref": "#/components/schemas/EnumAno"
+          },
+          "totalCTIsRejeitados": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "totalCTIsFinalizados": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "meta": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "Usuario": {
         "type": "object",
         "properties": {
@@ -8317,6 +9783,9 @@
             "type": "boolean"
           },
           "isFaturamentoRealizado": {
+            "type": "boolean"
+          },
+          "isRejeicaoMateriais": {
             "type": "boolean"
           },
           "isTempoManutencaoCorretivaEquipamentoProgramado": {
@@ -8447,6 +9916,9 @@
           "isFaturamentoRealizado": {
             "type": "boolean"
           },
+          "isRejeicaoMateriais": {
+            "type": "boolean"
+          },
           "isTempoManutencaoCorretivaEquipamentoProgramado": {
             "type": "boolean"
           },
@@ -8574,6 +10046,9 @@
             "type": "boolean"
           },
           "isFaturamentoRealizado": {
+            "type": "boolean"
+          },
+          "isRejeicaoMateriais": {
             "type": "boolean"
           },
           "isTempoManutencaoCorretivaEquipamentoProgramado": {

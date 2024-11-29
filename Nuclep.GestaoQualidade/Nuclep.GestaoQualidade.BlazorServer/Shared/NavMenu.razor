@@ -73,6 +73,17 @@
                     {
                         <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObra" Icon="done"></RadzenPanelMenuItem>
                     }
+                     
+                    @if (model.IsProdutividadeMaoObra)
+                    {
+                        <RadzenPanelMenuItem Text="Produtividade de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarProdutividadeMaoObra" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+
+                    @if (model.IsRejeicaoMateriais)
+                    {
+                        <RadzenPanelMenuItem Text="Rejeição de Materiais" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRejeicaoMateriais" Icon="done"></RadzenPanelMenuItem>
+                    }
 
                 </RadzenPanelMenuItem>
 
@@ -95,6 +106,8 @@
                         <RadzenPanelMenuItem Text="Eficácia de Treinamento" Style="font-size:12px" Path="Sistema/Consultar/ConsultarEficaciaTreinamentoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizadoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObraMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Produtividade de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarProdutividadeMaoObraMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Rejeição de Materiais" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRejeicaoMateriaisMeta" Icon="done_all"></RadzenPanelMenuItem>
                     </RadzenPanelMenuItem>
                 }
 
@@ -155,6 +168,7 @@
                         IsDuracaoProcessoLicitacao = usuarioResponse.IsDuracaoProcessoLicitacao,
                         IsEventosAtraso = usuarioResponse.IsEventosAtraso,
                         IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
+                        IsRejeicaoMateriais = usuarioResponse.IsRejeicaoMateriais,
                         IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
                         IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
                         IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,

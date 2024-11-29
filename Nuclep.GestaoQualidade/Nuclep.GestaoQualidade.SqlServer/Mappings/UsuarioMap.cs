@@ -33,6 +33,7 @@ namespace Nuclep.GestaoQualidade.SqlServer.Mappings
             builder.Property(x => x.IsDuracaoProcessoLicitacao).HasColumnName("IsDuracaoProcessoLicitacao");
             builder.Property(x => x.IsEventosAtraso).HasColumnName("IsEventosAtraso");
             builder.Property(x => x.IsFaturamentoRealizado).HasColumnName("IsFaturamentoRealizado");
+            builder.Property(x => x.IsRejeicaoMateriais).HasColumnName("IsRejeicaoMateriais");
             builder.Property(x => x.IsTempoManutencaoCorretivaEquipamentoProgramado).HasColumnName("IsTempoManutencaoCorretivaEquipamentoProgramado");
             builder.Property(x => x.IsAcaoCorrecaoAvaliadaEficaz).HasColumnName("IsAcaoCorrecaoAvaliadaEficaz");
             builder.Property(x => x.IsCumprimentoVerbaDestinadaPATMME).HasColumnName("IsCumprimentoVerbaDestinadaPATMME");

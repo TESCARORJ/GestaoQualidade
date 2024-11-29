@@ -1,0 +1,251 @@
+﻿@page "/Sistema/Consultar/ConsultarRejeicaoMateriais"
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.Security.Principal
+@using System.Reflection
+@using System.ComponentModel
+
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Consulta de Rejeição de Materiais</h3>
+            <h6 style="">Esse Indicador possui somente uma Meta por Ano</h6>
+        </div>
+        @if (IsExibeBotao)
+        {
+            <RadzenButton Text="Gerar Perguntas" Style="width: 20%" Click="@(args => CadastrarRejeicaoMateriais())" />
+        }
+    </RadzenStack>
+</RadzenCard>
+
+<RadzenDataGrid @ref="grid" AllowColumnResize="true" TItem="RejeicaoMateriaisResponseDTO"
+                Data="@model.RejeicaoMateriaisList" ColumnWidth="300px"
+                EmptyText="Nenhum registro encontrado"
+                RowUpdate="@OnUpdateRow"
+                EditMode="@editMode">
+    <Columns>
+        <!-- Hidden Column for UsuarioCadastro -->
+        <RadzenDataGridColumn Property="UsuarioCadastro" Visible="false" />
+        <RadzenDataGridColumn Property="UsuarioCadastroId" Visible="false" />
+        <RadzenDataGridColumn Property="DataHoraCadastro" Visible="false" />
+        <!---->
+
+    
+        <RadzenDataGridColumn Property="Meta" Title="Meta" Width="10%" />
+        @* <RadzenDataGridColumn Property="Mes" Title="Mês" Width="10%" /> *@
+
+        <RadzenDataGridColumn Property="Trimestre" Title="Trimestre" Width="10%">
+            <Template Context="data">
+                @GetDescription(((EnumTrimestre)data.Trimestre))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="Ano" Title="Ano" Width="10%">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="TotalCTIsRejeitados" Title="Total CTIs Rejeitados">
+            <EditTemplate Context="data">
+                <RadzenNumeric TValue="long?" @bind-Value="data.TotalCTIsRejeitados" Style="width: 100%;" />
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="TotalCTIsFinalizados" Title="Total CTIs Finalizados">
+            <EditTemplate Context="data">
+                <RadzenNumeric TValue="long?" @bind-Value="data.TotalCTIsFinalizados" Style="width: 100%;" />
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Context="data" Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Frozen="true" FrozenPosition="FrozenColumnPosition.Right" Width="10%">
+            <Template Context="data">
+                <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@(args => EditRow(data))" @onclick:stopPropagation="true">
+                </RadzenButton>
+
+            </Template>
+            <EditTemplate Context="data">
+                <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium" Click="@((args) => SaveRow(data))" aria-label="Save">
+                </RadzenButton>
+                <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" class="rz-my-1 rz-ms-1" Click="@((args) => CancelEdit(data))" aria-label="Cancel">
+                </RadzenButton>
+
+            </EditTemplate>
+        </RadzenDataGridColumn>
+
+
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+
+    DataGridEditMode editMode = DataGridEditMode.Single;
+
+
+
+    ConsultarRejeicaoMateriaisModel model = new();
+    ConsultarUsuarioModel usuarioModel = new();
+    RadzenDataGrid<RejeicaoMateriaisResponseDTO> grid;
+    List<RejeicaoMateriaisResponseDTO> dataToUpdate = new List<RejeicaoMateriaisResponseDTO>();
+
+
+    async Task EditRow(RejeicaoMateriaisResponseDTO model)
+    {
+
+        dataToUpdate.Add(model);
+        await grid.EditRow(model);
+    }
+
+    void CancelEdit(RejeicaoMateriaisResponseDTO model)
+    {
+        Reset(model);
+
+        grid.CancelEditRow(model);
+
+
+    }
+
+    void Reset()
+    {
+        dataToUpdate.Clear();
+    }
+
+    void Reset(RejeicaoMateriaisResponseDTO model)
+    {
+        dataToUpdate.Remove(model);
+    }
+
+    void OnUpdateRow(RejeicaoMateriaisResponseDTO model)
+    {
+        Reset(model);
+
+        var response = Http.PutAsJsonAsync($"/api/RejeicaoMateriais/id/{model.Id}", model);
+    }
+
+    bool IsExibeBotao = false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/RejeicaoMateriais/GetAllUsarioLogado");
+        model.RejeicaoMateriaisList = await responseList.Content.ReadFromJsonAsync<List<RejeicaoMateriaisResponseDTO>>();
+
+        var login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");
+
+        var usuarioLogin = await Http.GetAsync("api/Usuario/Usuario?login=" + login);
+
+        var usuarioResponse = await usuarioLogin.Content.ReadFromJsonAsync<UsuarioResponseDTO>();
+        if (usuarioResponse != null)
+        {
+            usuarioModel = new ConsultarUsuarioModel
+                {
+
+                    Nome = usuarioResponse.Nome,
+                    PerfilSistema = usuarioResponse.PerfilSistema,
+                    IsRejeicaoMateriais = usuarioResponse.IsRejeicaoMateriais,
+
+                };
+        }
+
+
+        if ((model.RejeicaoMateriaisList == null || !model.RejeicaoMateriaisList.Any() && usuarioModel.IsRejeicaoMateriais))
+        {
+
+            IsExibeBotao = true;
+
+        }
+    }
+
+    private async Task CadastrarRejeicaoMateriais()
+    {
+        try
+        {
+            var isMetaPerguntas = await Http.GetAsync("/api/RejeicaoMateriais/VerificaMetaPerguntas");
+
+            if (isMetaPerguntas.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Fala com o administrador!", Detail = "Indicador sem meta definida.", Duration = 4000 });
+            }
+            else
+            {
+                string login = string.IsNullOrEmpty(WindowsIdentity.GetCurrent().Name) ? string.Empty : Utils.RemoverPrefixo(WindowsIdentity.GetCurrent().Name, "NUCLEP\\");                
+                
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Atenção", Detail = "Gerando perguntas.", Duration = 8000 });
+
+                var response = await Http.GetAsync("/api/RejeicaoMateriais/GararPerguntas/");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    await Task.Delay(4000);
+                    Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+                }
+            }
+
+
+          
+           
+        }
+        catch (Exception ex)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha!", Duration = 4000 });
+        }
+    }
+
+    private void Editar(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarRejeicaoMateriais/{id}");
+    }
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+    private async Task SaveRow(RejeicaoMateriaisResponseDTO model)
+    {
+        try
+        {
+            // Envia a linha atualizada para a API
+            // var response = await Http.PostAsJsonAsync("api/aderencia/salvar", data);
+            var response = await Http.PutAsJsonAsync($"/api/RejeicaoMateriais/{model.Id}", model);
+
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Indicador", Detail = "Salvo com sucesso!!", Duration = 4000 });
+
+                grid.CancelEditRow(model);
+
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao salvar", Detail = "Falha ao salvar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha!", Duration = 4000 });
+        }
+    }
+
+    string GetDescription(Enum value)
+    {
+        FieldInfo? field = value.GetType().GetField(value.ToString());
+        DescriptionAttribute? attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        return attribute == null ? value.ToString() : attribute.Description;
+    }
+
+}
+
+
+

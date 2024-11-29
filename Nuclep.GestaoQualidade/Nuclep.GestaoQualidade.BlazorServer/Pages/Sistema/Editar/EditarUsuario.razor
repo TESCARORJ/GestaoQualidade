@@ -281,6 +281,14 @@
                             <RadzenLabel Text="Preenche Indicador de Eficácia de Treinamento?" Component="IsEficaciaTreinamento" class="rz-ms-2" />
                         </div>
                     </RadzenColumn>
+
+                    <RadzenColumn>
+                        <div class="rz-p-12">
+                            <RadzenCheckBox @bind-Value=@model.IsRejeicaoMateriais Name="IsRejeicaoMateriais" />
+                            <RadzenLabel Text="Preenche Indicador de Rejeição de Materiais?" Component="IsRejeicaoMateriais" class="rz-ms-2" />
+                        </div>
+                    </RadzenColumn>
+
                 </RadzenRow>
             }
             <RadzenButton Text="Salvar" ButtonType="ButtonType.Submit"></RadzenButton>

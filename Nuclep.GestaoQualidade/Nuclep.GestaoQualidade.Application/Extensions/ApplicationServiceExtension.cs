@@ -24,6 +24,9 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
              
             services.AddTransient<IFaturamentoRealizadoAppService, FaturamentoRealizadoAppService>();
             services.AddTransient<IFaturamentoRealizadoMetaAppService, FaturamentoRealizadoMetaAppService>();
+             
+            services.AddTransient<IRejeicaoMateriaisAppService, RejeicaoMateriaisAppService>();
+            services.AddTransient<IRejeicaoMateriaisMetaAppService, RejeicaoMateriaisMetaAppService>();
 
             services.AddTransient<IDuracaoProcessoLicitacaoAppService, DuracaoProcessoLicitacaoAppService>();
             services.AddTransient<IDuracaoProcessoLicitacaoMetaAppService, DuracaoProcessoLicitacaoMetaAppService>();
@@ -45,6 +48,9 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
                
             services.AddTransient<IOcupacaoMaoObraAppService, OcupacaoMaoObraAppService>();
             services.AddTransient<IOcupacaoMaoObraMetaAppService, OcupacaoMaoObraMetaAppService>();
+
+            services.AddTransient<IProdutividadeMaoObraAppService, ProdutividadeMaoObraAppService>();
+            services.AddTransient<IProdutividadeMaoObraMetaAppService, ProdutividadeMaoObraMetaAppService>();
 
             services.AddTransient<ILogCrudAppService, LogCrudAppService>();
                         

@@ -21,6 +21,7 @@ namespace Nuclep.GestaoQualidade.BlazorServer.DTOs
         public bool IsDuracaoProcessoLicitacao { get; set; }
         public bool IsEventosAtraso { get; set; }
         public bool IsFaturamentoRealizado { get; set; }
+        public bool IsRejeicaoMateriais { get; set; }
         public bool IsTempoManutencaoCorretivaEquipamentoProgramado { get; set; }
         public bool IsAcaoCorrecaoAvaliadaEficaz { get; set; }
         public bool IsCumprimentoVerbaDestinadaPATMME { get; set; }

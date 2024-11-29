@@ -17,6 +17,9 @@ namespace Nuclep.GestaoQualidade.Domain.Extensions
             
             services.AddTransient<IFaturamentoRealizadoDomainService, FaturamentoRealizadoDomainService>();
             services.AddTransient<IFaturamentoRealizadoMetaDomainService, FaturamentoRealizadoMetaDomainService>();
+              
+            services.AddTransient<IRejeicaoMateriaisDomainService, RejeicaoMateriaisDomainService>();
+            services.AddTransient<IRejeicaoMateriaisMetaDomainService, RejeicaoMateriaisMetaDomainService>();
 
             services.AddTransient<IDuracaoProcessoLicitacaoDomainService, DuracaoProcessoLicitacaoDomainService>();
             services.AddTransient<IDuracaoProcessoLicitacaoMetaDomainService, DuracaoProcessoLicitacaoMetaDomainService>();
@@ -38,6 +41,9 @@ namespace Nuclep.GestaoQualidade.Domain.Extensions
              
             services.AddTransient<IOcupacaoMaoObraDomainService, OcupacaoMaoObraDomainService>();
             services.AddTransient<IOcupacaoMaoObraMetaDomainService, OcupacaoMaoObraMetaDomainService>();
+
+            services.AddTransient<IProdutividadeMaoObraDomainService, ProdutividadeMaoObraDomainService>();
+            services.AddTransient<IProdutividadeMaoObraMetaDomainService, ProdutividadeMaoObraMetaDomainService>();
 
 
             services.AddTransient<ILogCrudDomainService, LogCrudDomainService>();
