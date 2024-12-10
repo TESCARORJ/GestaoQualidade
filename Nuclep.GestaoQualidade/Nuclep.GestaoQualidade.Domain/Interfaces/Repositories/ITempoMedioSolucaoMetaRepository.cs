@@ -5,10 +5,10 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Repositories
 {
     public interface ITempoMedioSolucaoMetaRepository : IBaseRepository<TempoMedioSolucaoMeta, long>
     {
-        Task<DefeitoSoldagem?> GetOneAsync(Expression<Func<DefeitoSoldagem, bool>> where);
-        Task<DefeitoSoldagem?> GetByIdAsync(long id);
-        Task<List<DefeitoSoldagem>> GetAllAsync();
-        Task<List<DefeitoSoldagem>> GetAllUsarioLogadoAsync(long usuarioLogadoId);
-        Task<List<DefeitoSoldagem>> GetAllAtivosAsync();
+        Task<TempoMedioSolucaoMeta?> GetOneAsync(Expression<Func<TempoMedioSolucaoMeta, bool>> where);
+        Task<TempoMedioSolucaoMeta?> GetByIdAsync(long id);
+        Task<List<TempoMedioSolucaoMeta>> GetAllAsync();
+        Task<List<TempoMedioSolucaoMeta>> GetAllUsarioLogadoAsync(long usuarioLogadoId);
+        Task<List<TempoMedioSolucaoMeta>> GetAllAtivosAsync();
     }
 }

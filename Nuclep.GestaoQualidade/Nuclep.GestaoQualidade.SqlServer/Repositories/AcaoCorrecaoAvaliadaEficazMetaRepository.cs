@@ -25,16 +25,19 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
         public async Task<AcaoCorrecaoAvaliadaEficazMeta?> GetByIdAsync(long id)
         {
             return await _context.Set<AcaoCorrecaoAvaliadaEficazMeta>()
-                                 .Where(x => x.Id == id).FirstOrDefaultAsync();
+                                 .Where(x => x.Id == id)
+                                 .Include(x => x.UsuarioCadastro)
+                                 .FirstOrDefaultAsync();
         }
 
         public async Task<List<AcaoCorrecaoAvaliadaEficazMeta>> GetAllAsync()
         {
             return await _context.Set<AcaoCorrecaoAvaliadaEficazMeta>()
-                                 .Where(x => x.Id > 0)
+                                 //.Where(x => x.Id > 0)
                                  .Include(x => x.UsuarioCadastro)
                                  .ToListAsync();
         }
+
         public async Task<List<AcaoCorrecaoAvaliadaEficazMeta>> GetAllUsarioLogadoAsync(long usuarioLogadoId)
         {
             return await _context.Set<AcaoCorrecaoAvaliadaEficazMeta>()
@@ -43,11 +46,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
                                  .ToListAsync();
         }
 
-
         public async Task<List<AcaoCorrecaoAvaliadaEficazMeta>> GetAllAtivosAsync()
         {
             return await _context.Set<AcaoCorrecaoAvaliadaEficazMeta>()
-                                 .Where(x => x.Id > 0 && x.IsAtivo == true)
+                                 .Where(x => x.IsAtivo == true)
                                  .Include(x => x.UsuarioCadastro)
                                  .ToListAsync();
         }

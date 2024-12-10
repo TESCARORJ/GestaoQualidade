@@ -20,15 +20,15 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
             _context = context;
         }
 
-        public async Task<LogTabela?> GetOneAsync(Expression<Func<LogTabela, bool>> where)
+        public Task<LogTabela> GetOneAsync(Expression<Func<LogTabela, bool>> where)
         {
-            return await _context.Set<LogTabela>()
+            return _context.Set<LogTabela>()
                                  .Where(where)
                                  .AsNoTracking()
                                  .FirstOrDefaultAsync();
         }
 
-        public async Task<LogTabela?> GetByIdAsync(long id)
+        public async Task<LogTabela> GetByIdAsync(long id)
         {
             return await _context.Set<LogTabela>()
                                  .Where(x => x.Id == id)

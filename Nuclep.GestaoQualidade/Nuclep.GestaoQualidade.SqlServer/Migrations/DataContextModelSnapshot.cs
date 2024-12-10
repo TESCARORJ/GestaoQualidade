@@ -725,6 +725,173 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.ToTable("Ind_FaturamentoRealizadoMeta", (string)null);
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ItensCadastradosMais15Dias", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<long?>("Atividade2")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("QuantidadeItensCadastrados")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("QuantidadeItensCadastrados15Dias")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_ItensCadastradosMais15Dias", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ItensCadastradosMais15DiasMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_ItensCadastradosMais15DiasMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.NaoConformidade", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<decimal?>("Atividade1")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("Atividade2")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_NaoConformidade", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.NaoConformidadeMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_NaoConformidadeMeta", (string)null);
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObra", b =>
                 {
                     b.Property<long>("Id")
@@ -968,6 +1135,651 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.ToTable("Ind_RejeicaoMateriaisMeta", (string)null);
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RespostaAreasRiscosPrazoOriginal", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("Realizado")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Trimestre")
+                        .HasColumnType("int")
+                        .HasColumnName("Trimestre");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_RespostaAreasRiscosPrazoOriginal", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RespostaAreasRiscosPrazoOriginalMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_RespostaAreasRiscosPrazoOriginalMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoClientes", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("Realizado")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_SatisfacaoClientes", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoClientesMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_SatisfacaoClientesMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoUsuario", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<decimal?>("Atividade1")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("Atividade2")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_SatisfacaoUsuario", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoUsuarioMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_SatisfacaoUsuarioMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ServiceLevelAgreement", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<decimal?>("Atividade1")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("Atividade2")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_ServiceLevelAgreement", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ServiceLevelAgreementMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_ServiceLevelAgreementMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TaxaConformidadeDocumentosQualidade", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano1")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano1");
+
+                    b.Property<int>("Ano2")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano2");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("TotalDentroPrazo")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("TotalDocumentos")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_TaxaConformidadeDocumentosQualidade", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TaxaConformidadeDocumentosQualidadeMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano1")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano1");
+
+                    b.Property<int>("Ano2")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano2");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_TaxaConformidadeDocumentosQualidadeMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioEmissaoOCItensCriticos", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("Realizado")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_TempoMedioEmissaoOCItensCriticos", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioEmissaoOCItensCriticosMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_TempoMedioEmissaoOCItensCriticosMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioSolucao", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<decimal?>("Atividade1")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("Atividade2")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_TempoMedioSolucao", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioSolucaoMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_TempoMedioSolucaoMeta", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoReparoEquipamentosProgramadosObras", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int")
+                        .HasColumnName("Mes");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<decimal?>("TotalHoraManutencaoEquipamentoRealizadas")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("TotalHorasTrabalhadas")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId");
+
+                    b.ToTable("Ind_TempoReparoEquipamentosProgramadosObras", (string)null);
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoReparoEquipamentosProgramadosObrasMeta", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("int")
+                        .HasColumnName("Ano");
+
+                    b.Property<DateTime>("DataHoraCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAtivo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meta")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UsuarioCadastroId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioCadastroId")
+                        .IsUnique();
+
+                    b.ToTable("Ind_TempoReparoEquipamentosProgramadosObrasMeta", (string)null);
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Localidade", b =>
                 {
                     b.Property<long>("Id")
@@ -1022,8 +1834,11 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("bit");
 
                     b.Property<long>("LogTabelaId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("IdLogTabela");
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("LogTabelaNome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("LogTipo")
                         .HasColumnType("int")
@@ -1033,8 +1848,7 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("UsuarioId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("UsuarioId");
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UsuarioNome")
                         .HasColumnType("nvarchar(max)");
@@ -1149,6 +1963,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("bit")
                         .HasColumnName("IsLocalidadeItaguai");
 
+                    b.Property<bool>("IsNaoConformidade")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsNaoConformidade");
+
                     b.Property<bool>("IsNivelServicoAtendimento")
                         .HasColumnType("bit")
                         .HasColumnName("IsNivelServicoAtendimento");
@@ -1169,17 +1987,21 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("bit")
                         .HasColumnName("IsRejeicaoMateriais");
 
-                    b.Property<bool>("IsRejeicaoMateriaisAntesTratamento")
-                        .HasColumnType("bit")
-                        .HasColumnName("IsRejeicaoMateriaisAntesTratamento");
-
                     b.Property<bool>("IsRespostaAreasPrazoOriginal")
                         .HasColumnType("bit")
                         .HasColumnName("IsRespostaAreasPrazoOriginal");
 
+                    b.Property<bool>("IsRespostaAreasRiscosPrazoOriginal")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsRespostaAreasRiscosPrazoOriginal");
+
                     b.Property<bool>("IsRetrabalhoDocumentos")
                         .HasColumnType("bit")
                         .HasColumnName("IsRetrabalhoDocumentos");
+
+                    b.Property<bool>("IsSatisfacaoClientes")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsSatisfacaoClientes");
 
                     b.Property<bool>("IsSatisfacaoClientesAreaResponsavel")
                         .HasColumnType("bit")
@@ -1189,6 +2011,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                         .HasColumnType("bit")
                         .HasColumnName("IsSatisfacaoUsuario");
 
+                    b.Property<bool>("IsServiceLevelAgreement")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsServiceLevelAgreement");
+
                     b.Property<bool>("IsTaxaConformidadeDocumentosQualidade")
                         .HasColumnType("bit")
                         .HasColumnName("IsTaxaConformidadeDocumentosQualidade");
@@ -1196,6 +2022,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Property<bool>("IsTempoManutencaoCorretivaEquipamentoProgramado")
                         .HasColumnType("bit")
                         .HasColumnName("IsTempoManutencaoCorretivaEquipamentoProgramado");
+
+                    b.Property<bool>("IsTempoMedioEmissaoOCItensCriticos")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsTempoMedioEmissaoOCItensCriticos");
 
                     b.Property<bool>("IsTempoMedioInspecaoRecebimentoMateriais")
                         .HasColumnType("bit")
@@ -1436,6 +2266,50 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.Navigation("UsuarioCadastro");
                 });
 
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ItensCadastradosMais15Dias", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ItensCadastradosMais15DiasMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ItensCadastradosMais15DiasMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.NaoConformidade", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.NaoConformidadeMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.NaoConformidadeMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
             modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.OcupacaoMaoObra", b =>
                 {
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
@@ -1496,6 +2370,182 @@ namespace Nuclep.GestaoQualidade.SqlServer.Migrations
                     b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
                         .WithOne()
                         .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RejeicaoMateriaisMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RespostaAreasRiscosPrazoOriginal", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RespostaAreasRiscosPrazoOriginalMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.RespostaAreasRiscosPrazoOriginalMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoClientes", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoClientesMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoClientesMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoUsuario", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoUsuarioMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.SatisfacaoUsuarioMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ServiceLevelAgreement", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ServiceLevelAgreementMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.ServiceLevelAgreementMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TaxaConformidadeDocumentosQualidade", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TaxaConformidadeDocumentosQualidadeMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TaxaConformidadeDocumentosQualidadeMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioEmissaoOCItensCriticos", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioEmissaoOCItensCriticosMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioEmissaoOCItensCriticosMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioSolucao", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioSolucaoMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoMedioSolucaoMeta", "UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoReparoEquipamentosProgramadosObras", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithMany()
+                        .HasForeignKey("UsuarioCadastroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UsuarioCadastro");
+                });
+
+            modelBuilder.Entity("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoReparoEquipamentosProgramadosObrasMeta", b =>
+                {
+                    b.HasOne("Nuclep.GestaoQualidade.Domain.Models.Usuario", "UsuarioCadastro")
+                        .WithOne()
+                        .HasForeignKey("Nuclep.GestaoQualidade.Domain.Models.Indicadores.TempoReparoEquipamentosProgramadosObrasMeta", "UsuarioCadastroId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

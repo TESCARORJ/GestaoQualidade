@@ -35,7 +35,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
         {
             if (!await _rejeicaoMateriaisRepository.VerifyExistsAsync(x => x.Id == entity.Id))
             {
-                throw new Exception($"Faturamento Realizados com ID {entity.Id} não foi encontrado ");
+                throw new Exception($"Rejeição de Materiais com ID {entity.Id} não foi encontrado ");
             }
 
             await _rejeicaoMateriaisRepository.UpdateAsync(entity);
@@ -49,7 +49,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Faturamento Realizados com ID {id} não foi encontrado ");
+                throw new Exception($"Rejeição de Materiais com ID {id} não foi encontrado ");
             }
 
             await _rejeicaoMateriaisRepository.DeleteAsync(registro);
@@ -64,7 +64,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Faturamento Realizados com ID {id} não foi encontrado ");
+                throw new Exception($"Rejeição de Materiais com ID {id} não foi encontrado ");
             }
 
             return registro;

@@ -8,7 +8,7 @@
 @inject HttpClient Http
 @inject NavigationManager Navigation
 
-<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+@* <RadzenCard Variant="Variant.Outlined" class="rz-my-4">
     <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
         <RadzenLabel Text="Sensibilidade ao caso do filtro" Component="caseSensitivity" />
         <RadzenDropDown @bind-Value="filterCaseSensitivity" Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)))" Change="@(args => grid.Reload())" Name="caseSensitivity">
@@ -25,7 +25,7 @@
 
     </RadzenStack>
 </RadzenCard>
-
+ *@
 <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.SimpleWithMenu"
                 PageSize="50" AllowPaging="true" AllowSorting="true" Data="@model.LogCrudList" ColumnWidth="300px"
                 FilterCaseSensitivity="@filterCaseSensitivity"

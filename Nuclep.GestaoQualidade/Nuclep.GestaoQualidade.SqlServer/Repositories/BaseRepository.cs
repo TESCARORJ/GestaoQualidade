@@ -84,40 +84,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Repositories
             }
         }
 
-        //public virtual async Task<TEntity?> GetOneAsync(Expression<Func<TEntity, bool>> where)
-        //{
-        //    return await _dataContext.Set<TEntity>().FirstOrDefaultAsync(where);
-        //}
-        //public virtual async Task<TEntity?> GetByIdAsync(TKey id)
-        //{
-        //    return await _dataContext.Set<TEntity>().FindAsync(id);
-        //}
-
-        //public virtual async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> where)
-        //{
-        //    try
-        //    {
-        //        return await _dataContext.Set<TEntity>().Where(where).ToListAsync();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw;
-        //    }
-        //}
-
-        //public virtual async Task<List<TEntity>> GetAllAtivosAsync(Expression<Func<TEntity, bool>> where)
-        //{
-        //    return await _dataContext.Set<TEntity>().Where(where).ToListAsync();
-        //}
-
         public virtual async Task<bool> VerifyExistsAsync(Expression<Func<TEntity, bool>> where)
         {
             return await _dataContext.Set<TEntity>().AnyAsync(where);
         }
-
-
 
         public virtual void Dispose()
         {

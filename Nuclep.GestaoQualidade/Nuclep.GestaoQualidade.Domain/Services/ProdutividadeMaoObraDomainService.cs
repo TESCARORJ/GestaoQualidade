@@ -34,7 +34,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
         {
             if (!await _produtividadeMaoObraRepository.VerifyExistsAsync(x => x.Id == entity.Id))
             {
-                throw new Exception($"Aderência Programação Mensal com ID {entity.Id} não encontrada.");
+                throw new Exception($"Produtividade de Mão de Obra com ID {entity.Id} não encontrada.");
             }
 
             await _produtividadeMaoObraRepository.UpdateAsync(entity);
@@ -49,7 +49,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Aderência Programação Mensal com ID {id} não encontrada.");
+                throw new Exception($"Produtividade de Mão de Obra com ID {id} não encontrada.");
             }
 
             await _produtividadeMaoObraRepository.DeleteAsync(registro);
@@ -64,7 +64,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Aderência Programação Mensal com ID {id} não encontrada.");
+                throw new Exception($"Produtividade de Mão de Obra com ID {id} não encontrada.");
             }
 
             return registro;

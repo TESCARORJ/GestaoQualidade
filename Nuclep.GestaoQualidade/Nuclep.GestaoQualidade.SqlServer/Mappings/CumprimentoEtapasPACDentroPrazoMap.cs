@@ -18,10 +18,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Mappings
                 
 
             builder.Property(e => e.PACPrazo)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.Property(e => e.TotalPACAberto)
-                .HasColumnType("decimal(18,2)");    
+                .HasColumnType("decimal(18,2)").IsRequired(false);    
 
             builder.Property(e => e.NomeAD)
                 .HasColumnType("varchar(255)");

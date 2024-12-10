@@ -42,6 +42,12 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<RejeicaoMateriaisMetaRequestDTO, RejeicaoMateriaisMeta>().ReverseMap();
             CreateMap<RejeicaoMateriaisMeta, RejeicaoMateriaisMetaResponseDTO>().ReverseMap();
 
+            CreateMap<RespostaAreasRiscosPrazoOriginalRequestDTO, RespostaAreasRiscosPrazoOriginal>().ReverseMap();
+            CreateMap<RespostaAreasRiscosPrazoOriginal, RespostaAreasRiscosPrazoOriginalResponseDTO>().ReverseMap();
+            CreateMap<RespostaAreasRiscosPrazoOriginalMetaRequestDTO, RespostaAreasRiscosPrazoOriginalMeta>().ReverseMap();
+            CreateMap<RespostaAreasRiscosPrazoOriginalMeta, RespostaAreasRiscosPrazoOriginalMetaResponseDTO>().ReverseMap();
+
+
             CreateMap<DuracaoProcessoLicitacaoRequestDTO, DuracaoProcessoLicitacao>().ReverseMap();
             CreateMap<DuracaoProcessoLicitacao, DuracaoProcessoLicitacaoResponseDTO>().ReverseMap();
             CreateMap<DuracaoProcessoLicitacaoMetaRequestDTO, DuracaoProcessoLicitacaoMeta>().ReverseMap();
@@ -84,6 +90,55 @@ namespace Nuclep.GestaoQualidade.Application.Mappings
             CreateMap<ProdutividadeMaoObra, ProdutividadeMaoObraResponseDTO>().ReverseMap();
             CreateMap<ProdutividadeMaoObraMetaRequestDTO, ProdutividadeMaoObraMeta>().ReverseMap();
             CreateMap<ProdutividadeMaoObraMeta, ProdutividadeMaoObraMetaResponseDTO>().ReverseMap();
+
+
+            CreateMap<SatisfacaoClientesRequestDTO, SatisfacaoClientes>().ReverseMap();
+            CreateMap<SatisfacaoClientes, SatisfacaoClientesResponseDTO>().ReverseMap();
+            CreateMap<SatisfacaoClientesMetaRequestDTO, SatisfacaoClientesMeta>().ReverseMap();
+            CreateMap<SatisfacaoClientesMeta, SatisfacaoClientesMetaResponseDTO>().ReverseMap();
+
+            CreateMap<TempoMedioEmissaoOCItensCriticosRequestDTO, TempoMedioEmissaoOCItensCriticos>().ReverseMap();
+            CreateMap<TempoMedioEmissaoOCItensCriticos, TempoMedioEmissaoOCItensCriticosResponseDTO>().ReverseMap();
+            CreateMap<TempoMedioEmissaoOCItensCriticosMetaRequestDTO, TempoMedioEmissaoOCItensCriticosMeta>().ReverseMap();
+            CreateMap<TempoMedioEmissaoOCItensCriticosMeta, TempoMedioEmissaoOCItensCriticosMetaResponseDTO>().ReverseMap();
+
+            CreateMap<SatisfacaoUsuarioRequestDTO, SatisfacaoUsuario>().ReverseMap();
+            CreateMap<SatisfacaoUsuario, SatisfacaoUsuarioResponseDTO>().ReverseMap();
+            CreateMap<SatisfacaoUsuarioMetaRequestDTO, SatisfacaoUsuarioMeta>().ReverseMap();
+            CreateMap<SatisfacaoUsuarioMeta, SatisfacaoUsuarioMetaResponseDTO>().ReverseMap();
+              
+            CreateMap<TempoMedioSolucaoRequestDTO, TempoMedioSolucao>().ReverseMap();
+            CreateMap<TempoMedioSolucao, TempoMedioSolucaoResponseDTO>().ReverseMap();
+            CreateMap<TempoMedioSolucaoMetaRequestDTO, TempoMedioSolucaoMeta>().ReverseMap();
+            CreateMap<TempoMedioSolucaoMeta, TempoMedioSolucaoMetaResponseDTO>().ReverseMap();
+
+            CreateMap<TempoReparoEquipamentosProgramadosObrasRequestDTO, TempoReparoEquipamentosProgramadosObras>().ReverseMap();
+            CreateMap<TempoReparoEquipamentosProgramadosObras, TempoReparoEquipamentosProgramadosObrasResponseDTO>().ReverseMap();
+            CreateMap<TempoReparoEquipamentosProgramadosObrasMetaRequestDTO, TempoReparoEquipamentosProgramadosObrasMeta>().ReverseMap();
+            CreateMap<TempoReparoEquipamentosProgramadosObrasMeta, TempoReparoEquipamentosProgramadosObrasMetaResponseDTO>().ReverseMap();
+
+
+            CreateMap<ServiceLevelAgreementRequestDTO, ServiceLevelAgreement>().ReverseMap();
+            CreateMap<ServiceLevelAgreement, ServiceLevelAgreementResponseDTO>().ReverseMap();
+            CreateMap<ServiceLevelAgreementMetaRequestDTO, ServiceLevelAgreementMeta>().ReverseMap();
+            CreateMap<ServiceLevelAgreementMeta, ServiceLevelAgreementMetaResponseDTO>().ReverseMap();
+              
+            CreateMap<ItensCadastradosMais15DiasRequestDTO, ItensCadastradosMais15Dias>().ReverseMap();
+            CreateMap<ItensCadastradosMais15Dias, ItensCadastradosMais15DiasResponseDTO>().ReverseMap();
+            CreateMap<ItensCadastradosMais15DiasMetaRequestDTO, ItensCadastradosMais15DiasMeta>().ReverseMap();
+            CreateMap<ItensCadastradosMais15DiasMeta, ItensCadastradosMais15DiasMetaResponseDTO>().ReverseMap();
+            
+            CreateMap<NaoConformidadeRequestDTO, NaoConformidade>().ReverseMap();
+            CreateMap<NaoConformidade, NaoConformidadeResponseDTO>().ReverseMap();
+            CreateMap<NaoConformidadeMetaRequestDTO, NaoConformidadeMeta>().ReverseMap();
+            CreateMap<NaoConformidadeMeta, NaoConformidadeMetaResponseDTO>().ReverseMap();
+
+            CreateMap<TaxaConformidadeDocumentosQualidadeRequestDTO, TaxaConformidadeDocumentosQualidade>().ReverseMap();
+            CreateMap<TaxaConformidadeDocumentosQualidade, TaxaConformidadeDocumentosQualidadeResponseDTO>().ReverseMap();
+            CreateMap<TaxaConformidadeDocumentosQualidadeMetaRequestDTO, TaxaConformidadeDocumentosQualidadeMeta>().ReverseMap();
+            CreateMap<TaxaConformidadeDocumentosQualidadeMeta, TaxaConformidadeDocumentosQualidadeMetaResponseDTO>().ReverseMap();
+
+
 
             CreateMap<Usuario, UsuarioResponseDTO>().ReverseMap();
             CreateMap<Usuario, UsuarioRequestDTO>().ReverseMap();

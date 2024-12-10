@@ -1,0 +1,130 @@
+﻿@page "/Sistema/Editar/EditarSatisfacaoUsuarioMeta/{id:long}"
+
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Editar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+@using System.ComponentModel
+@using Radzen.Blazor
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject NotificationService NotificationService
+@inject DialogService DialogService
+
+
+<h3>Editar Meta Satisfação de Usuário</h3>
+
+<div class="rz-p-0 rz-p-md-12">
+    <RadzenTemplateForm TItem="EditarSatisfacaoUsuarioMetaModel" Submit="Enviar" Data=@model>
+
+        <RadzenStack Gap="1rem">
+            <RadzenRow>
+                <RadzenColumn>
+                    <RadzenFormField class="col-md-12" Text="Meta">
+                        <ChildContent>
+                            <RadzenNumeric Name="Meta" @bind-Value=@model.Meta />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Meta" Text="First name is required." />
+                        </Helper>
+                    </RadzenFormField>
+                </RadzenColumn>
+
+   
+
+                <RadzenColumn>
+                    <RadzenFormField Text="Ano" class="col-md-12">
+                        <RadzenDropDown Data=@anoList @bind-Value="@model.Ano" TextProperty="Description" ValueProperty="Value" />
+                    </RadzenFormField>
+                </RadzenColumn>
+
+            </RadzenRow>
+
+
+        </RadzenStack>
+        <br />
+        <RadzenButton Text="Salvar Meta" ButtonType="ButtonType.Submit"></RadzenButton>
+
+    </RadzenTemplateForm>
+</div>
+
+<RadzenNotification />
+
+
+@code {
+    [Parameter]
+    public long Id { get; set; }
+    private List<EnumDescription>? mesList;
+    private List<EnumDescription>? anoList;
+
+
+    private EditarSatisfacaoUsuarioMetaModel model = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        model = await Http.GetFromJsonAsync<EditarSatisfacaoUsuarioMetaModel>($"api/SatisfacaoUsuarioMeta/id/{Id}");
+
+        if (model == null)
+        {
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Erro", Detail = "Usuário não encontrado", Duration = 4000 });
+            //Navigation.NavigateTo("/Sistema/SatisfacaoUsuarioMeta");
+            return;
+
+        }
+
+        mesList = Enum.GetValues(typeof(EnumMes))
+                             .Cast<EnumMes>()
+                             .Select(e => new EnumDescription { Value = e, Description = GetEnumDescription(e) })
+                             .ToList();
+
+        anoList = Enum.GetValues(typeof(EnumAno))
+                             .Cast<EnumAno>()
+                             .Select(e => new EnumDescription { Value = e, Description = GetEnumDescription(e) })
+                             .ToList();
+
+    }
+
+    private string GetEnumDescription(Enum value)
+    {
+        var field = value.GetType().GetField(value.ToString());
+        if (field == null) return value.ToString();
+
+        var attribute = (DescriptionAttribute?)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
+        return attribute?.Description ?? value.ToString();
+    }
+
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+    }
+
+
+
+    private async Task Enviar()
+    {
+        try
+        {
+            //validação
+
+            HttpResponseMessage response = await Http.PutAsJsonAsync($"api/SatisfacaoUsuarioMeta/{model.Id}", model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Editado com sucesso!", Detail = "Editado com sucesso!", Duration = 4000 });
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/Sistema/Consultar/ConsultarSatisfacaoUsuarioMeta");
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Falha ao editar", Detail = "Falha ao editar", Duration = 4000 });
+            }
+        }
+        catch (Exception ex)
+        {
+
+            ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = $"Erro: {ex.Message}", Detail = "Falha ao editar", Duration = 4000 });
+        }
+    }
+}

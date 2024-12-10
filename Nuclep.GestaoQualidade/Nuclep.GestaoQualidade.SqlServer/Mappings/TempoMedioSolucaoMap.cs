@@ -1,26 +1,42 @@
-﻿//using FluentNHibernate.Mapping;
-//using Nuclep.GestaoQualidade.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Nuclep.GestaoQualidade.Domain.Models.Indicadores;
 
-//namespace Nuclep.GestaoQualidade.SqlServer.Mappings
-//{
-//    public class TempoMedioSolucaoMap:ClassMap<TempoMedioSolucao>
-//    {
-//        public TempoMedioSolucaoMap()
-//        {
-//            Table("TempoMedioSolucao");
+namespace Nuclep.GestaoQualidade.SqlServer.Mappings
+{
+    public class TempoMedioSolucaoMap : IEntityTypeConfiguration<TempoMedioSolucao>
+    {
+        public void Configure(EntityTypeBuilder<TempoMedioSolucao> builder)
+        {
+            builder.ToTable("Ind_TempoMedioSolucao");
 
-//            Id(a => a.Id);
-  
-//            Map(a => a.IsAtivo);
-//            Map(a => a.DataHoraCadastro);
-//            Map(a => a.Ano);
-//            Map(a => a.Mes);
-//            Map(a => a.Atividade1);
-//            Map(a => a.Atividade2);
-//            Map(a => a.Meta);
+            builder.HasKey(e => e.Id);
 
-//            References(x => x.UsuarioCadastro).Column("IdUsuarioCadastro");
+            builder.Property(e => e.Ano).HasColumnName("Ano").HasColumnType("int");
 
-//        }
-//    }
-//}
+            builder.Property(e => e.Mes).HasColumnName("Mes").HasColumnType("int");
+
+            builder.Property(e => e.Atividade1)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.Atividade2)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.NomeAD)
+                .HasColumnType("varchar(255)");
+
+            builder.Property(e => e.IsAtivo)
+                .HasColumnType("bit");
+
+            builder.Property(e => e.DataHoraCadastro)
+                .HasColumnType("datetime2");
+
+            builder.HasOne(e => e.UsuarioCadastro)
+                  .WithMany()
+                  .HasForeignKey(e => e.UsuarioCadastroId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+}
+
+

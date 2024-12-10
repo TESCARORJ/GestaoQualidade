@@ -25,6 +25,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
             modelBuilder.ApplyConfiguration(new FaturamentoRealizadoMetaMap());
             modelBuilder.ApplyConfiguration(new RejeicaoMateriaisMap());
             modelBuilder.ApplyConfiguration(new RejeicaoMateriaisMetaMap());
+            modelBuilder.ApplyConfiguration(new RespostaAreasRiscosPrazoOriginalMap());
+            modelBuilder.ApplyConfiguration(new RespostaAreasRiscosPrazoOriginalMetaMap());
             modelBuilder.ApplyConfiguration(new DuracaoProcessoLicitacaoMap());
             modelBuilder.ApplyConfiguration(new DuracaoProcessoLicitacaoMetaMap());     
             modelBuilder.ApplyConfiguration(new UsuarioMap());
@@ -46,6 +48,33 @@ namespace Nuclep.GestaoQualidade.SqlServer.Contexts
 
             modelBuilder.ApplyConfiguration(new ProdutividadeMaoObraMap());
             modelBuilder.ApplyConfiguration(new ProdutividadeMaoObraMetaMap());
+            
+            modelBuilder.ApplyConfiguration(new SatisfacaoClientesMap());
+            modelBuilder.ApplyConfiguration(new SatisfacaoClientesMetaMap());
+
+            modelBuilder.ApplyConfiguration(new SatisfacaoUsuarioMap());
+            modelBuilder.ApplyConfiguration(new SatisfacaoUsuarioMetaMap());
+              
+            modelBuilder.ApplyConfiguration(new TempoMedioSolucaoMap());
+            modelBuilder.ApplyConfiguration(new TempoMedioSolucaoMetaMap());
+              
+            modelBuilder.ApplyConfiguration(new ServiceLevelAgreementMap());
+            modelBuilder.ApplyConfiguration(new ServiceLevelAgreementMetaMap());
+             
+            modelBuilder.ApplyConfiguration(new ItensCadastradosMais15DiasMap());
+            modelBuilder.ApplyConfiguration(new ItensCadastradosMais15DiasMetaMap());
+
+            modelBuilder.ApplyConfiguration(new NaoConformidadeMap());
+            modelBuilder.ApplyConfiguration(new NaoConformidadeMetaMap());
+
+            modelBuilder.ApplyConfiguration(new TaxaConformidadeDocumentosQualidadeMap());
+            modelBuilder.ApplyConfiguration(new TaxaConformidadeDocumentosQualidadeMetaMap());
+
+            modelBuilder.ApplyConfiguration(new TempoMedioEmissaoOCItensCriticosMap());
+            modelBuilder.ApplyConfiguration(new TempoMedioEmissaoOCItensCriticosMetaMap());
+
+            modelBuilder.ApplyConfiguration(new TempoReparoEquipamentosProgramadosObrasMap());
+            modelBuilder.ApplyConfiguration(new TempoReparoEquipamentosProgramadosObrasMetaMap());
 
         }
     }

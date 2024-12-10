@@ -4,15 +4,14 @@ using System.Net;
 
 namespace Nuclep.GestaoQualidade.Domain.Models.Indicadores
 {
-    public class ReducaoRNC : IEntidade
+    public class ItensCadastradosMais15Dias : IEntidade
     {
-
-        public string? Ano { get; set; }
-        public decimal TotalRNC { get; set; }
-        public decimal TotalPecasProduzidas { get; set; }
-
-        public List<ReducaoRNCMeta> MesList;
-       
+        public EnumAno Ano { get; set; }
+        public EnumMes Mes { get; set; }
+        public long? QuantidadeItensCadastrados15Dias { get; set; }
+        public long? QuantidadeItensCadastrados { get; set; }
+        public long? Atividade2 { get; set; }
+        public int Meta { get; set; }
 
     }
 }

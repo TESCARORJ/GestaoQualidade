@@ -18,13 +18,13 @@ namespace Nuclep.GestaoQualidade.SqlServer.Mappings
                 
 
             builder.Property(e => e.TotalAtividadesProgramadas)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.Property(e => e.AtividadesRealizadas)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.Property(e => e.AtividadesCanceladas)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
     
 

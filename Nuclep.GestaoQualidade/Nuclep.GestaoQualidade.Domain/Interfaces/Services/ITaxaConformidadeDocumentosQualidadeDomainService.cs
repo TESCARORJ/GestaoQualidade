@@ -5,6 +5,7 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Services
     public interface ITaxaConformidadeDocumentosQualidadeDomainService : IDisposable
     {
         Task<TaxaConformidadeDocumentosQualidade> AddAsync(TaxaConformidadeDocumentosQualidade entity);
+        Task<List<TaxaConformidadeDocumentosQualidade>> AddListAsync(List<TaxaConformidadeDocumentosQualidade> entity);
         Task<TaxaConformidadeDocumentosQualidade> UpdateAsync(TaxaConformidadeDocumentosQualidade entity);
         Task<TaxaConformidadeDocumentosQualidade> DeleteAsync(long id);
         Task<TaxaConformidadeDocumentosQualidade> GetByIdAsync(long id);

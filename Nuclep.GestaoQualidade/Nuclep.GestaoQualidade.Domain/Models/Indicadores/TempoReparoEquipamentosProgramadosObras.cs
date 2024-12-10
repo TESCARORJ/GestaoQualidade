@@ -5,11 +5,10 @@ namespace Nuclep.GestaoQualidade.Domain.Models.Indicadores
 {
     public class TempoReparoEquipamentosProgramadosObras : IEntidade
     {
-        public string? Ano { get; set; }
-        public string? Mes { get; set; }
-        public decimal TotalHoraManutencaoEquipamentoRealizadas { get; set; }
-        public decimal TotalHorasTrabalhadas { get; set; }
-
-        public List<TempoReparoEquipamentosProgramadosObrasMeta> MesList;
+        public EnumAno Ano { get; set; }
+        public EnumMes Mes { get; set; }
+        public long? TotalHoraManutencaoEquipamentoRealizadas { get; set; }
+        public long? TotalHorasTrabalhadas { get; set; }
+        public int Meta { get; set; }
     }
 }

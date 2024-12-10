@@ -1,22 +1,37 @@
-﻿//using FluentNHibernate.Mapping;
-//using Nuclep.GestaoQualidade.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Nuclep.GestaoQualidade.Domain.Models.Indicadores;
 
-//namespace Nuclep.GestaoQualidade.SqlServer.Mappings
-//{
-//    public class TempoMedioSolucaoMetaMap : ClassMap<TempoMedioSolucaoMeta>
-//    {
-//        public TempoMedioSolucaoMetaMap()
-//        {
-//            Table("TempoMedioSolucaoMeta");
+namespace Nuclep.GestaoQualidade.SqlServer.Mappings
+{
+    public class TempoMedioSolucaoMetaMap : IEntityTypeConfiguration<TempoMedioSolucaoMeta>
+    {
+        public void Configure(EntityTypeBuilder<TempoMedioSolucaoMeta> builder)
+        {
+            builder.ToTable("Ind_TempoMedioSolucaoMeta");
 
-//            Id(a => a.Id);
-  
-//            Map(a => a.IsAtivo);
-//            Map(a => a.DataHoraCadastro);
-//            Map(a => a.Meta);
+            builder.HasKey(a => a.Id);
 
-//            References(x => x.UsuarioCadastro).Column("IdUsuarioCadastro");
+            builder.Property(a => a.IsAtivo)
+                .HasColumnType("bit");
 
-//        }
-//    }
-//}
+            builder.Property(a => a.DataHoraCadastro)
+                .HasColumnType("datetime2");
+
+            builder.Property(a => a.Meta)
+                .HasColumnType("int");
+
+            builder.Property(e => e.DataHoraCadastro)
+              .HasColumnType("datetime2");
+
+            builder.Property(e => e.Ano).HasColumnName("Ano").HasColumnType("int");
+
+            builder.HasOne(e => e.UsuarioCadastro)
+                .WithOne()
+                .HasForeignKey<TempoMedioSolucaoMeta>(e => e.UsuarioCadastroId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}
+
+

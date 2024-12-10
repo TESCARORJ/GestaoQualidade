@@ -28,6 +28,8 @@ namespace Nuclep.GestaoQualidade.SqlServer.Extensions
             services.AddTransient<IFaturamentoRealizadoMetaRepository, FaturamentoRealizadoMetaRepository>();
             services.AddTransient<IRejeicaoMateriaisRepository, RejeicaoMateriaisRepository>();
             services.AddTransient<IRejeicaoMateriaisMetaRepository, RejeicaoMateriaisMetaRepository>();
+            services.AddTransient<IRespostaAreasRiscosPrazoOriginalRepository, RespostaAreasRiscosPrazoOriginalRepository>();
+            services.AddTransient<IRespostaAreasRiscosPrazoOriginalMetaRepository, RespostaAreasRiscosPrazoOriginalMetaRepository>();
             services.AddTransient<IDuracaoProcessoLicitacaoRepository, DuracaoProcessoLicitacaoRepository>();
             services.AddTransient<IDuracaoProcessoLicitacaoMetaRepository, DuracaoProcessoLicitacaoMetaRepository>();
             services.AddTransient<IAutoavaliacaoGerencialSGQRepository, AutoavaliacaoGerencialSGQRepository>();
@@ -42,6 +44,32 @@ namespace Nuclep.GestaoQualidade.SqlServer.Extensions
             services.AddTransient<IEficaciaTreinamentoMetaRepository, EficaciaTreinamentoMetaRepository>();
             services.AddTransient<IProdutividadeMaoObraRepository, ProdutividadeMaoObraRepository>();
             services.AddTransient<IProdutividadeMaoObraMetaRepository, ProdutividadeMaoObraMetaRepository>();
+            services.AddTransient<ISatisfacaoClientesRepository, SatisfacaoClientesRepository>();
+            services.AddTransient<ISatisfacaoClientesMetaRepository, SatisfacaoClientesMetaRepository>();
+            
+            services.AddTransient<ISatisfacaoUsuarioRepository, SatisfacaoUsuarioRepository>();
+            services.AddTransient<ISatisfacaoUsuarioMetaRepository, SatisfacaoUsuarioMetaRepository>();
+               
+            services.AddTransient<ITempoMedioSolucaoRepository, TempoMedioSolucaoRepository>();
+            services.AddTransient<ITempoMedioSolucaoMetaRepository, TempoMedioSolucaoMetaRepository>();
+              
+            services.AddTransient<ITempoReparoEquipamentosProgramadosObrasRepository, TempoReparoEquipamentosProgramadosObrasRepository>();
+            services.AddTransient<ITempoReparoEquipamentosProgramadosObrasMetaRepository, TempoReparoEquipamentosProgramadosObrasMetaRepository>();
+             
+            services.AddTransient<IServiceLevelAgreementRepository, ServiceLevelAgreementRepository>();
+            services.AddTransient<IServiceLevelAgreementMetaRepository, ServiceLevelAgreementMetaRepository>();
+             
+            services.AddTransient<IItensCadastradosMais15DiasRepository, ItensCadastradosMais15DiasRepository>();
+            services.AddTransient<IItensCadastradosMais15DiasMetaRepository, ItensCadastradosMais15DiasMetaRepository>();
+              
+            services.AddTransient<INaoConformidadeRepository, NaoConformidadeRepository>();
+            services.AddTransient<INaoConformidadeMetaRepository, NaoConformidadeMetaRepository>();
+
+            services.AddTransient<ITaxaConformidadeDocumentosQualidadeRepository, TaxaConformidadeDocumentosQualidadeRepository>();
+            services.AddTransient<ITaxaConformidadeDocumentosQualidadeMetaRepository, TaxaConformidadeDocumentosQualidadeMetaRepository>();
+
+            services.AddTransient<ITempoMedioEmissaoOCItensCriticosRepository, TempoMedioEmissaoOCItensCriticosRepository>();
+            services.AddTransient<ITempoMedioEmissaoOCItensCriticosMetaRepository, TempoMedioEmissaoOCItensCriticosMetaRepository>();
 
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddTransient<ILocalidadeRepository, LocalidadeRepository>();

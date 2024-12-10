@@ -1,26 +1,42 @@
-﻿//using FluentNHibernate.Mapping;
-//using Nuclep.GestaoQualidade.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Nuclep.GestaoQualidade.Domain.Models.Indicadores;
 
-//namespace Nuclep.GestaoQualidade.SqlServer.Mappings
-//{
-//    public class TempoReparoEquipamentosProgramadosObrasMap:ClassMap<TempoReparoEquipamentosProgramadosObras>
-//    {
-//        public TempoReparoEquipamentosProgramadosObrasMap()
-//        {
-//            Table("TempoReparoEquipamentosProgramadosObras");
+namespace Nuclep.GestaoQualidade.SqlServer.Mappings
+{
+    public class TempoReparoEquipamentosProgramadosObrasMap : IEntityTypeConfiguration<TempoReparoEquipamentosProgramadosObras>
+    {
+        public void Configure(EntityTypeBuilder<TempoReparoEquipamentosProgramadosObras> builder)
+        {
+            builder.ToTable("Ind_TempoReparoEquipamentosProgramadosObras");
 
-//            Id(a => a.Id);
-  
-//            Map(a => a.IsAtivo);
-//            Map(a => a.DataHoraCadastro);
-//            Map(a => a.Ano);
-//            Map(a => a.Mes);
-//            Map(a => a.TotalHoraManutencaoEquipamentoRealizadas);
-//            Map(a => a.TotalHorasTrabalhadas);
-//            Map(a => a.Meta);
+            builder.HasKey(e => e.Id);
 
-//            References(x => x.UsuarioCadastro).Column("IdUsuarioCadastro");
+            builder.Property(e => e.Ano).HasColumnName("Ano").HasColumnType("int");
 
-//        }
-//    }
-//}
+            builder.Property(e => e.Mes).HasColumnName("Mes").HasColumnType("int");
+
+            builder.Property(e => e.TotalHoraManutencaoEquipamentoRealizadas)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.TotalHorasTrabalhadas)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.NomeAD)
+                .HasColumnType("varchar(255)");
+
+            builder.Property(e => e.IsAtivo)
+                .HasColumnType("bit");
+
+            builder.Property(e => e.DataHoraCadastro)
+                .HasColumnType("datetime2");
+
+            builder.HasOne(e => e.UsuarioCadastro)
+                  .WithMany()
+                  .HasForeignKey(e => e.UsuarioCadastroId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+}
+
+

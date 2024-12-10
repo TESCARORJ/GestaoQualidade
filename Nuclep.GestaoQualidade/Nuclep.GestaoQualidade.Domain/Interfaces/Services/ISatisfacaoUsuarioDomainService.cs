@@ -5,6 +5,7 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Services
     public interface ISatisfacaoUsuarioDomainService : IDisposable
     {
         Task<SatisfacaoUsuario> AddAsync(SatisfacaoUsuario entity);
+        Task<List<SatisfacaoUsuario>> AddListAsync(List<SatisfacaoUsuario> entity);
         Task<SatisfacaoUsuario> UpdateAsync(SatisfacaoUsuario entity);
         Task<SatisfacaoUsuario> DeleteAsync(long id);
         Task<SatisfacaoUsuario> GetByIdAsync(long id);

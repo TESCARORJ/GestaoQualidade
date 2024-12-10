@@ -24,7 +24,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
         {
             if (!await _ocupacaoMaoObraMetaRepository.VerifyExistsAsync(x => x.Id == entity.Id))
             {
-                throw new Exception($"Meta de Aderência Programação Mensal com ID {entity.Id} não encontrada.");
+                throw new Exception($"Meta de Ocupação de Mão de Obra com ID {entity.Id} não encontrada.");
             }
 
             var model = GetByIdAsync(entity.Id).Result;
@@ -44,7 +44,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Meta de Aderência Programação Mensal com ID {id} não encontrada.");
+                throw new Exception($"Meta de Ocupação de Mão de Obra com ID {id} não encontrada.");
             }
 
             await _ocupacaoMaoObraMetaRepository.DeleteAsync(registro);
@@ -59,7 +59,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Meta de Aderência Programação Mensal com ID {id} não encontrada.");
+                throw new Exception($"Meta de Ocupação de Mão de Obra com ID {id} não encontrada.");
             }
 
             return registro;

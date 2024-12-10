@@ -35,7 +35,14 @@
 
                     @if (model.IsAutoavaliacaoGerencialSGQ)
                     {
-                        <RadzenPanelMenuItem Text="Autovaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQ" Icon="done"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Autoavaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQ" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                  
+
+                    @if (model.IsItensCadastradosMais15Dias)
+                    {
+                        <RadzenPanelMenuItem Text="Itens Cadastrados Mais 15 Dias" Style="font-size:12px" Path="Sistema/Consultar/ConsultarItensCadastradosMais15Dias" Icon="done"></RadzenPanelMenuItem>
                     }
 
                     @if (model.IsCumprimentoEtapasPACDentroPrazo)
@@ -53,7 +60,6 @@
                         <RadzenPanelMenuItem Text="Defeito de Soldagem" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDefeitoSoldagem" Icon="done"></RadzenPanelMenuItem>
                     }
 
-
                     @if (model.IsDuracaoProcessoLicitacao)
                     {
                         <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacao" Icon="done"></RadzenPanelMenuItem>
@@ -67,13 +73,19 @@
                     @if (model.IsFaturamentoRealizado)
                     {
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizado" Icon="done"></RadzenPanelMenuItem>
+                    }             
+
+                    @if (model.IsNaoConformidade)
+                    {
+                        <RadzenPanelMenuItem Text="Não Conformidade" Style="font-size:12px" Path="Sistema/Consultar/ConsultarNaoConformidade" Icon="done"></RadzenPanelMenuItem>
                     }
+
 
                     @if (model.IsOcupacaoMaoObra)
                     {
                         <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObra" Icon="done"></RadzenPanelMenuItem>
                     }
-                     
+
                     @if (model.IsProdutividadeMaoObra)
                     {
                         <RadzenPanelMenuItem Text="Produtividade de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarProdutividadeMaoObra" Icon="done"></RadzenPanelMenuItem>
@@ -83,6 +95,46 @@
                     @if (model.IsRejeicaoMateriais)
                     {
                         <RadzenPanelMenuItem Text="Rejeição de Materiais" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRejeicaoMateriais" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsRespostaAreasRiscosPrazoOriginal)
+                    {
+                        <RadzenPanelMenuItem Text="Resposta das Áreas aos Riscos no Prazo Original" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRespostaAreasRiscosPrazoOriginal" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsSatisfacaoClientes)
+                    {
+                        <RadzenPanelMenuItem Text="Satisfação de Clientes" Style="font-size:12px" Path="Sistema/Consultar/ConsultarSatisfacaoClientes" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsSatisfacaoUsuario)
+                    {
+                        <RadzenPanelMenuItem Text="Satisfação de Usuário" Style="font-size:12px" Path="Sistema/Consultar/ConsultarSatisfacaoUsuario" Icon="done"></RadzenPanelMenuItem>
+                    }
+                 
+                    @if (model.IsServiceLevelAgreement)
+                    {
+                        <RadzenPanelMenuItem Text="Service Level Agreement" Style="font-size:12px" Path="Sistema/Consultar/ConsultarServiceLevelAgreement" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsTaxaConformidadeDocumentosQualidade)
+                    {
+                        <RadzenPanelMenuItem Text="Taxa de Conformidade dos Documentos da Qualidade" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTaxaConformidadeDocumentosQualidade" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsTempoMedioSolucao)
+                    {
+                        <RadzenPanelMenuItem Text="Tempo Médio de Solução" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoMedioSolucao" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsTempoMedioEmissaoOCItensCriticos)
+                    {
+                        <RadzenPanelMenuItem Text="Tempo Médio de Emissão OC de Itens Criticos" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoMedioEmissaoOCItensCriticos" Icon="done"></RadzenPanelMenuItem>
+                    }
+
+                    @if (model.IsTempoReparoEquipamentosProgramadosObras)
+                    {
+                        <RadzenPanelMenuItem Text="Tempo de Reparo de Equipamentos Programados para Obras" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoReparoEquipamentosProgramadosObras" Icon="done"></RadzenPanelMenuItem>
                     }
 
                 </RadzenPanelMenuItem>
@@ -98,16 +150,27 @@
                     <RadzenPanelMenuItem Text="Configuração Meta" Icon="settings">
                         <RadzenPanelMenuItem Text="Ação de Correção Avaliada Eficaz" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAcaoCorrecaoAvaliadaEficazMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Aderência Programação Mensal" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAderenciaProgramacaoMensalMeta" Icon="done_all"></RadzenPanelMenuItem>
-                        <RadzenPanelMenuItem Text="Autovaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Autoavaliação Gerencial do SGQ" Style="font-size:12px" Path="Sistema/Consultar/ConsultarAutoavaliacaoGerencialSGQMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Ação de Cumprimento de Verba Destinada ao PAT pelo MME" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoVerbaDestinadaPATMMEMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Cumprimento das Etapas do PAC Dentro do Prazo" Style="font-size:12px" Path="Sistema/Consultar/ConsultarCumprimentoEtapasPACDentroPrazoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Defeito de Soldagem" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDefeitoSoldagemMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Duração de Processo de Licitação" Style="font-size:12px" Path="Sistema/Consultar/ConsultarDuracaoProcessoLicitacaoMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Eficácia de Treinamento" Style="font-size:12px" Path="Sistema/Consultar/ConsultarEficaciaTreinamentoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Itens Cadastrados Mais 15 Dias" Style="font-size:12px" Path="Sistema/Consultar/ConsultarItensCadastradosMais15DiasMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Faturamento Realizado" Style="font-size:12px" Path="Sistema/Consultar/ConsultarFaturamentoRealizadoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Não Conformidade" Style="font-size:12px" Path="Sistema/Consultar/ConsultarNaoConformidadeMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Ocupação de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarOcupacaoMaoObraMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Produtividade de Mão de Obra" Style="font-size:12px" Path="Sistema/Consultar/ConsultarProdutividadeMaoObraMeta" Icon="done_all"></RadzenPanelMenuItem>
                         <RadzenPanelMenuItem Text="Rejeição de Materiais" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRejeicaoMateriaisMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Resposta das Áreas aos Riscos no Prazo Original" Style="font-size:12px" Path="Sistema/Consultar/ConsultarRespostaAreasRiscosPrazoOriginalMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Satisfação de Clientes" Style="font-size:12px" Path="Sistema/Consultar/ConsultarSatisfacaoClientesMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Satisfação de Usuario" Style="font-size:12px" Path="Sistema/Consultar/ConsultarSatisfacaoUsuarioMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Service Level Agreement" Style="font-size:12px" Path="Sistema/Consultar/ConsultarServiceLevelAgreementMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Taxa de Conformidade dos Documentos da Qualidade" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTaxaConformidadeDocumentosQualidadeMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Tempo Médio de Solução" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoMedioSolucaoMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Tempo de Reparo de Equipamentos Programados para Obras" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoReparoEquipamentosProgramadosObrasMeta" Icon="done_all"></RadzenPanelMenuItem>
+                        <RadzenPanelMenuItem Text="Tempo Médio de Emissão OC de Itens Criticos" Style="font-size:12px" Path="Sistema/Consultar/ConsultarTempoMedioEmissaoOCItensCriticosMeta" Icon="done_all"></RadzenPanelMenuItem>
+
                     </RadzenPanelMenuItem>
                 }
 
@@ -151,7 +214,7 @@
             {
                 model = new ConsultarUsuarioModel
                     {
-                
+
                         Nome = usuarioResponse.Nome,
                         PerfilSistema = usuarioResponse.PerfilSistema,
                         IsConfirmacaoNaoInformado = usuarioResponse.IsConfirmacaoNaoInformado,
@@ -162,13 +225,15 @@
                         IsNivelServicoAtendimento = usuarioResponse.IsNivelServicoAtendimento,
                         IsAderenciaProgramacaoMensal = usuarioResponse.IsAderenciaProgramacaoMensal,
                         IsCumprimentoEtapasPACDentroPrazo = usuarioResponse.IsCumprimentoEtapasPACDentroPrazo,
-                        IsSatisfacaoUsuario = usuarioResponse.IsSatisfacaoUsuario,
                         IsTempoMedioSolucao = usuarioResponse.IsTempoMedioSolucao,
+                        IsSatisfacaoUsuario = usuarioResponse.IsSatisfacaoUsuario,
+                        IsNaoConformidade = usuarioResponse.IsNaoConformidade,
                         IsItensCadastradosMais15Dias = usuarioResponse.IsItensCadastradosMais15Dias,
                         IsDuracaoProcessoLicitacao = usuarioResponse.IsDuracaoProcessoLicitacao,
                         IsEventosAtraso = usuarioResponse.IsEventosAtraso,
                         IsFaturamentoRealizado = usuarioResponse.IsFaturamentoRealizado,
                         IsRejeicaoMateriais = usuarioResponse.IsRejeicaoMateriais,
+                        IsRespostaAreasRiscosPrazoOriginal = usuarioResponse.IsRespostaAreasRiscosPrazoOriginal,
                         IsTempoManutencaoCorretivaEquipamentoProgramado = usuarioResponse.IsTempoManutencaoCorretivaEquipamentoProgramado,
                         IsAcaoCorrecaoAvaliadaEficaz = usuarioResponse.IsAcaoCorrecaoAvaliadaEficaz,
                         IsCumprimentoVerbaDestinadaPATMME = usuarioResponse.IsCumprimentoVerbaDestinadaPATMME,
@@ -178,6 +243,8 @@
                         IsCapacitacaoAreaContratos = usuarioResponse.IsCapacitacaoAreaContratos,
                         IsOcupacaoMaoObra = usuarioResponse.IsOcupacaoMaoObra,
                         IsProdutividadeMaoObra = usuarioResponse.IsProdutividadeMaoObra,
+                        IsSatisfacaoClientes = usuarioResponse.IsSatisfacaoClientes,
+                        IsTempoMedioEmissaoOCItensCriticos = usuarioResponse.IsTempoMedioEmissaoOCItensCriticos,
                         IsGestaoProcessosPessoasPrevistoPAT = usuarioResponse.IsGestaoProcessosPessoasPrevistoPAT,
                         IsRespostaAreasPrazoOriginal = usuarioResponse.IsRespostaAreasPrazoOriginal,
                         IsRetrabalhoDocumentos = usuarioResponse.IsRetrabalhoDocumentos,
@@ -185,8 +252,7 @@
                         IsReducaoRNC = usuarioResponse.IsReducaoRNC,
                         IsTaxaConformidadeDocumentosQualidade = usuarioResponse.IsTaxaConformidadeDocumentosQualidade,
                         IsTempoMedioInspecaoRecebimentoMateriais = usuarioResponse.IsTempoMedioInspecaoRecebimentoMateriais,
-                        IsTempoReparoEquipamentosProgramadosObras = usuarioResponse.IsTempoReparoEquipamentosProgramadosObras,
-                        IsRejeicaoMateriaisAntesTratamento = usuarioResponse.IsRejeicaoMateriaisAntesTratamento
+                        IsTempoReparoEquipamentosProgramadosObras = usuarioResponse.IsTempoReparoEquipamentosProgramadosObras
 
                     };
             }

@@ -1,26 +1,42 @@
-﻿//using FluentNHibernate.Mapping;
-//using Nuclep.GestaoQualidade.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Nuclep.GestaoQualidade.Domain.Models.Indicadores;
 
-//namespace Nuclep.GestaoQualidade.SqlServer.Mappings
-//{
-//    public class ItensCadastradosMais15DiasMap:ClassMap<ItensCadastradosMais15Dias>
-//    {
-//        public ItensCadastradosMais15DiasMap()
-//        {
-//            Table("ItensCadastradosMais15Dias");
+namespace Nuclep.GestaoQualidade.SqlServer.Mappings
+{
+    public class ItensCadastradosMais15DiasMap : IEntityTypeConfiguration<ItensCadastradosMais15Dias>
+    {
+        public void Configure(EntityTypeBuilder<ItensCadastradosMais15Dias> builder)
+        {
+            builder.ToTable("Ind_ItensCadastradosMais15Dias");
 
-//            Id(a => a.Id);
-  
-//            Map(a => a.IsAtivo);
-//            Map(a => a.DataHoraCadastro);
-//            Map(a => a.Ano);
-//            Map(a => a.Mes);
-//            Map(a => a.Atividade1);
-//            Map(a => a.Atividade2);
-//            Map(a => a.Meta);
+            builder.HasKey(e => e.Id);
 
-//            References(x => x.UsuarioCadastro).Column("IdUsuarioCadastro");
+            builder.Property(e => e.Ano).HasColumnName("Ano").HasColumnType("int");
 
-//        }
-//    }
-//}
+            builder.Property(e => e.Mes).HasColumnName("Mes").HasColumnType("int");
+
+            builder.Property(e => e.QuantidadeItensCadastrados15Dias)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.QuantidadeItensCadastrados)
+                .HasColumnType("decimal(18,2)").IsRequired(false);
+
+            builder.Property(e => e.NomeAD)
+                .HasColumnType("varchar(255)");
+
+            builder.Property(e => e.IsAtivo)
+                .HasColumnType("bit");
+
+            builder.Property(e => e.DataHoraCadastro)
+                .HasColumnType("datetime2");
+
+            builder.HasOne(e => e.UsuarioCadastro)
+                  .WithMany()
+                  .HasForeignKey(e => e.UsuarioCadastroId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+}
+
+

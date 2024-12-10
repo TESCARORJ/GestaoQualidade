@@ -18,10 +18,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Mappings
 
 
             builder.Property(e => e.TotalDefeitosSoldaEncontradosEnsaiadosVolumetricos)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.Property(e => e.TotalComprimentoSoldadoInspecionado)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.HasOne(e => e.Localidade)
                   .WithMany()

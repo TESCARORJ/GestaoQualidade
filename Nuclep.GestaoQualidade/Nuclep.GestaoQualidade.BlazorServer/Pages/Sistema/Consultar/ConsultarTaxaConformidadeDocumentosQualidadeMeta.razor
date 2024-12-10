@@ -1,0 +1,100 @@
+﻿@page "/Sistema/Consultar/ConsultarTaxaConformidadeDocumentosQualidadeMeta"
+@using Microsoft.Extensions.Localization
+@using Nuclep.GestaoQualidade.BlazorServer.DTOs
+@using Nuclep.GestaoQualidade.BlazorServer.Helpers
+@using Nuclep.GestaoQualidade.BlazorServer.Models
+@using System.Reflection
+@using System.ComponentModel
+@using Nuclep.GestaoQualidade.BlazorServer.Models.Consultar
+@using Nuclep.GestaoQualidade.Domain.Enumeradores
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<RadzenCard Variant="Variant.Outlined" class="rz-my-4">
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+        <div>
+            <h3>Consulta de Meta deTaxa de Conformidade dos Documentos da Qualidade</h3>
+            <h6 style="">Esse Indicador possui somente uma Meta por Ano</h6>
+        </div>
+        @if (IsExibeBotao)
+        {
+            <RadzenButton Text="Cadastrar Novo" Style="width: 20%" Click="@(args => CadastrarTaxaConformidadeDocumentosQualidadeMeta())" />
+        }
+    </RadzenStack>
+</RadzenCard>
+
+
+<RadzenDataGrid @ref="grid" AllowColumnResize="true"
+                Data="@model.TaxaConformidadeDocumentosQualidadeMetaList" ColumnWidth="300px"
+                EmptyText="Nenhum registro encontrado">
+    <Columns>
+        <RadzenDataGridColumn Property="Meta" Title="Meta" />
+        <RadzenDataGridColumn Property="Ano1" Title="Ano 1" Width="100px">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano1))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn Property="Ano2" Title="Ano 2" Width="100px">
+            <Template Context="data">
+                @GetDescription(((EnumAno)data.Ano2))
+            </Template>
+        </RadzenDataGridColumn>
+
+        <RadzenDataGridColumn TItem="TaxaConformidadeDocumentosQualidadeMetaResponseDTO" Context="TaxaConformidadeDocumentosQualidadeMetaResponseDTO" CssClass="rz-p-4">
+            <Template>
+                <div style="display: flex; justify-content: center;">
+                    <RadzenButton Text="Editar" Style="width: 50%;" Click="@(args => EditarMeta(TaxaConformidadeDocumentosQualidadeMetaResponseDTO.Id))" />
+                </div>
+            </Template>
+        </RadzenDataGridColumn>
+
+    </Columns>
+</RadzenDataGrid>
+
+
+
+@code {
+    ConsultarTaxaConformidadeDocumentosQualidadeMetaModel model = new();
+    RadzenDataGrid<TaxaConformidadeDocumentosQualidadeMetaResponseDTO> grid;
+
+    bool IsExibeBotao = false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        var responseList = await Http.GetAsync("api/TaxaConformidadeDocumentosQualidadeMeta/GetAll");
+        model.TaxaConformidadeDocumentosQualidadeMetaList = await responseList.Content.ReadFromJsonAsync<List<TaxaConformidadeDocumentosQualidadeMetaResponseDTO>>();
+
+        if (model.TaxaConformidadeDocumentosQualidadeMetaList == null || model.TaxaConformidadeDocumentosQualidadeMetaList.Count == 0)
+        {
+
+            IsExibeBotao = true;
+
+        }
+    }
+
+    private void CadastrarTaxaConformidadeDocumentosQualidadeMeta()
+    {
+        Navigation.NavigateTo($"Sistema/Cadastrar/CadastrarTaxaConformidadeDocumentosQualidadeMeta");
+    }
+
+    private void EditarMeta(long id)
+    {
+        Navigation.NavigateTo($"Sistema/Editar/EditarTaxaConformidadeDocumentosQualidadeMeta/{id}");
+    }
+
+
+    string GetDescription(Enum value)
+    {
+        FieldInfo? field = value.GetType().GetField(value.ToString());
+        DescriptionAttribute? attribute = field.GetCustomAttribute<DescriptionAttribute>();
+        return attribute == null ? value.ToString() : attribute.Description;
+    }
+
+}
+
+
+

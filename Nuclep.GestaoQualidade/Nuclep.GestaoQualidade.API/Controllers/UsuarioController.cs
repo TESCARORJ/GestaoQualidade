@@ -28,9 +28,15 @@ namespace Nuclep.GestaoQualidade.API.Controllers
         private readonly IDuracaoProcessoLicitacaoRepository _duracaoProcessoLicitacaoRepository;
         private readonly IFaturamentoRealizadoRepository _faturamentoRealizadoRepository;
         private readonly IRejeicaoMateriaisRepository _rejeicaoMateriaisRepository;
+        private readonly IRespostaAreasRiscosPrazoOriginalRepository _respostaAreasRiscosPrazoOriginalRepository;
         private readonly IEficaciaTreinamentoRepository _eficaciaTreinamentoRepository;
         private readonly IOcupacaoMaoObraRepository _ocupacaoMaoObraRepository;
         private readonly IProdutividadeMaoObraRepository _produtividadeMaoObraRepository;
+        private readonly ISatisfacaoClientesRepository _satisfacaoClientesRepository;
+        private readonly ISatisfacaoUsuarioRepository _satisfacaoUsuarioRepository;
+        private readonly INaoConformidadeRepository _naoConformidadeRepository;
+        private readonly ITempoMedioSolucaoRepository _tempoMedioSolucaoRepository;
+        private readonly ITempoReparoEquipamentosProgramadosObrasRepository _tempoReparoEquipamentosProgramadosObrasRepository;
 
 
         public UsuarioController(
@@ -50,7 +56,12 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             IEficaciaTreinamentoRepository eficaciaTreinamentoRepository,
             IOcupacaoMaoObraRepository ocupacaoMaoObraRepository,
             IProdutividadeMaoObraRepository produtividadeMaoObraRepository,
-            IRejeicaoMateriaisRepository rejeicaoMateriaisRepository)
+            IRejeicaoMateriaisRepository rejeicaoMateriaisRepository,
+            ISatisfacaoClientesRepository satisfacaoClientesRepository,
+            ISatisfacaoUsuarioRepository satisfacaoUsuarioRepository,
+            INaoConformidadeRepository naoConformidadeRepository,
+            ITempoMedioSolucaoRepository tempoMedioSolucaoRepository,
+            ITempoReparoEquipamentosProgramadosObrasRepository tempoReparoEquipamentosProgramadosObrasRepository)
         {
             _UsuarioAppService = UsuarioAppService;
             _httpContextAccessor = httpContextAccessor;
@@ -69,6 +80,11 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             _ocupacaoMaoObraRepository = ocupacaoMaoObraRepository;
             _produtividadeMaoObraRepository = produtividadeMaoObraRepository;
             _rejeicaoMateriaisRepository = rejeicaoMateriaisRepository;
+            _satisfacaoClientesRepository = satisfacaoClientesRepository;
+            _satisfacaoUsuarioRepository = satisfacaoUsuarioRepository;
+            _naoConformidadeRepository = naoConformidadeRepository;
+            _tempoMedioSolucaoRepository = tempoMedioSolucaoRepository;
+            _tempoReparoEquipamentosProgramadosObrasRepository = tempoReparoEquipamentosProgramadosObrasRepository;
         }
 
 
@@ -86,6 +102,7 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             request.IsEventosAtraso = false;
             request.IsFaturamentoRealizado = false;
             request.IsRejeicaoMateriais = false;
+            request.IsRespostaAreasRiscosPrazoOriginal = false;
             request.IsGestaoProcessosPessoasPrevistoPAT = false;
             request.IsItensCadastradosMais15Dias = false;
             request.IsLocalidadeAramar = false;
@@ -93,6 +110,8 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             request.IsNivelServicoAtendimento = false;
             request.IsOcupacaoMaoObra = false;
             request.IsProdutividadeMaoObra = false;
+            request.IsSatisfacaoClientes = false;
+            request.IsTempoMedioEmissaoOCItensCriticos = false;
             request.IsReducaoRNC = false;
             request.IsRespostaAreasPrazoOriginal = false;
             request.IsRetrabalhoDocumentos = false;
@@ -102,6 +121,8 @@ namespace Nuclep.GestaoQualidade.API.Controllers
             request.IsTempoManutencaoCorretivaEquipamentoProgramado = false;
             request.IsTempoMedioInspecaoRecebimentoMateriais = false;
             request.IsTempoMedioSolucao = false;
+            request.IsServiceLevelAgreement = false;
+            request.IsNaoConformidade = false;
             request.IsTempoReparoEquipamentosProgramadosObras = false;
             request.IsVPR = false;
         }
@@ -303,7 +324,7 @@ namespace Nuclep.GestaoQualidade.API.Controllers
                                 UsuarioNome = usuario.Nome,
                                 LogTipo = LogTipo.Cadastrado,
                                 LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_AutoavaliacaoGerencialSGQ").Result.Id,
-                                Descricao = $"Deletados períodos do Indicador Autoavalização Gerencial SGQ para o usuário {usuario.Nome} em {DateTime.Now}",
+                                Descricao = $"Deletados períodos do Indicador Autoavaliação Gerencial SGQ para o usuário {usuario.Nome} em {DateTime.Now}",
                             };
 
                             await _logCrudRepository.AddAsync(logAutoavaliacaoGerencialSGQ);
@@ -535,6 +556,39 @@ namespace Nuclep.GestaoQualidade.API.Controllers
 
                     #endregion
 
+                    #region NaoConformidade
+
+                    if (!usuario.IsNaoConformidade)
+                    {
+                        var naoConformidadeList = await _naoConformidadeRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (naoConformidadeList.Count > 0)
+                        {
+
+                            var logNaoConformidade = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_NaoConformidade").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador Não Conformidade para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logNaoConformidade);
+
+                            foreach (var naoConformidade in naoConformidadeList)
+                            {
+                                await _naoConformidadeRepository.DeleteAsync(naoConformidade);
+
+                            }
+
+                        }
+                    }
+
+                    #endregion
+
                     #region OcupacaoMaoObra                   
 
                     if (!usuario.IsOcupacaoMaoObra)
@@ -631,6 +685,236 @@ namespace Nuclep.GestaoQualidade.API.Controllers
 
                         }
                     }
+
+                    #endregion
+
+                    #region RespostaAreasRiscosPrazoOriginal
+
+                    if (!usuario.IsRespostaAreasRiscosPrazoOriginal)
+                    {
+                        var respostaAreasRiscosPrazoOriginalList = await _respostaAreasRiscosPrazoOriginalRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (respostaAreasRiscosPrazoOriginalList.Count > 0)
+                        {
+
+                            var logRespostaAreasRiscosPrazoOriginal = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_RespostaAreasRiscosPrazoOriginal").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador Resposta Áreas Riscos Prazo Original para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logRespostaAreasRiscosPrazoOriginal);
+
+                            foreach (var respostaAreasRiscosPrazoOriginal in respostaAreasRiscosPrazoOriginalList)
+                            {
+                                await _respostaAreasRiscosPrazoOriginalRepository.DeleteAsync(respostaAreasRiscosPrazoOriginal);
+
+                            }
+
+                        }
+                    }
+
+                    #endregion
+
+                    #region SatisfacaoClientes                   
+
+                    if (!usuario.IsSatisfacaoClientes)
+                    {
+                        var satisfacaoClientesList = await _satisfacaoClientesRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (satisfacaoClientesList.Count > 0)
+                        {
+                            var logSatisfacaoClientes = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_SatisfacaoClientes").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Satisfação de Cliente para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logSatisfacaoClientes);
+
+                            foreach (var satisfacaoClientes in satisfacaoClientesList)
+                            {
+                                await _satisfacaoClientesRepository.DeleteAsync(satisfacaoClientes);
+
+                            }
+
+                        }
+                    }
+
+
+                    #endregion
+
+                    #region SatisfacaoUsuario                   
+
+                    if (!usuario.IsSatisfacaoUsuario)
+                    {
+                        var satisfacaoUsuarioList = await _satisfacaoUsuarioRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (satisfacaoUsuarioList.Count > 0)
+                        {
+                            var logSatisfacaoUsuario = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_SatisfacaoUsuario").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Satisfação de Cliente para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logSatisfacaoUsuario);
+
+                            foreach (var satisfacaoUsuario in satisfacaoUsuarioList)
+                            {
+                                await _satisfacaoUsuarioRepository.DeleteAsync(satisfacaoUsuario);
+
+                            }
+
+                        }
+                    }
+
+
+                    #endregion
+
+                    #region TempoMedioSalucao                   
+
+                    if (!usuario.IsTempoMedioSolucao)
+                    {
+                        var tempoMedioSalucaoList = await _tempoMedioSolucaoRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (tempoMedioSalucaoList.Count > 0)
+                        {
+                            var logTempoMedioSalucao = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_TempoMedioSalucao").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Satisfação de Cliente para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logTempoMedioSalucao);
+
+                            foreach (var tempoMedioSalucao in tempoMedioSalucaoList)
+                            {
+                                await _tempoMedioSolucaoRepository.DeleteAsync(tempoMedioSalucao);
+
+                            }
+
+                        }
+                    }
+
+
+                    #endregion
+
+                    #region TaxaConformidadeDocumentosQualidade
+
+                    if (!usuario.IsTaxaConformidadeDocumentosQualidade)
+                    {
+                        var autoavaliacaoGerencialSGQList = await _autoavaliacaoGerencialSGQRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (autoavaliacaoGerencialSGQList.Count > 0)
+                        {
+                            var logTaxaConformidadeDocumentosQualidade = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_TaxaConformidadeDocumentosQualidade").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador Taxa de Conformidade dos Documentos da Qualidade para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logTaxaConformidadeDocumentosQualidade);
+
+                            foreach (var acaoCorrecaoAvaliada in autoavaliacaoGerencialSGQList)
+                            {
+                                await _autoavaliacaoGerencialSGQRepository.DeleteAsync(acaoCorrecaoAvaliada);
+
+                            }
+
+                        }
+                    }
+
+                    #endregion
+
+                    #region TempoMedioEmissaoOCItensCriticos                   
+
+                    if (!usuario.IsTempoMedioEmissaoOCItensCriticos)
+                    {
+                        var satisfacaoClientesList = await _satisfacaoClientesRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (satisfacaoClientesList.Count > 0)
+                        {
+                            var logTempoMedioEmissaoOCItensCriticos = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_TempoMedioEmissaoOCItensCriticos").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Tempo Médio de Emissao OCI de Itens Críticos para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logTempoMedioEmissaoOCItensCriticos);
+
+                            foreach (var satisfacaoClientes in satisfacaoClientesList)
+                            {
+                                await _satisfacaoClientesRepository.DeleteAsync(satisfacaoClientes);
+
+                            }
+
+                        }
+                    }
+
+
+                    #endregion
+
+                    #region TempoMedioSalucao                   
+
+                    if (!usuario.IsTempoReparoEquipamentosProgramadosObras)
+                    {
+                        var tempoMedioSalucaoList = await _tempoReparoEquipamentosProgramadosObrasRepository.GetAllUsarioLogadoAsync(usuario.Id);
+
+                        if (tempoMedioSalucaoList.Count > 0)
+                        {
+                            var logTempoMedioSalucao = new LogCrud
+                            {
+                                IdReferencia = usuario.Id,
+                                DataHoraCadastro = DateTime.Now,
+                                UsuarioId = usuario.Id,
+                                UsuarioNome = usuario.Nome,
+                                LogTipo = LogTipo.Cadastrado,
+                                LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome == "Ind_TempoMedioSalucao").Result.Id,
+                                Descricao = $"Deletados períodos do Indicador de Tempo de Reparo de Equipamentos Programados para Obras para o usuário {usuario.Nome} em {DateTime.Now}",
+                            };
+
+                            await _logCrudRepository.AddAsync(logTempoMedioSalucao);
+
+                            foreach (var tempoMedioSalucao in tempoMedioSalucaoList)
+                            {
+                                await _tempoReparoEquipamentosProgramadosObrasRepository.DeleteAsync(tempoMedioSalucao);
+
+                            }
+
+                        }
+                    }
+
 
                     #endregion
 

@@ -18,7 +18,7 @@
                 {
                     Title = "Gestão de Qualidade API",
                     Version = "v1",
-                    Description = "API para gerenciamento dos indicadores do sertor de Gestão de Qualidade",    
+                    Description = "API para gerenciamento dos indicadores do sertor de Gestão de Qualidade",
                 });
             });
 
@@ -35,6 +35,7 @@
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestão de Qualidade API v1");
+                c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None); // Inicia o Swagger com os endpoints fechados
             });
 
             return app;

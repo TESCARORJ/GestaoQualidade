@@ -27,6 +27,9 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
              
             services.AddTransient<IRejeicaoMateriaisAppService, RejeicaoMateriaisAppService>();
             services.AddTransient<IRejeicaoMateriaisMetaAppService, RejeicaoMateriaisMetaAppService>();
+             
+            services.AddTransient<IRespostaAreasRiscosPrazoOriginalAppService, RespostaAreasRiscosPrazoOriginalAppService>();
+            services.AddTransient<IRespostaAreasRiscosPrazoOriginalMetaAppService, RespostaAreasRiscosPrazoOriginalMetaAppService>();
 
             services.AddTransient<IDuracaoProcessoLicitacaoAppService, DuracaoProcessoLicitacaoAppService>();
             services.AddTransient<IDuracaoProcessoLicitacaoMetaAppService, DuracaoProcessoLicitacaoMetaAppService>();
@@ -50,7 +53,34 @@ namespace Nuclep.GestaoQualidade.Application.Extensions
             services.AddTransient<IOcupacaoMaoObraMetaAppService, OcupacaoMaoObraMetaAppService>();
 
             services.AddTransient<IProdutividadeMaoObraAppService, ProdutividadeMaoObraAppService>();
-            services.AddTransient<IProdutividadeMaoObraMetaAppService, ProdutividadeMaoObraMetaAppService>();
+            services.AddTransient<IProdutividadeMaoObraMetaAppService, ProdutividadeMaoObraMetaAppService>(); 
+            
+            services.AddTransient<ISatisfacaoClientesAppService, SatisfacaoClientesAppService>();
+            services.AddTransient<ISatisfacaoClientesMetaAppService, SatisfacaoClientesMetaAppService>();
+                
+            services.AddTransient<ITempoMedioEmissaoOCItensCriticosAppService, TempoMedioEmissaoOCItensCriticosAppService>();
+            services.AddTransient<ITempoMedioEmissaoOCItensCriticosMetaAppService, TempoMedioEmissaoOCItensCriticosMetaAppService>();
+               
+            services.AddTransient<ISatisfacaoUsuarioAppService, SatisfacaoUsuarioAppService>();
+            services.AddTransient<ISatisfacaoUsuarioMetaAppService, SatisfacaoUsuarioMetaAppService>();
+
+            services.AddTransient<ITaxaConformidadeDocumentosQualidadeAppService, TaxaConformidadeDocumentosQualidadeAppService>();
+            services.AddTransient<ITaxaConformidadeDocumentosQualidadeMetaAppService, TaxaConformidadeDocumentosQualidadeMetaAppService>();
+
+            services.AddTransient<ITempoMedioSolucaoAppService, TempoMedioSolucaoAppService>();
+            services.AddTransient<ITempoMedioSolucaoMetaAppService, TempoMedioSolucaoMetaAppService>();
+                    
+            services.AddTransient<ITempoReparoEquipamentosProgramadosObrasAppService, TempoReparoEquipamentosProgramadosObrasAppService>();
+            services.AddTransient<ITempoReparoEquipamentosProgramadosObrasMetaAppService, TempoReparoEquipamentosProgramadosObrasMetaAppService>();
+                  
+            services.AddTransient<IServiceLevelAgreementAppService, ServiceLevelAgreementAppService>();
+            services.AddTransient<IServiceLevelAgreementMetaAppService, ServiceLevelAgreementMetaAppService>();
+                
+            services.AddTransient<IItensCadastradosMais15DiasAppService, ItensCadastradosMais15DiasAppService>();
+            services.AddTransient<IItensCadastradosMais15DiasMetaAppService, ItensCadastradosMais15DiasMetaAppService>();
+               
+            services.AddTransient<INaoConformidadeAppService, NaoConformidadeAppService>();
+            services.AddTransient<INaoConformidadeMetaAppService, NaoConformidadeMetaAppService>();
 
             services.AddTransient<ILogCrudAppService, LogCrudAppService>();
                         

@@ -6,12 +6,11 @@ namespace Nuclep.GestaoQualidade.Domain.Models.Indicadores
 {
     public class TempoMedioSolucao : IEntidade
     {
-        public string? Ano { get; set; }
-        public string? Mes { get; set; }
-        public decimal Atividade1 { get; set; }
-        public decimal Atividade2 { get; set; }
+        public EnumAno Ano { get; set; }
+        public EnumMes Mes { get; set; }
+        public long? Atividade1 { get; set; }
+        public long? Atividade2 { get; set; }
+        public int Meta { get; set; }
 
-        public List<TempoMedioSolucaoMeta> MesList;
-       
     }
 }

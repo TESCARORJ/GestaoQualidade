@@ -118,7 +118,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
             {
                 try
                 {
-                    foreach (var item in logs)
+                    foreach (var item in await logs)
                     {
                         item.IdReferencia = model.Id;
                         await _logCrudRepository.AddAsync(item);
@@ -157,7 +157,7 @@ namespace Nuclep.GestaoQualidade.Application.Services
                 LogTipo = LogTipo.Cadastrado,
                 LogTabelaId = _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == "Ind_RejeicaoMateriais".ToLower()).Result.Id,
                 IdReferencia = model.Id,
-                Descricao = $" Rejeição de Materiais de valor {model.Trimestre} excluída no sistema por {usuarioLogado.Nome}, ID: {usuarioLogado.Id} em {DateTime.Now}."
+                Descricao = $" Rejeição de Materiais do período {model.Trimestre} excluída no sistema por {usuarioLogado.Nome}, ID: {usuarioLogado.Id} em {DateTime.Now}."
             };
 
             var result = await _rejeicaoMateriaisDomainService.DeleteAsync(id);
@@ -194,10 +194,12 @@ namespace Nuclep.GestaoQualidade.Application.Services
             return _mapper.Map<List<RejeicaoMateriaisResponseDTO>>(result);
         }
 
-        private List<LogCrud> Logar(RejeicaoMateriaisRequestDTO request, string tabela)
+        private async Task<List<LogCrud>> Logar(RejeicaoMateriaisRequestDTO request, string tabela)
         {
             var logs = new List<LogCrud>();
             var usuarioLogado = _usuarioSession.GetUsuarioLogado().Result;
+            LogTabela logTabela = await _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower() == tabela.ToLower());
+
             //Log de diferenças
             if (request.Id != 0)
             {
@@ -211,7 +213,8 @@ namespace Nuclep.GestaoQualidade.Application.Services
                                                     System.Text.RegularExpressions.RegexOptions.Compiled).Trim()
                               select new LogCrud(usuarioLogado.Id, usuarioLogado.Nome
                               , LogTipo.Alterado
-                              , _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id
+                              , logTabela.Id
+                              , logTabela.Nome
                               , propCamelcase,
                               (diff.Value.Item1 == null || string.IsNullOrEmpty(diff.Value.Item1.ToString())
                               ? "'sem dado'"
@@ -224,9 +227,16 @@ namespace Nuclep.GestaoQualidade.Application.Services
             }
             else
             {
-                logs.Add(new LogCrud(usuarioLogado.Id, usuarioLogado.Nome, LogTipo.Cadastrado,
-                    _logTabelaRepository.GetOneAsync(x => x.Nome.ToLower().Equals(tabela.ToLower())).Result.Id, null,
-                    null, null));
+                try
+                {
+                    logs.Add(new LogCrud(usuarioLogado.Id, usuarioLogado.Nome, LogTipo.Cadastrado, logTabela.Id, logTabela.Nome, null, null, null));
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+
             }
 
             return logs;

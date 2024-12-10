@@ -32,11 +32,15 @@ namespace Nuclep.GestaoQualidade.Application.DTOs
         public bool IsCumprimentoEtapasPACDentroPrazo { get; set; }
         public bool IsSatisfacaoUsuario { get; set; }
         public bool IsTempoMedioSolucao { get; set; }
+        public bool IsServiceLevelAgreement { get; set; }
+        public bool IsNaoConformidade { get; set; }
         public bool IsItensCadastradosMais15Dias { get; set; }
         public bool IsDuracaoProcessoLicitacao { get; set; }
         public bool IsEventosAtraso { get; set; }
         public bool IsFaturamentoRealizado { get; set; }
         public bool IsRejeicaoMateriais { get; set; }
+        public bool IsRespostaAreasRiscosPrazoOriginal { get; set; }
+
         public bool IsTempoManutencaoCorretivaEquipamentoProgramado { get; set; }
         public bool IsAcaoCorrecaoAvaliadaEficaz { get; set; }
         public bool IsCumprimentoVerbaDestinadaPATMME { get; set; }
@@ -46,6 +50,8 @@ namespace Nuclep.GestaoQualidade.Application.DTOs
         public bool IsCapacitacaoAreaContratos { get; set; }
         public bool IsOcupacaoMaoObra { get; set; }
         public bool IsProdutividadeMaoObra { get; set; }
+        public bool IsSatisfacaoClientes { get; set; }
+        public bool IsTempoMedioEmissaoOCItensCriticos { get; set; }
         public bool IsGestaoProcessosPessoasPrevistoPAT { get; set; }
         public bool IsRespostaAreasPrazoOriginal { get; set; }
         public bool IsRetrabalhoDocumentos { get; set; }

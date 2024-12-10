@@ -25,7 +25,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
         {
             if (!await _localidadeRepository.VerifyExistsAsync(x => x.Id == entity.Id))
             {
-                throw new Exception($"Usuário com ID {entity.Id} não foi encontrada ");
+                throw new Exception($"Localide com ID {entity.Id} não foi encontrada ");
             }
 
             try
@@ -49,7 +49,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Usuário com ID {id} não foi encontrado ");
+                throw new Exception($"Localidade com ID {id} não foi encontrado ");
             }
 
             await _localidadeRepository.DeleteAsync(registro);
@@ -64,7 +64,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Usuário com ID {id} não foi encontrado ");
+                throw new Exception($"Localidade com ID {id} não foi encontrado ");
             }
 
             return registro;
@@ -76,7 +76,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Usuário com Nome {nome} não foi encontrado");
+                throw new Exception($"Localidade com Nome {nome} não foi encontrado");
             }
 
             return registro;
@@ -88,7 +88,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Usuário com Nome {login} não foi encontrado");
+                throw new Exception($"Localidade com Nome {login} não foi encontrado");
             }
 
             return registro;
@@ -102,7 +102,7 @@ namespace Nuclep.GestaoQualidade.Domain.Services
 
             if (registro == null)
             {
-                throw new Exception($"Usuário com Nome {nome} não foi encontrado");
+                throw new Exception($"Localidade com Nome {nome} não foi encontrado");
             }
 
             return registro;

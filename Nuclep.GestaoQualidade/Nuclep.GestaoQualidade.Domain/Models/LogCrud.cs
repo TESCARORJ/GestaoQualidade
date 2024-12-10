@@ -7,14 +7,14 @@ namespace Nuclep.GestaoQualidade.Domain.Models
     {
         public LogCrud() { }
 
-        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId, string nomeFormulario, string de, string para/*, Residuo residuo*/)
+        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId, string logTabelaNome, string nomeFormulario, string de, string para/*, Residuo residuo*/)
         {
             DataHoraCadastro = DateTime.Now;
             UsuarioId = usuarioId;
             UsuarioNome = usuarioNome;
             LogTipo = tipo;
             LogTabelaId = tabelaId;
-            //Residuo = residuo;
+            LogTabelaNome = logTabelaNome;
 
 
             if (tipo == LogTipo.Cadastrado)
@@ -32,7 +32,7 @@ namespace Nuclep.GestaoQualidade.Domain.Models
         }
 
 
-        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId, string nomeFormulario, string de, string para, long idRef/*, Residuo residuo*/)
+        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId, string logTabelaNome, string nomeFormulario, string de, string para, long idRef/*, Residuo residuo*/)
         {
             DataHoraCadastro = DateTime.Now;
             UsuarioId = usuarioId;
@@ -56,7 +56,7 @@ namespace Nuclep.GestaoQualidade.Domain.Models
             }
         }
 
-        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId)
+        public LogCrud(long usuarioId, string usuarioNome, LogTipo tipo, long tabelaId, string logTabelaNome)
         {
             DataHoraCadastro = DateTime.Now;
             UsuarioId = usuarioId;
@@ -82,6 +82,7 @@ namespace Nuclep.GestaoQualidade.Domain.Models
         public long IdReferencia { get; set; }
         public LogTipo LogTipo { get; set; }
         public long LogTabelaId { get; set; }
+        public string LogTabelaNome { get; set; }
 
         //public LogTabela LogTabela { get; set; }
         public long UsuarioId { get; set; }

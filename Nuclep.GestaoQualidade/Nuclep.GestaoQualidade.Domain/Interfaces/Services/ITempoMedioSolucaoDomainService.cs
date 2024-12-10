@@ -5,6 +5,7 @@ namespace Nuclep.GestaoQualidade.Domain.Interfaces.Services
     public interface ITempoMedioSolucaoDomainService : IDisposable
     {
         Task<TempoMedioSolucao> AddAsync(TempoMedioSolucao entity);
+        Task<List<TempoMedioSolucao>> AddListAsync(List<TempoMedioSolucao> entity);
         Task<TempoMedioSolucao> UpdateAsync(TempoMedioSolucao entity);
         Task<TempoMedioSolucao> DeleteAsync(long id);
         Task<TempoMedioSolucao> GetByIdAsync(long id);

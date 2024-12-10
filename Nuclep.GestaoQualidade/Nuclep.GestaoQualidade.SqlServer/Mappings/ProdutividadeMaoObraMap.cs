@@ -18,10 +18,10 @@ namespace Nuclep.GestaoQualidade.SqlServer.Mappings
 
 
             builder.Property(e => e.TempoTotalFaturavel)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
             builder.Property(e => e.TempoDisponivelTotal)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)").IsRequired(false);
 
           
 
